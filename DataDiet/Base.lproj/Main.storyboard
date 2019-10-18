@@ -46,15 +46,6 @@
                                     <segue destination="sMD-j8-8jn" kind="show" id="ZPX-4c-eU6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-nR-30c">
-                                <rect key="frame" x="177" y="802" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ScanButton"/>
-                                <connections>
-                                    <action selector="OnScanButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="raE-0s-8md"/>
-                                    <segue destination="v9E-bM-HXa" kind="show" identifier="ProductView" id="O9K-FU-t71"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
