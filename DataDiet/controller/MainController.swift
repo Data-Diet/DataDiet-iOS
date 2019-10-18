@@ -1,7 +1,7 @@
 import AVFoundation
 import UIKit
 
-class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class MainController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
