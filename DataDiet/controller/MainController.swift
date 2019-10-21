@@ -1,7 +1,7 @@
 import AVFoundation
 import UIKit
 
-class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class MainController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -90,9 +90,8 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         print("in Metadata Output")
         
         if (canScan) {
-            captureSession.stopRunning()
             
-            
+            print(metadataObjects.first ?? "None")
             if let metadataObject = metadataObjects.first {
                 guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
                 guard let stringValue = readableObject.stringValue else { return }
@@ -112,27 +111,23 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func found(code: String) {
-        if (canScan) {
-            
-            
-            let barcodeNumber = code.suffix(code.count - 1)
-            print(barcodeNumber)
-            
-            let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + barcodeNumber + ".json"
-            
-            let item = Product(URL: productJSONURL)
-            
-            performSegue(withIdentifier: SegueIdProductJSON, sender: item)
-            
-            DispatchQueue.main.async {
-                //calling another function after fetching the json
-                //it will show the names to label
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "ProductView") as! ProductViewController
-                self.present(newViewController, animated: true, completion: nil)
-            }
+        let barcodeNumber = code.suffix(code.count - 1)
+        print("barcodeNumber: " + barcodeNumber)
         
+        let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + barcodeNumber + ".json"
+        
+        let item = Product(URL: productJSONURL)
+        
+        performSegue(withIdentifier: SegueIdProductJSON, sender: item)
+        
+        DispatchQueue.main.async {
+            //calling another function after fetching the json
+            //it will show the names to label
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ProductView") as! ProductViewController
+            self.present(newViewController, animated: true, completion: nil)
         }
+        captureSession.startRunning()
     }
     
     override var prefersStatusBarHidden: Bool {
