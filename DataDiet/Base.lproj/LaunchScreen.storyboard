@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,115 +19,19 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginBackground" translatesAutoresizingMaskIntoConstraints="NO" id="rWo-45-Cco">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DataDiet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5f-EA-raC">
-                                <rect key="frame" x="94" y="70" width="187.5" height="33.5"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleAppIcon " translatesAutoresizingMaskIntoConstraints="NO" id="hZj-IY-MFi">
-                                <rect key="frame" x="103" y="113.5" width="169" height="166.5"/>
+                                <rect key="frame" x="103" y="250" width="169" height="167"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1VH-hq-QBz">
-                                <rect key="frame" x="84.5" y="280" width="206" height="120"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="________ LOG IN ________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SK1-eM-UZd">
-                                        <rect key="frame" x="0.0" y="0.0" width="206" height="33.5"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or Email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Ypn-8g-tWh">
-                                        <rect key="frame" x="0.0" y="43.5" width="206" height="33.5"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" textContentType="username"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pqY-5h-iAT">
-                                        <rect key="frame" x="0.0" y="87" width="206" height="33"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
-                                        <textInputTraits key="textInputTraits" textContentType="password"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyF-w9-UoA">
-                                <rect key="frame" x="138" y="405" width="99" height="22"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="10"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Forgot Password?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZxD-Qh-zDG">
-                                <rect key="frame" x="84.5" y="432" width="206" height="120"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__________ OR __________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SxS-fu-Ov6">
-                                        <rect key="frame" x="0.0" y="0.0" width="206" height="33.5"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mj-2W-jN1">
-                                        <rect key="frame" x="0.0" y="43.5" width="206" height="33.5"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
-                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Continue with Facebook" backgroundImage="FB">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUn-JM-w4t">
-                                        <rect key="frame" x="0.0" y="87" width="206" height="33"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
-                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Continue with Google" backgroundImage="Google">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoH-RB-r4U">
-                                <rect key="frame" x="158" y="557" width="59" height="22"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="10"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="New User?">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hZj-IY-MFi" firstAttribute="height" secondItem="rWo-45-Cco" secondAttribute="height" multiplier="0.25" id="011-gA-kJg"/>
-                            <constraint firstItem="1VH-hq-QBz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="27F-Rj-PV1"/>
-                            <constraint firstItem="1VH-hq-QBz" firstAttribute="width" secondItem="rWo-45-Cco" secondAttribute="width" multiplier="0.55" id="3AZ-Fy-FhG"/>
-                            <constraint firstItem="s5f-EA-raC" firstAttribute="width" secondItem="rWo-45-Cco" secondAttribute="width" multiplier="0.5" id="59v-9q-tNr"/>
                             <constraint firstItem="hZj-IY-MFi" firstAttribute="width" secondItem="rWo-45-Cco" secondAttribute="width" multiplier="0.45" id="AzF-jf-DQY"/>
-                            <constraint firstItem="s5f-EA-raC" firstAttribute="height" secondItem="rWo-45-Cco" secondAttribute="height" multiplier="0.05" id="EQN-lc-6Hu"/>
-                            <constraint firstItem="ZxD-Qh-zDG" firstAttribute="height" secondItem="rWo-45-Cco" secondAttribute="height" multiplier="0.18" id="HFS-qY-3D9"/>
+                            <constraint firstItem="hZj-IY-MFi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FeW-lu-YZ9"/>
                             <constraint firstItem="rWo-45-Cco" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Mqv-aL-zWf"/>
-                            <constraint firstItem="1VH-hq-QBz" firstAttribute="height" secondItem="rWo-45-Cco" secondAttribute="height" multiplier="0.18" id="N3P-m4-a6R"/>
-                            <constraint firstItem="ZxD-Qh-zDG" firstAttribute="width" secondItem="SK1-eM-UZd" secondAttribute="width" id="N7q-Na-ImG"/>
                             <constraint firstItem="rWo-45-Cco" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="OLr-Ro-YtE"/>
                             <constraint firstAttribute="bottom" secondItem="rWo-45-Cco" secondAttribute="bottom" id="Z3z-GL-h6U"/>
-                            <constraint firstItem="KyF-w9-UoA" firstAttribute="top" secondItem="1VH-hq-QBz" secondAttribute="bottom" constant="5" id="ZJA-cN-MPm"/>
-                            <constraint firstItem="KyF-w9-UoA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="byh-dk-c0P"/>
-                            <constraint firstItem="1VH-hq-QBz" firstAttribute="top" secondItem="hZj-IY-MFi" secondAttribute="bottom" id="dAv-Oh-r7E"/>
-                            <constraint firstItem="QoH-RB-r4U" firstAttribute="top" secondItem="ZxD-Qh-zDG" secondAttribute="bottom" constant="5" id="dhd-Um-7d7"/>
-                            <constraint firstItem="ZxD-Qh-zDG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eA9-sI-4ZZ"/>
                             <constraint firstAttribute="trailing" secondItem="rWo-45-Cco" secondAttribute="trailing" id="eg2-T8-WSt"/>
-                            <constraint firstItem="hZj-IY-MFi" firstAttribute="top" secondItem="s5f-EA-raC" secondAttribute="bottom" constant="10" id="hOY-YV-YIS"/>
-                            <constraint firstItem="ZxD-Qh-zDG" firstAttribute="top" secondItem="KyF-w9-UoA" secondAttribute="bottom" constant="5" id="m8T-tz-GVL"/>
-                            <constraint firstItem="s5f-EA-raC" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="nRq-Y7-zFi"/>
-                            <constraint firstItem="s5f-EA-raC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="t9G-3q-5qY"/>
-                            <constraint firstItem="QoH-RB-r4U" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uiy-if-hpA"/>
                             <constraint firstItem="hZj-IY-MFi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ybd-gI-xXk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -142,8 +44,6 @@
     </scenes>
     <resources>
         <image name="CircleAppIcon " width="200" height="199.5"/>
-        <image name="FB" width="285" height="69"/>
-        <image name="Google" width="285" height="69"/>
         <image name="LoginBackground" width="1680" height="633"/>
     </resources>
 </document>
