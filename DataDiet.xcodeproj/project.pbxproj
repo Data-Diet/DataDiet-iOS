@@ -21,7 +21,11 @@
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
 		CD584052DFF82057B1624AD1 /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A64323EFC455E9A44FF5E2 /* Pods_DataDiet.framework */; };
 		E8E4387C102818538FDE5301 /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104AB6C9191DB23BD4891504 /* Pods_DataDietUITests.framework */; };
+<<<<<<< Updated upstream
 		FEAA1035235D04EE008BD70F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEAA1034235D04ED008BD70F /* GoogleService-Info.plist */; };
+=======
+		FE2C59A8235D459900D625FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE2C59A7235D459900D625FF /* GoogleService-Info.plist */; };
+>>>>>>> Stashed changes
 		FEAA1037235D0C50008BD70F /* ScanSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA1036235D0C50008BD70F /* ScanSettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,7 +73,11 @@
 		5D714E6A85E1616C59334CE0 /* Pods-DataDietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.release.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89C9191AA20571C49C8C1EF1 /* Pods-DataDietTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.release.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC0A73C667CBBD9A1F687A4A /* Pods-DataDiet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.debug.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.debug.xcconfig"; sourceTree = "<group>"; };
+<<<<<<< Updated upstream
 		FEAA1034235D04ED008BD70F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+=======
+		FE2C59A7235D459900D625FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		FEAA1036235D0C50008BD70F /* ScanSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +150,7 @@
 				1A55EF6622B888370010681A /* Main.storyboard */,
 				1A55EF6C22B8883A0010681A /* Assets.xcassets */,
 				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
+				FE2C59A7235D459900D625FF /* GoogleService-Info.plist */,
 				1A55EF7122B8883A0010681A /* Info.plist */,
 				FEAA1034235D04ED008BD70F /* GoogleService-Info.plist */,
 				1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */,
@@ -308,7 +317,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A55EF7022B8883A0010681A /* LaunchScreen.storyboard in Resources */,
+<<<<<<< Updated upstream
 				FEAA1035235D04EE008BD70F /* GoogleService-Info.plist in Resources */,
+=======
+				FE2C59A8235D459900D625FF /* GoogleService-Info.plist in Resources */,
+>>>>>>> Stashed changes
 				1A55EF6D22B8883A0010681A /* Assets.xcassets in Resources */,
 				1A55EF6822B888370010681A /* Main.storyboard in Resources */,
 			);

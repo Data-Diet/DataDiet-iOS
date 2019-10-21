@@ -97,7 +97,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< Updated upstream
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tbY-eX-yz1">
+=======
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tbY-eX-yz1">
+>>>>>>> Stashed changes
                                 <rect key="frame" x="0.0" y="93" width="414" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -150,14 +154,27 @@
                             <constraint firstItem="tbY-eX-yz1" firstAttribute="trailing" secondItem="QZt-nb-vbF" secondAttribute="trailing" id="0gQ-go-wKu"/>
                             <constraint firstItem="TXK-Yr-3qo" firstAttribute="leading" secondItem="QZt-nb-vbF" secondAttribute="leading" constant="105" id="9Ck-AF-EEv"/>
                             <constraint firstItem="tbY-eX-yz1" firstAttribute="top" secondItem="TXK-Yr-3qo" secondAttribute="bottom" constant="8.3300000000000001" id="Ma6-dI-AFQ"/>
+<<<<<<< Updated upstream
                             <constraint firstItem="tbY-eX-yz1" firstAttribute="top" secondItem="PHM-ZH-RQR" secondAttribute="bottom" constant="41" id="QI0-Yd-zHJ"/>
                             <constraint firstItem="TXK-Yr-3qo" firstAttribute="top" secondItem="QZt-nb-vbF" secondAttribute="top" constant="41.670000000000002" id="VdT-vL-i0C"/>
                             <constraint firstItem="tbY-eX-yz1" firstAttribute="top" secondItem="TXK-Yr-3qo" secondAttribute="bottom" constant="8.3300000000000001" id="Zcj-Zp-VQD"/>
+=======
+                            <constraint firstItem="tbY-eX-yz1" firstAttribute="trailing" secondItem="QZt-nb-vbF" secondAttribute="trailing" id="Nln-s3-8eW"/>
+                            <constraint firstItem="tbY-eX-yz1" firstAttribute="top" secondItem="PHM-ZH-RQR" secondAttribute="bottom" constant="41" id="QI0-Yd-zHJ"/>
+                            <constraint firstItem="tbY-eX-yz1" firstAttribute="leading" secondItem="QZt-nb-vbF" secondAttribute="leading" id="UTa-VV-x1C"/>
+                            <constraint firstItem="TXK-Yr-3qo" firstAttribute="top" secondItem="QZt-nb-vbF" secondAttribute="top" constant="41.670000000000002" id="VdT-vL-i0C"/>
+                            <constraint firstItem="tbY-eX-yz1" firstAttribute="top" secondItem="TXK-Yr-3qo" secondAttribute="bottom" constant="8.3300000000000001" id="Zcj-Zp-VQD"/>
+                            <constraint firstItem="tbY-eX-yz1" firstAttribute="top" secondItem="TXK-Yr-3qo" secondAttribute="bottom" constant="8.3300000000000001" id="Zpt-Ja-EJA"/>
+>>>>>>> Stashed changes
                             <constraint firstItem="QZt-nb-vbF" firstAttribute="trailing" secondItem="PHM-ZH-RQR" secondAttribute="trailing" constant="358" id="a6O-K0-Ip7"/>
                             <constraint firstItem="tbY-eX-yz1" firstAttribute="leading" secondItem="QZt-nb-vbF" secondAttribute="leading" id="aAg-51-QHk"/>
                             <constraint firstItem="QZt-nb-vbF" firstAttribute="trailing" secondItem="TXK-Yr-3qo" secondAttribute="trailing" constant="104" id="kfU-TI-cEn"/>
                             <constraint firstItem="PHM-ZH-RQR" firstAttribute="leading" secondItem="QZt-nb-vbF" secondAttribute="leading" constant="18" id="mPE-F9-tpd"/>
                             <constraint firstItem="PHM-ZH-RQR" firstAttribute="top" secondItem="uNf-ll-8hF" secondAttribute="top" constant="19" id="sle-tl-iOn"/>
+<<<<<<< Updated upstream
+=======
+                            <constraint firstItem="QZt-nb-vbF" firstAttribute="bottom" secondItem="tbY-eX-yz1" secondAttribute="bottom" constant="45" id="zY2-RS-8Ar"/>
+>>>>>>> Stashed changes
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QZt-nb-vbF"/>
                     </view>
