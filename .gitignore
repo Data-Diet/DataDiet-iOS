@@ -78,7 +78,5 @@ lerna-debug.log
 service-account-credentials.json
 **/package-lock.json
 .DS_Store
-Pods/
 xcuserdata/
-*.xcworkspace/
 GoogleService-Info.plist
