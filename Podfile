@@ -10,6 +10,7 @@ target 'DataDiet' do
   pod 'Firebase/Analytics'
   pod 'Firebase/MLVision'
   pod 'Firebase/MLVisionBarcodeModel'
+  pod 'Firebase/Auth'
 
   target 'DataDietTests' do
     inherit! :search_paths
