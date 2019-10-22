@@ -28,6 +28,11 @@ class AllergiesSettingsController: UIViewController, UITextFieldDelegate, UITabl
         return true
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(allergies.count)
+        return allergies.count
+    }
+    
     func insertNewAllergy() {
         allergies.append(AllergiesTextAddField.text!)
         let indexPath = IndexPath(row: allergies.count - 1, section: 0)
@@ -38,12 +43,8 @@ class AllergiesSettingsController: UIViewController, UITextFieldDelegate, UITabl
         view.endEditing(true)
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allergies.count
-    }
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+
         if editingStyle == .delete {
             allergies.remove(at: indexPath.row)
             tableView.beginUpdates()
