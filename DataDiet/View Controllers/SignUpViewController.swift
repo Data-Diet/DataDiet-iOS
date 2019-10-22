@@ -59,9 +59,15 @@ class SignUpViewController: UIViewController {
         }
         // Check if password is secure
         let cleanedPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let confirmPassword = confirmPasswordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        if confirmPassword != cleanedPassword {
+            return "Please make sure your passwords match!"
+        }
+        
         if isPasswordValid(cleanedPassword) == false {
             // Password isn't secure enough
-            return "Please make sure your password is at least 8 characters, contains a special character and a number"
+            return "Your password must be 8 characters long with a number and special"
         }
         
         return nil
@@ -101,12 +107,14 @@ class SignUpViewController: UIViewController {
                     // User created successfully, now store first and last name
                     let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["first_name" : firstName, "last_name" : lastName, "UID" : result!.user.uid]) { (error) in
+                    db.collection("users").document(result!.user.uid).setData(["first_name" : firstName, "last_name" : lastName])
+                    
+                   /* db.collection("users").addDocument(data: ["first_name" : firstName, "last_name" : lastName, "UID" : result!.user.uid]) { (error) in
                         if err != nil {
                             // Show error message
                             self.showError("Error creating this user!")
                         }
-                    }
+                    }*/
                     // Transition to home screen
                     self.transitionToHome()
                 }
