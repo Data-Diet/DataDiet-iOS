@@ -16,31 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-nR-30c">
-                                <rect key="frame" x="157" y="587" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHD-nR-30c">
+                                <rect key="frame" x="168.66666666666666" y="639" width="77" height="77"/>
                                 <state key="normal" image="ScanButton"/>
                                 <connections>
                                     <action selector="OnScanButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="raE-0s-8md"/>
                                     <segue destination="v9E-bM-HXa" kind="show" identifier="ProductView" id="O9K-FU-t71"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-nH-DkU" userLabel="Image Gallery Button">
-                                <rect key="frame" x="16" y="617" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-nH-DkU" userLabel="Image Gallery Button">
+                                <rect key="frame" x="20" y="677" width="39" height="39"/>
                                 <state key="normal" image="ImageGalleryButton"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6La-ZV-T38" userLabel="History Button">
-                                <rect key="frame" x="329" y="617" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6La-ZV-T38" userLabel="History Button">
+                                <rect key="frame" x="351" y="673" width="43" height="43"/>
                                 <state key="normal" image="HistoryButton"/>
                                 <connections>
                                     <segue destination="uWd-nv-yEs" kind="show" id="eXK-Uu-C66"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmW-lT-dfI" userLabel="Settings Button">
-                                <rect key="frame" x="329" y="20" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmW-lT-dfI" userLabel="Settings Button">
+                                <rect key="frame" x="363" y="20" width="31" height="32"/>
                                 <state key="normal" image="SettingsButton"/>
                                 <connections>
                                     <segue destination="sMD-j8-8jn" kind="show" id="ZPX-4c-eU6"/>
@@ -48,6 +44,16 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1gZ-nH-DkU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="2dL-qb-6Oq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nHD-nR-30c" secondAttribute="bottom" constant="20" id="32y-vR-cgV"/>
+                            <constraint firstItem="TmW-lT-dfI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3na-Yl-BPG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TmW-lT-dfI" secondAttribute="trailing" constant="20" id="aSf-eB-PqE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6La-ZV-T38" secondAttribute="bottom" constant="20" id="feR-YS-6sf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1gZ-nH-DkU" secondAttribute="bottom" constant="20" id="jce-XY-Gff"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6La-ZV-T38" secondAttribute="trailing" constant="20" id="k9W-pu-XQa"/>
+                            <constraint firstItem="nHD-nR-30c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wtK-rT-LJg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -250,7 +256,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUt-JZ-roE">
                                         <rect key="frame" x="0.0" y="193.33333333333331" width="414" height="64.333333333333314"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                         <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Security" image="Security">
@@ -260,6 +266,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2K-jI-pEN">
                                         <rect key="frame" x="0.0" y="257.66666666666663" width="414" height="64.666666666666686"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
                                         <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Privacy" image="Privacy">
@@ -301,7 +308,7 @@
         <!--Scanner View Controller-->
         <scene sceneID="2Tn-WK-PY2">
             <objects>
-                <viewController title="Scanner View Controller" id="oXi-7t-ebu" sceneMemberID="viewController">
+                <viewController title="Scanner View Controller" id="oXi-7t-ebu" customClass="ScannerSettingsController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BZR-Wm-RcM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,18 +318,18 @@
                                 <color key="barTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DEC-r0-1gb">
-                                <rect key="frame" x="0.0" y="65.666666666666686" width="414" height="573"/>
+                                <rect key="frame" x="0.0" y="65.666666666666686" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DietsCell" id="w7n-tA-0Po">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="16.333333969116211"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DietsCell" rowHeight="45" id="w7n-tA-0Po">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="w7n-tA-0Po" id="bCB-Mw-hdD">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="16.333333969116211"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5O-Aj-CBE">
-                                                    <rect key="frame" x="24.999999999999996" y="0.0" width="42.666666666666657" height="16.333333333333332"/>
+                                                    <rect key="frame" x="24.999999999999996" y="0.0" width="42.666666666666657" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -338,20 +345,20 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VeganCell" id="7YB-tB-q0e">
-                                        <rect key="frame" x="0.0" y="44.333333969116211" width="414" height="14.333333015441895"/>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VeganCell" rowHeight="45" id="7YB-tB-q0e">
+                                        <rect key="frame" x="0.0" y="73" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7YB-tB-q0e" id="rXp-Yi-e2s">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="14.333333015441895"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sG9-Ak-mbR">
-                                                    <rect key="frame" x="24.999999999999996" y="0.0" width="43.666666666666657" height="14.333333333333334"/>
+                                                    <rect key="frame" x="24.999999999999996" y="0.0" width="43.666666666666657" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zk6-TV-ClE">
-                                                    <rect key="frame" x="350" y="-8.3333333333333339" width="51" height="31"/>
+                                                    <rect key="frame" x="350" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -364,20 +371,20 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VegetarianCell" id="2dA-JK-WQM">
-                                        <rect key="frame" x="0.0" y="58.666666984558105" width="414" height="14.333333015441895"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="VegetarianCell" rowHeight="45" id="2dA-JK-WQM">
+                                        <rect key="frame" x="0.0" y="118" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2dA-JK-WQM" id="dam-BL-ss9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="14.333333015441895"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vegetarian" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86R-au-6Ek">
-                                                    <rect key="frame" x="25" y="0.0" width="74.666666666666671" height="14.333333333333334"/>
+                                                    <rect key="frame" x="25" y="0.0" width="74.666666666666671" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-qX-F2e">
-                                                    <rect key="frame" x="350" y="-8.3333333333333339" width="51" height="31"/>
+                                                    <rect key="frame" x="350" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -391,20 +398,20 @@
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" identifier="diet"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PescatarianCell" id="vLu-I5-igu">
-                                        <rect key="frame" x="0.0" y="73" width="414" height="14.333333015441895"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PescatarianCell" rowHeight="45" id="vLu-I5-igu">
+                                        <rect key="frame" x="0.0" y="163" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vLu-I5-igu" id="CGz-Lu-hCm">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="14.333333015441895"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pescatarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gn-r2-sTb">
-                                                    <rect key="frame" x="25" y="0.0" width="81" height="14.333333333333334"/>
+                                                    <rect key="frame" x="25" y="0.0" width="81" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZDw-4z-Gm9">
-                                                    <rect key="frame" x="350" y="-8.3333333333333339" width="51" height="31"/>
+                                                    <rect key="frame" x="350" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -417,20 +424,20 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KosherCell" id="X1M-VZ-M9I">
-                                        <rect key="frame" x="0.0" y="87.333333015441895" width="414" height="14.333333015441895"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KosherCell" rowHeight="45" id="X1M-VZ-M9I">
+                                        <rect key="frame" x="0.0" y="208" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X1M-VZ-M9I" id="hPT-52-y9S">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="14.333333015441895"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kosher" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJc-QR-N4b">
-                                                    <rect key="frame" x="24.999999999999996" y="0.0" width="48.666666666666657" height="14.333333333333334"/>
+                                                    <rect key="frame" x="24.999999999999996" y="0.0" width="48.666666666666657" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="geY-rw-yAR">
-                                                    <rect key="frame" x="350" y="-8.3333333333333339" width="51" height="31"/>
+                                                    <rect key="frame" x="350" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -443,21 +450,21 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KetoCell" id="H0P-Ju-ubn">
-                                        <rect key="frame" x="0.0" y="101.66666603088379" width="414" height="14.333333015441895"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="KetoCell" rowHeight="45" id="H0P-Ju-ubn">
+                                        <rect key="frame" x="0.0" y="253" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H0P-Ju-ubn" id="lcu-nI-ZKe">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="14.333333015441895"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ketogenic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQc-jR-vcP">
-                                                    <rect key="frame" x="25" y="0.0" width="69" height="14.333333333333334"/>
+                                                    <rect key="frame" x="25" y="0.0" width="69" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p08-lf-QIi">
-                                                    <rect key="frame" x="350" y="-8.3333333333333339" width="51" height="31"/>
+                                                    <rect key="frame" x="350" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -470,20 +477,20 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaleoCell" id="fhs-sk-CDs">
-                                        <rect key="frame" x="0.0" y="115.99999904632568" width="414" height="14.333333015441895"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PaleoCell" rowHeight="45" id="fhs-sk-CDs">
+                                        <rect key="frame" x="0.0" y="298" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fhs-sk-CDs" id="Mhl-Dw-T2Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="14.333333015441895"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paleolithic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQ5-V3-gYx">
-                                                    <rect key="frame" x="25" y="0.0" width="70" height="14.333333333333334"/>
+                                                    <rect key="frame" x="25" y="0.0" width="70" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3II-DQ-mCj">
-                                                    <rect key="frame" x="350" y="-8.3333333333333339" width="51" height="31"/>
+                                                    <rect key="frame" x="350" y="7" width="51" height="31"/>
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -496,15 +503,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergiesCell" id="OI2-fF-7XS">
-                                        <rect key="frame" x="0.0" y="130.33333206176758" width="414" height="16.333333969116211"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllergiesCell" rowHeight="45" id="OI2-fF-7XS">
+                                        <rect key="frame" x="0.0" y="343" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OI2-fF-7XS" id="8wA-Os-ElR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="16.333333969116211"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allergies &amp; Intolerances" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CK-mI-Uth">
-                                                    <rect key="frame" x="25" y="0.0" width="193.66666666666666" height="16.333333333333332"/>
+                                                    <rect key="frame" x="25" y="0.0" width="193.66666666666666" height="45"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -520,17 +527,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInputCell" rowHeight="43" id="PBU-7J-uVX">
-                                        <rect key="frame" x="0.0" y="146.66666603088379" width="414" height="43"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserInputCell" rowHeight="45" id="PBU-7J-uVX">
+                                        <rect key="frame" x="0.0" y="388" width="414" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PBU-7J-uVX" id="aj2-5D-Obp">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter foods separated by commas" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-wa-D1t">
-                                                    <rect key="frame" x="10" y="5" width="394" height="32.333333333333336"/>
+                                                    <rect key="frame" x="10" y="5" width="394" height="33.666666666666664"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="12"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                             </subviews>
@@ -571,7 +578,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="DEC-r0-1gb" firstAttribute="height" secondItem="BZR-Wm-RcM" secondAttribute="height" multiplier="0.8" id="6vC-cL-unZ"/>
+                            <constraint firstItem="DEC-r0-1gb" firstAttribute="height" secondItem="BZR-Wm-RcM" secondAttribute="height" id="6vC-cL-unZ"/>
                             <constraint firstItem="Bex-Xn-8cm" firstAttribute="trailing" secondItem="DEC-r0-1gb" secondAttribute="trailing" id="HJJ-CS-Hhk"/>
                             <constraint firstItem="DEC-r0-1gb" firstAttribute="top" secondItem="BfF-wI-zRv" secondAttribute="bottom" constant="15" id="JZP-QZ-ocE"/>
                             <constraint firstItem="BfF-wI-zRv" firstAttribute="height" secondItem="XrS-Sj-ZbT" secondAttribute="height" multiplier="0.35" id="M1G-Ge-88o"/>
