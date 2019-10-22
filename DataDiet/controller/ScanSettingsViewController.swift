@@ -26,6 +26,7 @@ class ScanSettingsViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let label = UILabel()
         label.text = "Diets"
+        label.textColor = UIColor.white
         label.backgroundColor = UIColor.lightGray
         return label
     }

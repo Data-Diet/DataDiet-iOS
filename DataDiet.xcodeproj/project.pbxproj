@@ -21,6 +21,7 @@
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
 		CD584052DFF82057B1624AD1 /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A64323EFC455E9A44FF5E2 /* Pods_DataDiet.framework */; };
 		E8E4387C102818538FDE5301 /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104AB6C9191DB23BD4891504 /* Pods_DataDietUITests.framework */; };
+		FE19B136235EEA7A0081F385 /* AllergiesSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19B135235EEA7A0081F385 /* AllergiesSettingsController.swift */; };
 		FEAA1037235D0C50008BD70F /* ScanSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAA1036235D0C50008BD70F /* ScanSettingsViewController.swift */; };
 		FECB2A9A235D567D007D0FBA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FECB2A99235D567D007D0FBA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		5D714E6A85E1616C59334CE0 /* Pods-DataDietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.release.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89C9191AA20571C49C8C1EF1 /* Pods-DataDietTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.release.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC0A73C667CBBD9A1F687A4A /* Pods-DataDiet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.debug.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.debug.xcconfig"; sourceTree = "<group>"; };
+		FE19B135235EEA7A0081F385 /* AllergiesSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllergiesSettingsController.swift; sourceTree = "<group>"; };
 		FEAA1036235D0C50008BD70F /* ScanSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanSettingsViewController.swift; sourceTree = "<group>"; };
 		FECB2A99235D567D007D0FBA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 				1A55EF6422B888370010681A /* MainController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				FEAA1036235D0C50008BD70F /* ScanSettingsViewController.swift */,
+				FE19B135235EEA7A0081F385 /* AllergiesSettingsController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
 				1A55EF6522B888370010681A /* MainController.swift in Sources */,
 				1A110BD122C4700800ED1D0F /* Product.swift in Sources */,
+				FE19B136235EEA7A0081F385 /* AllergiesSettingsController.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				FEAA1037235D0C50008BD70F /* ScanSettingsViewController.swift in Sources */,
