@@ -27,4 +27,12 @@ class ScannerSettingsController: UIViewController {
     }
     */
 
+<<<<<<< HEAD
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 6
+    }
+
+=======
+>>>>>>> feature/Settings-Page
 }

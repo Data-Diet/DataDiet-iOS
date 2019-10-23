@@ -53,8 +53,8 @@ class MainController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         }
         
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.layer.bounds
-        previewLayer.videoGravity = .resizeAspectFill
+//        previewLayer.frame = view.layer.bounds
+//        previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
         
         bringButtonsToFront()
