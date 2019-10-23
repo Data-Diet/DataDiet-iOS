@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+>>>>>>> feature/Settings-Page
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -89,6 +93,7 @@
             </objects>
             <point key="canvasLocation" x="131" y="713"/>
         </scene>
+<<<<<<< HEAD
         <!--Scan Settings View Controller-->
         <scene sceneID="cAd-rG-sQn">
             <objects>
@@ -287,6 +292,8 @@
             </objects>
             <point key="canvasLocation" x="2969.5652173913045" y="17.934782608695652"/>
         </scene>
+=======
+>>>>>>> feature/Settings-Page
         <!--Product View Controller-->
         <scene sceneID="aag-TI-Smn">
             <objects>
@@ -424,7 +431,11 @@
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+<<<<<<< HEAD
                                             <segue destination="8TQ-GH-ukd" kind="show" id="4hv-lm-00U"/>
+=======
+                                            <segue destination="oXi-7t-ebu" kind="show" id="8yE-ua-Aar"/>
+>>>>>>> feature/Settings-Page
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ec3-qo-9T8">
@@ -501,7 +512,11 @@
         <!--Scanner View Controller-->
         <scene sceneID="2Tn-WK-PY2">
             <objects>
+<<<<<<< HEAD
                 <viewController title="Scanner View Controller" id="oXi-7t-ebu" customClass="ScannerSettingsController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+=======
+                <viewController title="Scanner View Controller" id="oXi-7t-ebu" sceneMemberID="viewController">
+>>>>>>> feature/Settings-Page
                     <view key="view" contentMode="scaleToFill" id="BZR-Wm-RcM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -551,7 +566,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zk6-TV-ClE">
+<<<<<<< HEAD
                                                     <rect key="frame" x="350" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+=======
+                                                    <rect key="frame" x="311" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+>>>>>>> feature/Settings-Page
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -577,7 +596,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-qX-F2e">
+<<<<<<< HEAD
                                                     <rect key="frame" x="350" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+=======
+                                                    <rect key="frame" x="311" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+>>>>>>> feature/Settings-Page
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -604,7 +627,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZDw-4z-Gm9">
+<<<<<<< HEAD
                                                     <rect key="frame" x="350" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+=======
+                                                    <rect key="frame" x="311" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+>>>>>>> feature/Settings-Page
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -630,7 +657,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="geY-rw-yAR">
+<<<<<<< HEAD
                                                     <rect key="frame" x="350" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+=======
+                                                    <rect key="frame" x="311" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+>>>>>>> feature/Settings-Page
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -657,7 +688,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="p08-lf-QIi">
+<<<<<<< HEAD
                                                     <rect key="frame" x="350" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+=======
+                                                    <rect key="frame" x="311" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+>>>>>>> feature/Settings-Page
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -683,7 +718,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3II-DQ-mCj">
+<<<<<<< HEAD
                                                     <rect key="frame" x="350" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+=======
+                                                    <rect key="frame" x="311" y="6.3333333333333321" width="51" height="30.999999999999996"/>
+>>>>>>> feature/Settings-Page
                                                     <color key="onTintColor" red="0.68235294117647061" green="0.85490196078431369" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 </switch>
                                             </subviews>
@@ -728,7 +767,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter foods separated by commas" textAlignment="natural" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jjA-wa-D1t">
+<<<<<<< HEAD
                                                     <rect key="frame" x="10" y="5" width="394" height="32"/>
+=======
+                                                    <rect key="frame" x="10" y="5" width="355" height="32"/>
+>>>>>>> feature/Settings-Page
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -768,6 +811,7 @@
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
+<<<<<<< HEAD
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F83-gK-nTY">
                                 <rect key="frame" x="0.0" y="692" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -784,6 +828,8 @@
                                 </items>
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
+=======
+>>>>>>> feature/Settings-Page
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -803,12 +849,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt3-ZH-6fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
             <point key="canvasLocation" x="1568" y="713"/>
+=======
+            <point key="canvasLocation" x="2301.5999999999999" y="14.842578710644679"/>
+>>>>>>> feature/Settings-Page
         </scene>
     </scenes>
     <resources>
         <image name="Account" width="30" height="30"/>
         <image name="Friends" width="35" height="19"/>
+<<<<<<< HEAD
         <image name="HistoryButton" width="43" height="43"/>
         <image name="ImageGalleryButton" width="39" height="39"/>
         <image name="Privacy" width="30" height="37"/>
@@ -816,6 +867,15 @@
         <image name="Scanner" width="30" height="30"/>
         <image name="Security" width="30" height="39"/>
         <image name="SettingsButton" width="31" height="32"/>
+=======
+        <image name="HistoryButton" width="21.5" height="21.5"/>
+        <image name="ImageGalleryButton" width="19.5" height="19.5"/>
+        <image name="Privacy" width="30" height="37"/>
+        <image name="ScanButton" width="38.5" height="38.5"/>
+        <image name="Scanner" width="30" height="30"/>
+        <image name="Security" width="30" height="39"/>
+        <image name="SettingsButton" width="15.5" height="16"/>
+>>>>>>> feature/Settings-Page
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ZPX-4c-eU6"/>
