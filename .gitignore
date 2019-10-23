@@ -79,4 +79,5 @@ service-account-credentials.json
 **/package-lock.json
 .DS_Store
 xcuserdata/
+Pods/
 GoogleService-Info.plist
