@@ -12,7 +12,7 @@
 		1A110BD122C4700800ED1D0F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BD022C4700800ED1D0F /* Product.swift */; };
 		1A3235DC22BDD7ED00A823AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */; };
 		1A55EF6322B888370010681A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6222B888370010681A /* AppDelegate.swift */; };
-		1A55EF6522B888370010681A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6422B888370010681A /* MainController.swift */; };
+		1A55EF6522B888370010681A /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6422B888370010681A /* ScannerController.swift */; };
 		1A55EF6822B888370010681A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A55EF6622B888370010681A /* Main.storyboard */; };
 		1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */; };
 		1A55EF6D22B8883A0010681A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A55EF6C22B8883A0010681A /* Assets.xcassets */; };
@@ -48,7 +48,7 @@
 		1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1A55EF5F22B888370010681A /* DataDiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataDiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A55EF6222B888370010681A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A55EF6422B888370010681A /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		1A55EF6422B888370010681A /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
 		1A55EF6722B888370010681A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A55EF6A22B888370010681A /* DataDiet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataDiet.xcdatamodel; sourceTree = "<group>"; };
 		1A55EF6C22B8883A0010681A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */,
-				1A55EF6422B888370010681A /* MainController.swift */,
+				1A55EF6422B888370010681A /* ScannerController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 			);
 			path = controller;
@@ -419,7 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
-				1A55EF6522B888370010681A /* MainController.swift in Sources */,
+				1A55EF6522B888370010681A /* ScannerController.swift in Sources */,
 				1A110BD122C4700800ED1D0F /* Product.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
