@@ -54,7 +54,7 @@ class SignUpViewController: UIViewController {
     
     func validateFields() -> String? {
         // Check all fields are filled in.
-        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""{
+        if firstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || lastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" || confirmPasswordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
             return "Please fill in all fields"
         }
         // Check if password is secure
@@ -108,7 +108,11 @@ class SignUpViewController: UIViewController {
                     let db = Firestore.firestore()
                     
                     db.collection("users").document(result!.user.uid).setData(["first_name" : firstName, "last_name" : lastName])
-                    
+                    db.collection("users").document(result!.user.uid).collection("Settings").addDocument(data: ["Ketogenic" : false, "Vegetarian" : false]) { (error) in
+                        if err != nil {
+                            self.showError("Error creating database")
+                        }
+                    }
                    /* db.collection("users").addDocument(data: ["first_name" : firstName, "last_name" : lastName, "UID" : result!.user.uid]) { (error) in
                         if err != nil {
                             // Show error message
