@@ -11,7 +11,7 @@
         <!--Scanner Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainView" id="BYZ-38-t0r" customClass="ScannerController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductViewSegue" id="BYZ-38-t0r" customClass="ScannerController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,8 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ScanButton"/>
                                 <connections>
-                                    <action selector="OnScanButtonTouchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="raE-0s-8md"/>
-                                    <segue destination="v9E-bM-HXa" kind="show" identifier="ProductView" id="O9K-FU-t71"/>
+                                    <action selector="OnScanButtonPressedInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YrE-0u-GpY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gZ-nH-DkU" userLabel="Image Gallery Button">
@@ -54,9 +53,10 @@
                     <connections>
                         <outlet property="HistoryButton" destination="6La-ZV-T38" id="yrD-7u-lxI"/>
                         <outlet property="ImageGalleryButton" destination="1gZ-nH-DkU" id="8uU-ky-lnq"/>
-                        <outlet property="ScanButton" destination="nHD-nR-30c" id="rQm-7K-ips"/>
+                        <outlet property="ScanButton" destination="nHD-nR-30c" id="HUY-RM-pjM"/>
                         <outlet property="SettingsButton" destination="TmW-lT-dfI" id="2dX-3g-mSY"/>
                         <outlet property="videoPreview" destination="8bC-Xf-vdC" id="5ot-yI-DSI"/>
+                        <segue destination="v9E-bM-HXa" kind="show" identifier="ProductViewSegue" id="pkj-Je-fWK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

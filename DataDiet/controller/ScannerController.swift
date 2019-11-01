@@ -6,7 +6,6 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     @IBOutlet var videoPreview: UIView!
-    
     @IBOutlet var ScanButton: UIButton!
     @IBOutlet var ImageGalleryButton: UIButton!
     @IBOutlet var HistoryButton: UIButton!
@@ -88,17 +87,17 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         print("in Metadata Output")
-        
+
         if (canScan) {
-            
-            print(metadataObjects.first ?? "None")
+
+            print(metadataObjects)
             if let metadataObject = metadataObjects.first {
                 guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
                 guard let stringValue = readableObject.stringValue else { return }
                 AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
                 found(code: stringValue)
             }
-            
+
             if metadataObjects.isEmpty {
                 captureSession.startRunning()
                 print("No Barcodes Found")
@@ -114,19 +113,13 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
         let barcodeNumber = code.suffix(code.count - 1)
         print("barcodeNumber: " + barcodeNumber)
         
+        canScan = false
         let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + barcodeNumber + ".json"
-        
-        let item = Product(URL: productJSONURL)
-        
-        performSegue(withIdentifier: SegueIdProductJSON, sender: item)
-        
-        DispatchQueue.main.async {
-            //calling another function after fetching the json
-            //it will show the names to label
-            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let newViewController = storyBoard.instantiateViewController(withIdentifier: "ProductView") as! ProductViewController
-            self.present(newViewController, animated: true, completion: nil)
+                
+        DispatchQueue.main.sync {
+            self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
         }
+        
         captureSession.startRunning()
     }
     
@@ -138,7 +131,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
         return .portrait
     }
     
-    @IBAction func OnScanButtonTouchUpInside(_ sender: Any) {
+    @IBAction func OnScanButtonPressedInside(_ sender: UIButton) {
         canScan = true
         print(canScan)
     }
