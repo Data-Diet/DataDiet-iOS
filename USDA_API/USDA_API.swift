@@ -56,14 +56,17 @@ struct USDARequest{
     
     //Function used to format ingredients list into an array
     func formatIngredients(ingredientsList: String) -> Array<String> {
-        let ingredients = ingredientsList.substring(from: "ingredients" + "\"" + ":" + "\"", to: ".")
-        var rmChars = ingredients?.replacingOccurrences(of: "(", with: "")
-        rmChars = rmChars!.replacingOccurrences(of: ")", with: "")
-        rmChars = rmChars!.replacingOccurrences(of: "[", with: "")
-        rmChars = rmChars!.replacingOccurrences(of: "]", with: "")
-        rmChars = rmChars!.replacingOccurrences(of: "Made from ", with: "")
-        rmChars = rmChars!.replacingOccurrences(of: "and ", with: "")
-        return rmChars!.components(separatedBy: ", ")
+        let ingredients = ingredientsList.substring(from: "ingredients" + "\"" + ":" + "\"", to: ".");
+        
+        guard var rmChars = ingredients?.replacingOccurrences(of: "[\\[\\]\\(\\)]", with: "", options: .regularExpression, range: nil) else {
+                print("Barcode was not found in USDA Database")
+                return [String]()
+            }
+        
+        rmChars = rmChars.replacingOccurrences(of: "Made from ", with: "")
+        rmChars = rmChars.replacingOccurrences(of: "and ", with: "")
+        rmChars = rmChars.replacingOccurrences(of: "and/or ", with: "")
+        return rmChars.components(separatedBy: ", ")
     }
     
 }

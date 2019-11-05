@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         let data = USDARequest()
-        data.getIngredients(barcodeNumber: "00028400157483") { (ingredientsArray) in
+        data.getIngredients(barcodeNumber: " ") { (ingredientsArray) in
             //Can access all the ingredients in here if barcode is specified
             for element in ingredientsArray { //Testing
                 print(element)
