@@ -19,7 +19,7 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//
 //        let format = VisionBarcodeFormat.all
 //        let barcodeOptions = VisionBarcodeDetectorOptions(formats: format)
 //
