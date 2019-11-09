@@ -38,7 +38,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         AllergiesTableView.endUpdates()
         AllergiesTextField.text = ""
         view.endEditing(true)
-        /*
+        
         scannerData.updateData(["Allergies": allergies]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
@@ -46,7 +46,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
                 print("Document successfully updated")
             }
         }
-        */
+        
     }
     
     override func viewDidLoad() {
@@ -87,11 +87,9 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
                         }
                     }
                 }
+                self.DietsTableView.reloadData()  //Values weren't reloading b/c they werent inside closure
+                self.AllergiesTableView.reloadData()
             }
-        }
-        DispatchQueue.main.async {
-            self.DietsTableView.reloadData()
-            self.AllergiesTableView.reloadData()
         }
     }
     
@@ -119,8 +117,8 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     }
 
     @objc func switchChanged(_ sender: UISwitch!) {
-        print("Table switch changed on \(sender.tag)")
-        print("The switch is \(sender.isOn ? "ON" : "OFF")")
+        //print("Table switch changed on \(sender.tag)")
+        //print("The switch is \(sender.isOn ? "ON" : "OFF")")
         
         dietsSelected[sender.tag] = sender.isOn;
         scannerData.updateData([diets[sender.tag]: sender.isOn]) { err in
