@@ -38,7 +38,6 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         AllergiesTableView.endUpdates()
         AllergiesTextField.text = ""
         view.endEditing(true)
-        /*
         scannerData.updateData(["Allergies": allergies]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
@@ -46,7 +45,6 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
                 print("Document successfully updated")
             }
         }
-        */
     }
     
     override func viewDidLoad() {
@@ -87,11 +85,9 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
                         }
                     }
                 }
+                self.DietsTableView.reloadData()
+                self.AllergiesTableView.reloadData()
             }
-        }
-        DispatchQueue.main.async {
-            self.DietsTableView.reloadData()
-            self.AllergiesTableView.reloadData()
         }
     }
     
