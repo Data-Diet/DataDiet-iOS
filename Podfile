@@ -12,6 +12,10 @@ target 'DataDiet' do
   pod 'Firebase/MLVisionBarcodeModel'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'GoogleSignIn'
+  pod 'FacebookCore'
+  pod 'FacebookLogin'
+  pod 'FacebookShare'
 
   target 'DataDietTests' do
     inherit! :search_paths

@@ -9,6 +9,8 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import GoogleSignIn
+import FacebookLogin
 
 class LoginViewController: UIViewController {
     
@@ -20,13 +22,31 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
     
+    @IBOutlet weak var googleButton: GIDSignInButton!
+    
+    let userDefault = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        
+        // Automatically sign in the user.
+        // GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         errorLabel.alpha = 0
+        
+       // let loginButton = FBLoginButton(permissions: [ .publicProfile])
+        //loginButton.center = view.center
+        //view.addSubview(loginButton)
     }
     
+    
+    /*override func viewDidAppear(_ animated: Bool) {
+        if userDefault.bool(forKey: "userSignedIn"){
+            //transitionToHome()
+        }
+    }*/
 
     /*
     // MARK: - Navigation

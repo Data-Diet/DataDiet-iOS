@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */; };
+		076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */; };
+		07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A349632374F32A00C23FF4 /* TestViewController.swift */; };
 		07EAF5BC235E6711008DCA70 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF5BB235E6711008DCA70 /* SignUpViewController.swift */; };
 		07EAF5BE235E695C008DCA70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF5BD235E695C008DCA70 /* LoginViewController.swift */; };
 		07EAF5C1235E710B008DCA70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF5C0235E710B008DCA70 /* Constants.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		07A349632374F32A00C23FF4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		07EAF5BB235E6711008DCA70 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		07EAF5BD235E695C008DCA70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		07EAF5C0235E710B008DCA70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -188,6 +194,9 @@
 				1A55EF6422B888370010681A /* ScannerController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				07EAF5BD235E695C008DCA70 /* LoginViewController.swift */,
+				07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */,
+				07A349632374F32A00C23FF4 /* TestViewController.swift */,
+				076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -225,6 +234,7 @@
 				1A55EF5C22B888370010681A /* Frameworks */,
 				1A55EF5D22B888370010681A /* Resources */,
 				D68B66F1AF3074C5BA8B1FDC /* [CP] Embed Pods Frameworks */,
+				3D09E99B90F904F834565751 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,6 +355,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3D09E99B90F904F834565751 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DataDiet/Pods-DataDiet-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DataDiet/Pods-DataDiet-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DataDiet/Pods-DataDiet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3E2F5EA965B50E6442CBCC6C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,9 +468,12 @@
 				1A110BD122C4700800ED1D0F /* Product.swift in Sources */,
 				07EAF5BE235E695C008DCA70 /* LoginViewController.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
+				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
+				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,
 				07EAF5C1235E710B008DCA70 /* Constants.swift in Sources */,
+				076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,6 +583,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -607,6 +638,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -620,7 +652,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVHDS8H54U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DataDiet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -640,7 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LVHDS8H54U;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DataDiet/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
