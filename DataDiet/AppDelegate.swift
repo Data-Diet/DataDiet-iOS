@@ -9,17 +9,81 @@
 import UIKit
 import CoreData
 import Firebase
+import GoogleSignIn
+import FacebookCore
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     var window: UIWindow?
+    //let userDefault = UserDefaults()
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+        
+        //ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
         return true
+    }
+    
+    @available(iOS 9.0, *)
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+      -> Bool {
+        
+       // if ApplicationDelegate.shared.application(application, open: url, options: options){
+         //   return true
+       // }
+        
+        return GIDSignIn.sharedInstance().handle(url)
+    }
+    
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
+              withError error: Error!) {
+      if let error = error {
+        if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+          print("The user has not signed in before or they have since signed out.")
+        } else {
+          print("\(error.localizedDescription)")
+        }
+        return
+      }
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+      // Perform any operations on signed in user here.
+      let userId = user.userID                  // For client-side use only!
+      let idToken = user.authentication.idToken // Safe to send to the server
+      let fullName = user.profile.name
+      let givenName = user.profile.givenName
+      let familyName = user.profile.familyName
+      let email = user.profile.email
+      // Pass in credentials to Firebase
+        Auth.auth().signIn(with: credential) { (authResult, error) in
+            if let error = error {
+                print("Firebase sign in error")
+                print(error)
+                return
+            }else{
+                self.transitionToHome()
+            }
+      // User is signed in
+            //self.userDefault.set(true, forKey: "userSignedIn")
+            //self.userDefault.synchronize()
+            print(fullName)
+            print("User is signed in with Firebase")
+            
+        }
+    }
+
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -90,6 +154,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    func transitionToHome(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let homeVC =
+        storyboard.instantiateViewController(identifier: Constants.Storyboard.ScannerController) as? ScannerController
+        
+        window?.rootViewController = homeVC
+        window?.makeKeyAndVisible()
+    }
+    
 
 }
 
