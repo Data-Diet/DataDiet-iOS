@@ -13,7 +13,6 @@
 		0D8466132451DB2737F08A39 /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572C3B9D71B1E0D29E10A397 /* Pods_DataDietTests.framework */; };
 		1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */; };
 		1A110BD122C4700800ED1D0F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BD022C4700800ED1D0F /* Product.swift */; };
-		1A3235DC22BDD7ED00A823AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */; };
 		1A55EF6322B888370010681A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6222B888370010681A /* AppDelegate.swift */; };
 		1A55EF6522B888370010681A /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6422B888370010681A /* ScannerController.swift */; };
 		1A55EF6822B888370010681A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A55EF6622B888370010681A /* Main.storyboard */; };
@@ -25,6 +24,7 @@
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
 		CD584052DFF82057B1624AD1 /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A64323EFC455E9A44FF5E2 /* Pods_DataDiet.framework */; };
 		E8E4387C102818538FDE5301 /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104AB6C9191DB23BD4891504 /* Pods_DataDietUITests.framework */; };
+		FE482EA5237763770072F727 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE482EA4237763770072F727 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 		104AB6C9191DB23BD4891504 /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		1A110BD022C4700800ED1D0F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1A55EF5F22B888370010681A /* DataDiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataDiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A55EF6222B888370010681A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A55EF6422B888370010681A /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		5D714E6A85E1616C59334CE0 /* Pods-DataDietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.release.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89C9191AA20571C49C8C1EF1 /* Pods-DataDietTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.release.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC0A73C667CBBD9A1F687A4A /* Pods-DataDiet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.debug.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.debug.xcconfig"; sourceTree = "<group>"; };
+		FE482EA4237763770072F727 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,10 +150,10 @@
 				1AD19E91235A63880004A331 /* View Controllers */,
 				07EAF5BF235E6E5D008DCA70 /* Utilities */,
 				1AD19E92235A63A30004A331 /* Models */,
-				1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */,
 				1A55EF6222B888370010681A /* AppDelegate.swift */,
 				1A55EF6622B888370010681A /* Main.storyboard */,
 				1A55EF6C22B8883A0010681A /* Assets.xcassets */,
+				FE482EA4237763770072F727 /* GoogleService-Info.plist */,
 				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
 				1A55EF7122B8883A0010681A /* Info.plist */,
 				1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */,
@@ -322,7 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A55EF7022B8883A0010681A /* LaunchScreen.storyboard in Resources */,
-				1A3235DC22BDD7ED00A823AC /* GoogleService-Info.plist in Resources */,
+				FE482EA5237763770072F727 /* GoogleService-Info.plist in Resources */,
 				1A55EF6D22B8883A0010681A /* Assets.xcassets in Resources */,
 				1A55EF6822B888370010681A /* Main.storyboard in Resources */,
 			);
