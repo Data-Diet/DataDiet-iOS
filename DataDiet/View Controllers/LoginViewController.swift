@@ -14,15 +14,11 @@ import FacebookLogin
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
     
-    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
-    @IBOutlet weak var errorLabel: UILabel!
-    
-    @IBOutlet weak var loginButton: UIButton!
-    
-    @IBOutlet weak var googleButton: GIDSignInButton!
+    @IBOutlet var errorLabel: UILabel!
     
     let userDefault = UserDefaults.standard
     
@@ -33,7 +29,7 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
         // Automatically sign in the user.
-        // GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         errorLabel.alpha = 0
         
        // let loginButton = FBLoginButton(permissions: [ .publicProfile])
@@ -73,11 +69,9 @@ class LoginViewController: UIViewController {
     }
     
     func transitionToHome(){
-        let homeVC =
-        storyboard?.instantiateViewController(identifier: Constants.Storyboard.ScannerController) as? ScannerController
-        
-        view.window?.rootViewController = homeVC
-        view.window?.makeKeyAndVisible()
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "LoginSuccessSegue", sender: self)
+        }
     }
     
     @IBAction func loginTapped(_ sender: Any) {

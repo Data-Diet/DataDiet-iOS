@@ -13,6 +13,7 @@ import FirebaseAuth
 class ForgotPasswordViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
+    
     @IBOutlet weak var resetButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()

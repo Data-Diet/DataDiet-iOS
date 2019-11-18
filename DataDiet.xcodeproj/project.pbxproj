@@ -10,13 +10,13 @@
 		0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */; };
 		076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */; };
 		07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A349632374F32A00C23FF4 /* TestViewController.swift */; };
-		07EAF5BC235E6711008DCA70 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF5BB235E6711008DCA70 /* SignUpViewController.swift */; };
-		07EAF5BE235E695C008DCA70 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF5BD235E695C008DCA70 /* LoginViewController.swift */; };
-		07EAF5C1235E710B008DCA70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EAF5C0235E710B008DCA70 /* Constants.swift */; };
 		0D8466132451DB2737F08A39 /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572C3B9D71B1E0D29E10A397 /* Pods_DataDietTests.framework */; };
 		1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */; };
 		1A110BD122C4700800ED1D0F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BD022C4700800ED1D0F /* Product.swift */; };
 		1A3235DC22BDD7ED00A823AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */; };
+		1A452D5F238095010063899E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D5E238095010063899E /* LoginViewController.swift */; };
+		1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D602380C3B00063899E /* SignUpViewController.swift */; };
+		1A452D632380D64D0063899E /* USDA_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D622380D64D0063899E /* USDA_API.swift */; };
 		1A55EF6322B888370010681A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6222B888370010681A /* AppDelegate.swift */; };
 		1A55EF6522B888370010681A /* ScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF6422B888370010681A /* ScannerController.swift */; };
 		1A55EF6822B888370010681A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A55EF6622B888370010681A /* Main.storyboard */; };
@@ -51,13 +51,13 @@
 		07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		07A349632374F32A00C23FF4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
-		07EAF5BB235E6711008DCA70 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		07EAF5BD235E695C008DCA70 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		07EAF5C0235E710B008DCA70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		104AB6C9191DB23BD4891504 /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		1A110BD022C4700800ED1D0F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1A452D5E238095010063899E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1A452D602380C3B00063899E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1A452D622380D64D0063899E /* USDA_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDA_API.swift; sourceTree = "<group>"; };
 		1A55EF5F22B888370010681A /* DataDiet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataDiet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A55EF6222B888370010681A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A55EF6422B888370010681A /* ScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerController.swift; sourceTree = "<group>"; };
@@ -183,10 +183,12 @@
 				1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */,
 				1A55EF6422B888370010681A /* ScannerController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
-				07EAF5BD235E695C008DCA70 /* LoginViewController.swift */,
 				07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */,
 				07A349632374F32A00C23FF4 /* TestViewController.swift */,
 				076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */,
+				1A452D5E238095010063899E /* LoginViewController.swift */,
+				1A452D602380C3B00063899E /* SignUpViewController.swift */,
+				1A452D622380D64D0063899E /* USDA_API.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -452,15 +454,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */,
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
 				1A55EF6522B888370010681A /* ScannerController.swift in Sources */,
+				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
 				1A110BD122C4700800ED1D0F /* Product.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
 				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
 				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,
-				07EAF5C1235E710B008DCA70 /* Constants.swift in Sources */,
+				1A452D5F238095010063899E /* LoginViewController.swift in Sources */,
 				076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -548,7 +552,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jhmanalo@icloud.com (9A3VR4G4X9)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -610,7 +614,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: jhmanalo@icloud.com (9A3VR4G4X9)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -639,8 +643,9 @@
 			baseConfigurationReference = CC0A73C667CBBD9A1F687A4A /* Pods-DataDiet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LVHDS8H54U;
 				INFOPLIST_FILE = DataDiet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -648,6 +653,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JeremyManalo.DataDiet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -658,8 +664,9 @@
 			baseConfigurationReference = 4F770612A1364B88D8150F1F /* Pods-DataDiet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = LVHDS8H54U;
 				INFOPLIST_FILE = DataDiet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -667,6 +674,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = JeremyManalo.DataDiet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

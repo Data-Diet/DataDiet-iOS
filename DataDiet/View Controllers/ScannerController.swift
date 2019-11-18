@@ -133,31 +133,31 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
-        print(metadataObjects.count)
+//        print(metadataObjects.count)
 
         if (canScan) {
 
             print(metadataObjects)
             
-            if metadataObjects.count > 1 {
-                let alert = UIAlertController(title: "Alert", message: "Scanning multiple barcodes is a planned implementation, please scan one barcode at a time.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-                      switch action.style{
-                      case .default:
-                            print("default")
-
-                      case .cancel:
-                            print("cancel")
-
-                      case .destructive:
-                            print("destructive")
-
-
-                }}))
-                 DispatchQueue.main.sync {
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }
+//            if metadataObjects.count > 1 {
+//                let alert = UIAlertController(title: "Alert", message: "Scanning multiple barcodes is a planned implementation, please scan one barcode at a time.", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+//                      switch action.style{
+//                      case .default:
+//                            print("default")
+//
+//                      case .cancel:
+//                            print("cancel")
+//
+//                      case .destructive:
+//                            print("destructive")
+//
+//
+//                }}))
+//                 DispatchQueue.main.sync {
+//                    self.present(alert, animated: true, completion: nil)
+//                }
+//            }
             
             if let metadataObject = metadataObjects.first {
                 guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
@@ -183,6 +183,18 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
         canScan = false
         let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + productBarcode + ".json"
         
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        let data = USDARequest()
+        data.getIngredients(barcodeNumber: self.productBarcode) { (ingredientsArray) in
+            //Can access all the ingredients in here if barcode is specified
+            for element in ingredientsArray { //Testing
+                print(element)
+            }
+        }
+
+        
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
         }
@@ -191,8 +203,10 @@ class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegat
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var ProductVC = segue.destination as! ProductViewController
-        ProductVC.productBarcode = self.productBarcode
+        if (segue.identifier == "ProductViewSegue") {
+            var ProductVC = segue.destination as! ProductViewController
+            ProductVC.productBarcode = self.productBarcode
+        }
     }
     
     override var prefersStatusBarHidden: Bool {
