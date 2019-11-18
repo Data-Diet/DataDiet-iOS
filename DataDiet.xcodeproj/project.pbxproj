@@ -24,7 +24,8 @@
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
 		CD584052DFF82057B1624AD1 /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53A64323EFC455E9A44FF5E2 /* Pods_DataDiet.framework */; };
 		E8E4387C102818538FDE5301 /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 104AB6C9191DB23BD4891504 /* Pods_DataDietUITests.framework */; };
-		FE482EA5237763770072F727 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE482EA4237763770072F727 /* GoogleService-Info.plist */; };
+		FEAB76672382AE4D00150B29 /* SharePersonalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAB76662382AE4D00150B29 /* SharePersonalSettings.swift */; };
+		FEAB76692382AEB400150B29 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEAB76682382AEB400150B29 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +75,8 @@
 		5D714E6A85E1616C59334CE0 /* Pods-DataDietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.release.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89C9191AA20571C49C8C1EF1 /* Pods-DataDietTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.release.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.release.xcconfig"; sourceTree = "<group>"; };
 		CC0A73C667CBBD9A1F687A4A /* Pods-DataDiet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.debug.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.debug.xcconfig"; sourceTree = "<group>"; };
-		FE482EA4237763770072F727 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FEAB76662382AE4D00150B29 /* SharePersonalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePersonalSettings.swift; sourceTree = "<group>"; };
+		FEAB76682382AEB400150B29 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,9 +155,9 @@
 				1A55EF6222B888370010681A /* AppDelegate.swift */,
 				1A55EF6622B888370010681A /* Main.storyboard */,
 				1A55EF6C22B8883A0010681A /* Assets.xcassets */,
-				FE482EA4237763770072F727 /* GoogleService-Info.plist */,
 				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
 				1A55EF7122B8883A0010681A /* Info.plist */,
+				FEAB76682382AEB400150B29 /* GoogleService-Info.plist */,
 				1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */,
 				07EAF5C0235E710B008DCA70 /* Constants.swift */,
 			);
@@ -185,6 +187,7 @@
 			children = (
 				07EAF5BB235E6711008DCA70 /* SignUpViewController.swift */,
 				1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */,
+				FEAB76662382AE4D00150B29 /* SharePersonalSettings.swift */,
 				1A55EF6422B888370010681A /* ScannerController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				07EAF5BD235E695C008DCA70 /* LoginViewController.swift */,
@@ -322,7 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A55EF7022B8883A0010681A /* LaunchScreen.storyboard in Resources */,
-				FE482EA5237763770072F727 /* GoogleService-Info.plist in Resources */,
+				FEAB76692382AEB400150B29 /* GoogleService-Info.plist in Resources */,
 				1A55EF6D22B8883A0010681A /* Assets.xcassets in Resources */,
 				1A55EF6822B888370010681A /* Main.storyboard in Resources */,
 			);
@@ -441,6 +444,7 @@
 				1A110BD122C4700800ED1D0F /* Product.swift in Sources */,
 				07EAF5BE235E695C008DCA70 /* LoginViewController.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
+				FEAB76672382AE4D00150B29 /* SharePersonalSettings.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
 				07EAF5C1235E710B008DCA70 /* Constants.swift in Sources */,
