@@ -1,15 +1,16 @@
 //
-//  ScannerSettingsController.swift
+//  PersonalSettingsViewController.swift
 //  DataDiet
 //
-//  Created by Jeremy Manalo on 10/18/19.
+//  Created by Ashley Cline on 11/13/19.
 //  Copyright © 2019 DataDiet. All rights reserved.
 //
+
 import UIKit
 import Firebase
 import FirebaseAuth
 
-class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class PersonalSettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     let diets = ["Vegan", "Vegetarian", "Pescatarian", "Kosher", "Ketogenic", "Paleolithic"]
     var dietsSelected = [Bool](repeating: false, count: 6)
@@ -30,7 +31,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var AllergiesTextField: UITextField!
     @IBOutlet weak var AllergiesTableView: UITableView!
     
-    @IBAction func addAllergy(_ sender: UIButton) {
+    @IBAction func addAllergy(_ sender: Any) {
         allergies.append(AllergiesTextField.text!)
         let indexPath = IndexPath(row: allergies.count - 1, section: 0)
         AllergiesTableView.beginUpdates()
@@ -38,6 +39,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         AllergiesTableView.endUpdates()
         AllergiesTextField.text = ""
         view.endEditing(true)
+        
         scannerData.updateData(["Allergies": allergies]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
@@ -47,28 +49,24 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
-    @IBAction func importSettings(_ sender: Any) {
-        // will check for database changes when importing friend settings
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        DietsTableView?.dataSource = self
-        DietsTableView?.delegate = self
-        DietsTableView?.register(UITableViewCell.self, forCellReuseIdentifier: "DietCell")
+        DietsTableView.dataSource = self
+        DietsTableView.delegate = self
+        DietsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "DietCell")
         
-        AllergiesTableView?.dataSource = self
-        AllergiesTableView?.delegate = self
-        AllergiesTableView?.register(UITableViewCell.self, forCellReuseIdentifier: "AllergyCell")
+        AllergiesTableView.dataSource = self
+        AllergiesTableView.delegate = self
+        AllergiesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "AllergyCell")
         
         db = Firestore.firestore()
         loadSettings()
     }
-    
+
     func loadSettings() {
         if let userID = Auth.auth().currentUser?.uid {
-            scannerData = db.collection("users").document(userID).collection("Settings").document("Scanner")
+            scannerData = db.collection("users").document(userID).collection("Settings").document("Personal")
             scannerData.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let scannerSettings = document.data()
@@ -76,8 +74,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
                         self.dietsSelected[i] = scannerSettings![self.diets[i]] as! Bool
                     }
                     self.allergies = scannerSettings!["Allergies"] as! [String]
-                }
-                else {
+                } else {
                     self.scannerData.setData(self.defaultSettings) { err in
                         if let err = err {
                             print("Error writing document: \(err)")
@@ -86,8 +83,8 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
                         }
                     }
                 }
-                self.DietsTableView?.reloadData()
-                self.AllergiesTableView?.reloadData()
+                self.DietsTableView.reloadData()
+                self.AllergiesTableView.reloadData()
             }
         }
     }
@@ -104,8 +101,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         
             cell.accessoryView = switchView
             return cell
-        }
-        else {
+        } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AllergyCell")!
             cell.textLabel?.text = allergies[indexPath.row]
             return cell
