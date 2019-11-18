@@ -138,12 +138,15 @@
 		1A55EF6122B888370010681A /* DataDiet */ = {
 			isa = PBXGroup;
 			children = (
-				1A3235DB22BDD7ED00A823AC /* GoogleService-Info.plist */,
+				1AD19E91235A63880004A331 /* View Controllers */,
+				07EAF5BF235E6E5D008DCA70 /* Utilities */,
+				1AD19E92235A63A30004A331 /* Models */,
 				1A55EF6222B888370010681A /* AppDelegate.swift */,
 				1AD19E92235A63A30004A331 /* models */,
 				1AD19E91235A63880004A331 /* View Controllers */,
 				1A55EF6622B888370010681A /* Main.storyboard */,
 				1A55EF6C22B8883A0010681A /* Assets.xcassets */,
+				FE482EA4237763770072F727 /* GoogleService-Info.plist */,
 				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
 				1A55EF7122B8883A0010681A /* Info.plist */,
 				1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */,
@@ -327,7 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A55EF7022B8883A0010681A /* LaunchScreen.storyboard in Resources */,
-				1A3235DC22BDD7ED00A823AC /* GoogleService-Info.plist in Resources */,
+				FE482EA5237763770072F727 /* GoogleService-Info.plist in Resources */,
 				1A55EF6D22B8883A0010681A /* Assets.xcassets in Resources */,
 				1A55EF6822B888370010681A /* Main.storyboard in Resources */,
 			);
