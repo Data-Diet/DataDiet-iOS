@@ -156,13 +156,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func transitionToHome(){
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let homeVC =
-        storyboard.instantiateViewController(identifier: Constants.Storyboard.ScannerController) as? ScannerController
-        
-        window?.rootViewController = homeVC
-        window?.makeKeyAndVisible()
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Scanner", bundle: nil)
+        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "ScannerStoryboard") as UIViewController
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = initialViewControlleripad
+        self.window?.makeKeyAndVisible()
     }
     
 

@@ -45,7 +45,7 @@ class SettingsViewController: UIViewController {
             //let navController = UINavigationController(rootViewController: //LoginViewController())
             //navController.navigationBar.barStyle = .black
             //self.present(navController, animated: true, completion: nil)
-            performSegue(withIdentifier: "logOUT", sender: sender)
+            performSegue(withIdentifier: "LogOutSegue", sender: sender)
             print("Logged OUT")
         }catch let signOutError as NSError{
                 print("Error signing out: %@", signOutError)

@@ -6,6 +6,7 @@ target 'DataDiet' do
   use_frameworks!
 
   # Pods for DataDiet
+  pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/MLVision'

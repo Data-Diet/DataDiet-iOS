@@ -140,10 +140,9 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
     }
     
     func transitionToHome(){
-        let homeVC = storyboard?.instantiateViewController(identifier: Constants.Storyboard.ScannerController) as? ScannerController
-        
-        view.window?.rootViewController = homeVC
-        view.window?.makeKeyAndVisible()
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "SignUpSuccessSegue", sender: self)
+        }
     }
     
     @IBAction func signUpTapped(_ sender: Any) {

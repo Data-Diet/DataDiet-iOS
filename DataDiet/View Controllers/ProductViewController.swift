@@ -19,6 +19,8 @@ class ProductViewController: UIViewController {
     
     var product: Product?
     
+    var productBarcode = ""
+    
     //the json file url
     let URL_HEROES = "http://192.168.1.105/json/heroes.php";
     
@@ -28,6 +30,8 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        print("productBarcode: " + self.productBarcode)
         
         //calling the function that will fetch the json
         getJsonFromUrl();
