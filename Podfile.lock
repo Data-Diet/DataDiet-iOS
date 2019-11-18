@@ -53,6 +53,9 @@ PODS:
   - Firebase/MLVisionBarcodeModel (6.2.0):
     - Firebase/CoreOnly
     - FirebaseMLVisionBarcodeModel (~> 0.16.0)
+  - Firebase/Storage (6.2.0):
+    - Firebase/CoreOnly
+    - FirebaseStorage (~> 3.2.1)
   - FirebaseAnalytics (6.0.1):
     - FirebaseCore (~> 6.0)
     - FirebaseInstanceID (~> 4.1)
@@ -104,6 +107,10 @@ PODS:
     - GoogleMobileVision/Detector (~> 1.4)
   - FirebaseMLVisionBarcodeModel (0.16.0):
     - GoogleMobileVision/BarcodeDetector (~> 1.4)
+  - FirebaseStorage (3.2.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - GTMSessionFetcher/Core (~> 1.1)
   - GoogleAPIClientForREST/Core (1.3.9):
     - GTMSessionFetcher (>= 1.1.7)
   - GoogleAPIClientForREST/Vision (1.3.9):
@@ -191,6 +198,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/MLVision
   - Firebase/MLVisionBarcodeModel
+  - Firebase/Storage
   - GoogleSignIn
 
 SPEC REPOS:
@@ -213,6 +221,7 @@ SPEC REPOS:
     - FirebaseMLCommon
     - FirebaseMLVision
     - FirebaseMLVisionBarcodeModel
+    - FirebaseStorage
     - GoogleAPIClientForREST
     - GoogleAppMeasurement
     - GoogleMobileVision
@@ -246,6 +255,7 @@ SPEC CHECKSUMS:
   FirebaseMLCommon: d430756ba2a16bac8fefc81ea416e7f822f052fd
   FirebaseMLVision: 35d0a720334b141d70a55e7e817c1cac23f32285
   FirebaseMLVisionBarcodeModel: 2abf9867e2c9914726c4d0a6936aaf8b75eb7d46
+  FirebaseStorage: 926d41552072b9fee67aa645760f05f87b7ce604
   GoogleAPIClientForREST: 44c7b678cbab11d26a47eab7309d6179b1a61f0c
   GoogleAppMeasurement: 51d8d9ea48f0ca44484d29cfbdef976fbd4fc336
   GoogleMobileVision: 31cfb4319fd0c03d80105680abd9eae9da5e3b47
@@ -260,6 +270,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
 
-PODFILE CHECKSUM: d6c6f379e7d2d90d9eae8a518bd957e8865ea049
+PODFILE CHECKSUM: 98e96951536028c6c5f424575f7b2a66648991dd
 
-COCOAPODS: 1.8.3
+COCOAPODS: 1.8.4

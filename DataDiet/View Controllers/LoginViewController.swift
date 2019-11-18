@@ -14,11 +14,15 @@ import FacebookLogin
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
-    @IBOutlet var errorLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    @IBOutlet weak var googleButton: GIDSignInButton!
     
     let userDefault = UserDefaults.standard
     
@@ -29,7 +33,7 @@ class LoginViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
         
         // Automatically sign in the user.
-         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        // GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         errorLabel.alpha = 0
         
        // let loginButton = FBLoginButton(permissions: [ .publicProfile])
