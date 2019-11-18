@@ -151,7 +151,9 @@
 				1AD19E91235A63880004A331 /* View Controllers */,
 				1AEA31E22382AFB500E5EECE /* Storyboards */,
 				1A55EF6C22B8883A0010681A /* Assets.xcassets */,
+				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
 				1A55EF7122B8883A0010681A /* Info.plist */,
+				FEAB76682382AEB400150B29 /* GoogleService-Info.plist */,
 				1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */,
 				1AEA31DD238295B900E5EECE /* GoogleService-Info.plist */,
 				1A70FF1123825BE500932997 /* Constants.swift */,
@@ -181,7 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */,
-				1A55EF6422B888370010681A /* ScannerViewController.swift */,
+				FEAB76662382AE4D00150B29 /* SharePersonalSettings.swift */,
+				1A55EF6422B888370010681A /* ScannerController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */,
 				07A349632374F32A00C23FF4 /* TestViewController.swift */,
