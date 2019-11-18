@@ -27,6 +27,9 @@
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
 		1AEA31DE238295B900E5EECE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31DD238295B900E5EECE /* GoogleService-Info.plist */; };
 		1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA31DF2382994B00E5EECE /* AccountViewController.swift */; };
+		1AEA31E42382B16500E5EECE /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E32382B16500E5EECE /* Scanner.storyboard */; };
+		1AEA31E62382B3B800E5EECE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E52382B3B800E5EECE /* Settings.storyboard */; };
+		1AEA31E82382B4C800E5EECE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E72382B4C800E5EECE /* Login.storyboard */; };
 		AAD3323AFFFAB623D82076E2 /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE6EAD0DDF0175FA4F1F3DA /* Pods_DataDietUITests.framework */; };
 		B8011E3E795C68783C44943C /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080D9FA82BEEA7D8FE7B3E45 /* Pods_DataDiet.framework */; };
 		E48A3EC793C1210750347A65 /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A66CA18B555DD8D75F5EBA0 /* Pods_DataDietTests.framework */; };
@@ -81,6 +84,9 @@
 		1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSettingsController.swift; sourceTree = "<group>"; };
 		1AEA31DD238295B900E5EECE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1AEA31DF2382994B00E5EECE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		1AEA31E32382B16500E5EECE /* Scanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
+		1AEA31E52382B3B800E5EECE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		1AEA31E72382B4C800E5EECE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		5EE6EAD0DDF0175FA4F1F3DA /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		983491A2262E69CA7C8D0F3A /* Pods-DataDiet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.release.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.release.xcconfig"; sourceTree = "<group>"; };
 		AEB2244F053F66E58D6610D1 /* Pods-DataDietTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.debug.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,9 +149,8 @@
 				1A55EF6222B888370010681A /* AppDelegate.swift */,
 				1AD19E92235A63A30004A331 /* models */,
 				1AD19E91235A63880004A331 /* View Controllers */,
-				1A55EF6622B888370010681A /* Main.storyboard */,
+				1AEA31E22382AFB500E5EECE /* Storyboards */,
 				1A55EF6C22B8883A0010681A /* Assets.xcassets */,
-				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
 				1A55EF7122B8883A0010681A /* Info.plist */,
 				1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */,
 				1AEA31DD238295B900E5EECE /* GoogleService-Info.plist */,
@@ -195,6 +200,18 @@
 				1A110BD022C4700800ED1D0F /* Product.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		1AEA31E22382AFB500E5EECE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
+				1A55EF6622B888370010681A /* Main.storyboard */,
+				1AEA31E32382B16500E5EECE /* Scanner.storyboard */,
+				1AEA31E52382B3B800E5EECE /* Settings.storyboard */,
+				1AEA31E72382B4C800E5EECE /* Login.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		31F2023239936BEDD991BB79 /* Frameworks */ = {
@@ -332,7 +349,10 @@
 				1A55EF7022B8883A0010681A /* LaunchScreen.storyboard in Resources */,
 				1AEA31DE238295B900E5EECE /* GoogleService-Info.plist in Resources */,
 				1A55EF6D22B8883A0010681A /* Assets.xcassets in Resources */,
+				1AEA31E62382B3B800E5EECE /* Settings.storyboard in Resources */,
+				1AEA31E42382B16500E5EECE /* Scanner.storyboard in Resources */,
 				1A55EF6822B888370010681A /* Main.storyboard in Resources */,
+				1AEA31E82382B4C800E5EECE /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

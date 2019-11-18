@@ -156,7 +156,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     func transitionToHome(){
-        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Scanner", bundle: nil)
         let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "ScannerStoryboard") as UIViewController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = initialViewControlleripad
