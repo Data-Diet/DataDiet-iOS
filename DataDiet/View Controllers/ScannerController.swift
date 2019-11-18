@@ -1,24 +1,70 @@
 import AVFoundation
 import UIKit
+import Firebase
 
-class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class ScannerController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
     @IBOutlet var videoPreview: UIView!
-    
     @IBOutlet var ScanButton: UIButton!
     @IBOutlet var ImageGalleryButton: UIButton!
     @IBOutlet var HistoryButton: UIButton!
     @IBOutlet var SettingsButton: UIButton!
     
     var canScan = false
+    var productBarcode = ""
     
     let SegueIdProductJSON = "ProductView"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//
+//        let format = VisionBarcodeFormat.all
+//        let barcodeOptions = VisionBarcodeDetectorOptions(formats: format)
+//
+//        var vision = Vision.vision()
+//
+//        let barcodeDetector = vision.barcodeDetector(options: barcodeOptions)
+//
+//        func imageOrientation(
+//            deviceOrientation: UIDeviceOrientation,
+//            cameraPosition: AVCaptureDevice.Position
+//            ) -> VisionDetectorImageOrientation {
+//            switch deviceOrientation {
+//                case .portrait:
+//                    return cameraPosition == .front ? .leftTop : .rightTop
+//                case .landscapeLeft:
+//                    return cameraPosition == .front ? .bottomLeft : .topLeft
+//                case .portraitUpsideDown:
+//                    return cameraPosition == .front ? .rightBottom : .leftBottom
+//                case .landscapeRight:
+//                    return cameraPosition == .front ? .topRight : .bottomRight
+//                case .faceDown, .faceUp, .unknown:
+//                    return .leftTop
+//            }
+//        }
+//
+//        let cameraPosition = AVCaptureDevice.Position.back  // Set to the capture device you used.
+//        let metadata = VisionImageMetadata()
+//        metadata.orientation = imageOrientation(
+//            deviceOrientation: UIDevice.current.orientation,
+//            cameraPosition: cameraPosition
+//        )
+//
+//        let image = VisionImage(buffer: CMSampleBuffer.self as! CMSampleBuffer)
+//        image.metadata = metadata
+//
+//        barcodeDetector.detect(in: image) { features, error in
+//          guard error == nil, let features = features, !features.isEmpty else {
+//            // ...
+//            return
+//          }
+//
+//          // ...
+//        }
+
+                
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
         
@@ -87,11 +133,31 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
-        print("in Metadata Output")
-        
+//        print(metadataObjects.count)
+
         if (canScan) {
-            captureSession.stopRunning()
+
+            print(metadataObjects)
             
+//            if metadataObjects.count > 1 {
+//                let alert = UIAlertController(title: "Alert", message: "Scanning multiple barcodes is a planned implementation, please scan one barcode at a time.", preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+//                      switch action.style{
+//                      case .default:
+//                            print("default")
+//
+//                      case .cancel:
+//                            print("cancel")
+//
+//                      case .destructive:
+//                            print("destructive")
+//
+//
+//                }}))
+//                 DispatchQueue.main.sync {
+//                    self.present(alert, animated: true, completion: nil)
+//                }
+//            }
             
             if let metadataObject = metadataObjects.first {
                 guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
@@ -99,7 +165,7 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
                 AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
                 found(code: stringValue)
             }
-            
+
             if metadataObjects.isEmpty {
                 captureSession.startRunning()
                 print("No Barcodes Found")
@@ -112,26 +178,34 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     }
     
     func found(code: String) {
-        if (canScan) {
-            
-            
-            let barcodeNumber = code.suffix(code.count - 1)
-            print(barcodeNumber)
-            
-            let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + barcodeNumber + ".json"
-            
-            let item = Product(URL: productJSONURL)
-            
-            performSegue(withIdentifier: SegueIdProductJSON, sender: item)
-            
-            DispatchQueue.main.async {
-                //calling another function after fetching the json
-                //it will show the names to label
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "ProductView") as! ProductViewController
-                self.present(newViewController, animated: true, completion: nil)
-            }
+        self.productBarcode = String(code.suffix(code.count - 1))
         
+        canScan = false
+        let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + productBarcode + ".json"
+        
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        let data = USDARequest()
+        data.getIngredients(barcodeNumber: self.productBarcode) { (ingredientsArray) in
+            //Can access all the ingredients in here if barcode is specified
+            for element in ingredientsArray { //Testing
+                print(element)
+            }
+        }
+
+        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+        }
+        
+        captureSession.startRunning()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ProductViewSegue") {
+            var ProductVC = segue.destination as! ProductViewController
+            ProductVC.productBarcode = self.productBarcode
         }
     }
     
@@ -143,7 +217,11 @@ class ViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
         return .portrait
     }
     
-    @IBAction func OnScanButtonTouchUpInside(_ sender: Any) {
+    @IBAction func ScanButtonTouchUpInside(_ sender: Any) {
+        canScan = false
+        print(canScan)
+    }
+    @IBAction func ScanButtonTouchDownInside(_ sender: Any) {
         canScan = true
         print(canScan)
     }
