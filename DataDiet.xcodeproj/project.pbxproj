@@ -30,6 +30,7 @@
 		1AEA31E42382B16500E5EECE /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E32382B16500E5EECE /* Scanner.storyboard */; };
 		1AEA31E62382B3B800E5EECE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E52382B3B800E5EECE /* Settings.storyboard */; };
 		1AEA31E82382B4C800E5EECE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E72382B4C800E5EECE /* Login.storyboard */; };
+		1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */; };
 		AAD3323AFFFAB623D82076E2 /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE6EAD0DDF0175FA4F1F3DA /* Pods_DataDietUITests.framework */; };
 		B8011E3E795C68783C44943C /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 080D9FA82BEEA7D8FE7B3E45 /* Pods_DataDiet.framework */; };
 		E48A3EC793C1210750347A65 /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A66CA18B555DD8D75F5EBA0 /* Pods_DataDietTests.framework */; };
@@ -87,6 +88,7 @@
 		1AEA31E32382B16500E5EECE /* Scanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		1AEA31E52382B3B800E5EECE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		1AEA31E72382B4C800E5EECE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePersonalSettings.swift; sourceTree = "<group>"; };
 		5EE6EAD0DDF0175FA4F1F3DA /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		983491A2262E69CA7C8D0F3A /* Pods-DataDiet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.release.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.release.xcconfig"; sourceTree = "<group>"; };
 		AEB2244F053F66E58D6610D1 /* Pods-DataDietTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.debug.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,9 +153,7 @@
 				1AD19E91235A63880004A331 /* View Controllers */,
 				1AEA31E22382AFB500E5EECE /* Storyboards */,
 				1A55EF6C22B8883A0010681A /* Assets.xcassets */,
-				1A55EF6E22B8883A0010681A /* LaunchScreen.storyboard */,
 				1A55EF7122B8883A0010681A /* Info.plist */,
-				FEAB76682382AEB400150B29 /* GoogleService-Info.plist */,
 				1A55EF6922B888370010681A /* DataDiet.xcdatamodeld */,
 				1AEA31DD238295B900E5EECE /* GoogleService-Info.plist */,
 				1A70FF1123825BE500932997 /* Constants.swift */,
@@ -183,11 +183,11 @@
 			isa = PBXGroup;
 			children = (
 				1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */,
-				FEAB76662382AE4D00150B29 /* SharePersonalSettings.swift */,
-				1A55EF6422B888370010681A /* ScannerController.swift */,
+				1A55EF6422B888370010681A /* ScannerViewController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */,
 				07A349632374F32A00C23FF4 /* TestViewController.swift */,
+				1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */,
 				076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */,
 				1A452D5E238095010063899E /* LoginViewController.swift */,
 				1A452D602380C3B00063899E /* SignUpViewController.swift */,
@@ -484,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */,
+				1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */,
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
 				1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */,
 				1A55EF6522B888370010681A /* ScannerViewController.swift in Sources */,
