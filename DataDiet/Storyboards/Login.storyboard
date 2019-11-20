@@ -11,17 +11,16 @@
         <!--Scanner-->
         <scene sceneID="I0I-kF-908">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i2o-pQ-TrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Scanner" id="WvS-RA-2dJ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="J69-py-68j"/>
                 </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i2o-pQ-TrP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6312" y="-305"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="zQz-dD-cQT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wl3-J0-s2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Login View Controller" modalPresentationStyle="fullScreen" id="FVB-3h-AjJ" customClass="LoginViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0QP-hn-j25">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -32,10 +31,10 @@
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DataDiet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAF-Af-sMe">
                                 <rect key="frame" x="103.5" y="94" width="207" height="45"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="32"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleAppIcon " translatesAutoresizingMaskIntoConstraints="NO" id="bon-cq-K21">
@@ -49,7 +48,7 @@
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username or Email" textAlignment="natural" adjustsFontSizeToFit="NO" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="uPP-tB-yhn">
@@ -83,10 +82,10 @@
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Forgot Password?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="6tD-2K-hE4" kind="show" id="2oB-nK-Se7"/>
+                                    <segue destination="6tD-2K-hE4" kind="presentation" id="2oB-nK-Se7"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NbK-8W-XrV">
@@ -97,7 +96,7 @@
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
-                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZr-mc-EAw">
@@ -120,7 +119,7 @@
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="New User?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <segue destination="jlc-fY-0S1" kind="presentation" id="xwm-8V-fy3"/>
@@ -165,13 +164,13 @@
                         <segue destination="WvS-RA-2dJ" kind="show" identifier="LoginSuccessSegue" id="0Em-Fh-faf"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wl3-J0-s2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5675" y="-1"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="m3c-cS-aIH">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iwC-8Y-tzX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="pageSheet" id="jlc-fY-0S1" customClass="SignUpViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bAX-Dg-qrQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -258,14 +257,14 @@
                         <segue destination="WvS-RA-2dJ" kind="show" identifier="SignUpSuccessSegue" id="LFE-DO-Rvh"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwC-8Y-tzX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5674" y="690"/>
         </scene>
         <!--Forgot Password View Controller-->
         <scene sceneID="2qz-z8-hq4">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LmM-XS-kwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController id="6tD-2K-hE4" customClass="ForgotPasswordViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="formSheet" id="6tD-2K-hE4" customClass="ForgotPasswordViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uIN-An-zN4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,6 +323,7 @@
                         <outlet property="resetButton" destination="t2V-QS-ccn" id="Fqc-nW-g6Y"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LmM-XS-kwZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6716" y="350"/>
         </scene>

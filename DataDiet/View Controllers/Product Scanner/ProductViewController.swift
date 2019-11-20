@@ -13,7 +13,7 @@ class ProductViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var productImage: UIImageView!
     @IBOutlet var productTitle: UILabel!
-    @IBOutlet var productNav: UINavigationBar!
+    @IBOutlet var Navbar: UINavigationBar!
     
     let SegueIdProductJSON = "productJSON"
     
@@ -30,6 +30,10 @@ class ProductViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let IS = ImageSetter()
+        
+        IS.SetBarImage(Navbar: Navbar)
         
         print("productBarcode: " + self.productBarcode)
         

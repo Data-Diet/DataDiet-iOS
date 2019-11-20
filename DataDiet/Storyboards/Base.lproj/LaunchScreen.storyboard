@@ -20,20 +20,20 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CircleAppIcon " translatesAutoresizingMaskIntoConstraints="NO" id="hZj-IY-MFi">
-                                <rect key="frame" x="114" y="336" width="186" height="224"/>
+                                <rect key="frame" x="82" y="323" width="250" height="250"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hZj-IY-MFi" firstAttribute="height" secondItem="rWo-45-Cco" secondAttribute="height" multiplier="0.25" id="011-gA-kJg"/>
-                            <constraint firstItem="hZj-IY-MFi" firstAttribute="width" secondItem="rWo-45-Cco" secondAttribute="width" multiplier="0.45" id="AzF-jf-DQY"/>
-                            <constraint firstItem="hZj-IY-MFi" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FeW-lu-YZ9"/>
+                            <constraint firstItem="hZj-IY-MFi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="08R-w4-JAO"/>
                             <constraint firstItem="rWo-45-Cco" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Mqv-aL-zWf"/>
                             <constraint firstItem="rWo-45-Cco" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="OLr-Ro-YtE"/>
+                            <constraint firstItem="hZj-IY-MFi" firstAttribute="centerX" secondItem="rWo-45-Cco" secondAttribute="centerX" id="WHR-GI-6Oq"/>
+                            <constraint firstItem="hZj-IY-MFi" firstAttribute="centerY" secondItem="rWo-45-Cco" secondAttribute="centerY" id="Wbp-El-jA1"/>
                             <constraint firstAttribute="bottom" secondItem="rWo-45-Cco" secondAttribute="bottom" id="Z3z-GL-h6U"/>
                             <constraint firstAttribute="trailing" secondItem="rWo-45-Cco" secondAttribute="trailing" id="eg2-T8-WSt"/>
-                            <constraint firstItem="hZj-IY-MFi" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ybd-gI-xXk"/>
+                            <constraint firstItem="hZj-IY-MFi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="279" id="lUx-Pq-1as"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

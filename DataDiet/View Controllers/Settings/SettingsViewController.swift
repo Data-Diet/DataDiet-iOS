@@ -14,8 +14,17 @@ import GoogleSignIn
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var logOutButton: UIButton!
+    
+    @IBOutlet var Navbar: UINavigationBar!
+    
+    @IBOutlet var Toolbar: UIToolbar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let IS = ImageSetter()
+        
+        IS.SetBarImage(Navbar: Navbar)
+        IS.SetBarImage(Toolbar: Toolbar)
 
         // Do any additional setup after loading the view.
     }

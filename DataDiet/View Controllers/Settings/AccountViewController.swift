@@ -20,11 +20,23 @@ class AccountViewController: UIViewController {
     @IBOutlet weak var UsernameLabel: UILabel!
     @IBOutlet weak var ProfilePhoto: UIImageView!
     
+    @IBOutlet var Navbar: UINavigationBar!
+    @IBOutlet var Toolbar: UIToolbar!
+    
+    
     @IBAction func changeProfilePhoto(_ sender: Any) {
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let IS = ImageSetter()
+        
+        if (Navbar != nil) {
+            IS.SetBarImage(Navbar: Navbar)
+            IS.SetBarImage(Toolbar: Toolbar)
+        }
+        
         ProfilePhoto?.layer.masksToBounds = true
         ProfilePhoto?.layer.cornerRadius = ProfilePhoto.bounds.width / 2
         db = Firestore.firestore()

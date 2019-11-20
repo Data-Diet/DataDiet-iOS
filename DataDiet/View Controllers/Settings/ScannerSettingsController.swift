@@ -30,6 +30,8 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var AllergiesTextField: UITextField!
     @IBOutlet weak var AllergiesTableView: UITableView!
     
+    @IBOutlet var Navbar: UINavigationBar!
+    @IBOutlet var Toolbar: UIToolbar!
     @IBAction func addAllergy(_ sender: UIButton) {
         allergies.append(AllergiesTextField.text!)
         let indexPath = IndexPath(row: allergies.count - 1, section: 0)
@@ -46,6 +48,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
             }
         }
     }
+
     
     @IBAction func importSettings(_ sender: Any) {
         // will check for database changes when importing friend settings
@@ -53,6 +56,11 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let IS = ImageSetter()
+        
+        IS.SetBarImage(Navbar: Navbar)
+        IS.SetBarImage(Toolbar: Toolbar)
 
         DietsTableView?.dataSource = self
         DietsTableView?.delegate = self

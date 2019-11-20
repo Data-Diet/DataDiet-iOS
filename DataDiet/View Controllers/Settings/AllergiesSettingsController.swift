@@ -18,7 +18,7 @@ class AllergiesSettingsController: UIViewController, UITextFieldDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AllergyCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllergyCell")!
         cell.textLabel?.text = allergies[indexPath.row]
         print(allergies)
         return cell
