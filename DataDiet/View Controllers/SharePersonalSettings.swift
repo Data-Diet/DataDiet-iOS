@@ -36,6 +36,7 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     var dietsSelected1 = [Bool](repeating: false, count: 6)
     var allergies1 = [String]()
     
+
     @IBOutlet weak var FriendsTableView: UITableView!
     
     override func viewDidLoad() {
