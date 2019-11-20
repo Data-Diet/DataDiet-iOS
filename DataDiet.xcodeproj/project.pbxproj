@@ -12,7 +12,7 @@
 		07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A349632374F32A00C23FF4 /* TestViewController.swift */; };
 		0E88DFABD1EBAF25EA41E263 /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27B2FDA11E48F38A014B5FE /* Pods_DataDiet.framework */; };
 		1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */; };
-		1A110BD122C4700800ED1D0F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BD022C4700800ED1D0F /* Product.swift */; };
+		1A1428122385D41E009EFF6F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1428112385D41E009EFF6F /* Product.swift */; };
 		1A452D5F238095010063899E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D5E238095010063899E /* LoginViewController.swift */; };
 		1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D602380C3B00063899E /* SignUpViewController.swift */; };
 		1A452D632380D64D0063899E /* USDA_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D622380D64D0063899E /* USDA_API.swift */; };
@@ -65,7 +65,7 @@
 		07AEF68FE83F6276A1FF1385 /* Pods-DataDietUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.debug.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0838E4C52258FAD9037A317E /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		1A110BD022C4700800ED1D0F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		1A1428112385D41E009EFF6F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		1A452D5E238095010063899E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A452D602380C3B00063899E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1A452D622380D64D0063899E /* USDA_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDA_API.swift; sourceTree = "<group>"; };
@@ -143,6 +143,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1A1428132385D425009EFF6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A1428112385D41E009EFF6F /* Product.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1A55EF5622B888370010681A = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +176,8 @@
 		1A55EF6122B888370010681A /* DataDiet */ = {
 			isa = PBXGroup;
 			children = (
+				1A1428132385D425009EFF6F /* Models */,
 				1A55EF6222B888370010681A /* AppDelegate.swift */,
-				1AD19E92235A63A30004A331 /* models */,
 				1AD19E91235A63880004A331 /* View Controllers */,
 				1AEA322223855AA100E5EECE /* Modules */,
 				1AEA31E22382AFB500E5EECE /* Storyboards */,
@@ -209,14 +217,6 @@
 				1AEA321E2385596D00E5EECE /* Product Scanner */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		1AD19E92235A63A30004A331 /* models */ = {
-			isa = PBXGroup;
-			children = (
-				1A110BD022C4700800ED1D0F /* Product.swift */,
-			);
-			path = models;
 			sourceTree = "<group>";
 		};
 		1AEA31E22382AFB500E5EECE /* Storyboards */ = {
@@ -539,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A1428122385D41E009EFF6F /* Product.swift in Sources */,
 				1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */,
 				1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */,
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
@@ -546,7 +547,6 @@
 				1AEA322523855AEB00E5EECE /* ImageSetter.swift in Sources */,
 				1A55EF6522B888370010681A /* ScannerViewController.swift in Sources */,
 				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
-				1A110BD122C4700800ED1D0F /* Product.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
 				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,
