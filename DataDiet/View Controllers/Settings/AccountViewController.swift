@@ -10,10 +10,12 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class AccountViewController: UIViewController {
+class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var db: Firestore!
-    
+    var uid: String!
+    var userData: DocumentReference!
+    var image: UIImage? = nil
     
     @IBOutlet weak var NameLabel: UILabel!
     @IBOutlet weak var EmailLabel: UILabel!
@@ -23,9 +25,60 @@ class AccountViewController: UIViewController {
     @IBOutlet var Navbar: UINavigationBar!
     @IBOutlet var Toolbar: UIToolbar!
     
-    
+
     @IBAction func changeProfilePhoto(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]){
+        if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
+            image = imageSelected
+            ProfilePhoto?.image = imageSelected
+        }
+        if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            image = imageOriginal
+            ProfilePhoto?.image = imageOriginal
+        }
+        updateData()
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func updateData() {
+        guard let imageSelected = self.image else {
+            return
+        }
+        guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
+            return
+        }
+        
+        let storageRef = Storage.storage().reference(forURL: "gs://datadiet-1329a.appspot.com")
+        let storageProfileRef = storageRef.child("profile_pics").child(uid)
+        let metadata = StorageMetadata()
+        metadata.contentType = "image/jpg"
+        storageProfileRef.putData(imageData, metadata: metadata, completion:
+        { (storageMetaData, error) in
+        if error != nil {
+            return
+        }
+            storageProfileRef.downloadURL { (url, error) in
+                if let metaImageUrl = url?.absoluteString{
+                    self.userData.updateData(["profilePicURL": metaImageUrl]) { err in
+                        if let err = err {
+                            print("Error updating document: \(err)")
+                        } else {
+                            print("Document successfully updated")
+                        }
+                    }
+                }
+            }
+        } )
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +98,10 @@ class AccountViewController: UIViewController {
     
     func loadInfo() {
         if let userID = Auth.auth().currentUser?.uid {
-            let scannerData = db.collection("users").document(userID)
-            scannerData.getDocument { (document, error) in
+            userData = db.collection("users").document(userID)
+            userData.getDocument { (document, error) in
                 if let document = document, document.exists {
+                    self.uid = userID
                     let accountInfo = document.data()
                     
                     let firstName = (accountInfo!["first_name"] as! String)

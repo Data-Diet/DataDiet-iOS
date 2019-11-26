@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6i-J4-Xys">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c6i-J4-Xys">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -210,7 +210,7 @@
                                     <color key="titleColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeProfilePhoto:" destination="jfO-p1-poQ" eventType="touchUpInside" id="kDQ-a7-oTY"/>
+                                    <action selector="changeProfilePhoto:" destination="jfO-p1-poQ" eventType="touchUpInside" id="Yc9-fq-chI"/>
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uo-vw-dhs">
@@ -291,7 +291,7 @@
                                                     <color key="titleColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="TBU-9H-pdy" kind="show" id="Nm9-tZ-iRZ"/>
+                                                    <segue destination="a2D-IN-zLp" kind="show" id="tLk-U7-Ez3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -318,7 +318,7 @@
                                                     <color key="titleColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="gfY-B2-JvS" kind="show" id="dmB-hK-VcX"/>
+                                                    <segue destination="PHg-Nm-PnW" kind="show" id="ZSe-Kv-5Fp"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -807,67 +807,10 @@
             </objects>
             <point key="canvasLocation" x="9368" y="-1"/>
         </scene>
-        <!--Email View Controller Scene-->
-        <scene sceneID="bst-gW-VFY">
-            <objects>
-                <viewController title="Email View Controller Scene" modalPresentationStyle="fullScreen" id="TBU-9H-pdy" customClass="AccountViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L5h-d6-2Dz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YML-nC-RF5">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
-                                <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22v-HE-XAn">
-                                <rect key="frame" x="148" y="35.5" width="118" height="41"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xQR-fj-sMF">
-                                <rect key="frame" x="15" y="43.5" width="15" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="4E5-nJ-b83"/>
-                                    <constraint firstAttribute="height" constant="25" id="jJX-cw-t7l"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system"/>
-                                <connections>
-                                    <segue destination="jfO-p1-poQ" kind="show" id="nOk-WO-0Hv"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="22v-HE-XAn" firstAttribute="height" secondItem="YML-nC-RF5" secondAttribute="height" multiplier="0.5" id="1Mi-X0-aJ1"/>
-                            <constraint firstItem="22v-HE-XAn" firstAttribute="centerX" secondItem="L5h-d6-2Dz" secondAttribute="centerX" id="3Ac-p7-UQJ"/>
-                            <constraint firstItem="22v-HE-XAn" firstAttribute="centerY" secondItem="YML-nC-RF5" secondAttribute="centerY" constant="15" id="7qz-fE-w5x"/>
-                            <constraint firstItem="xQR-fj-sMF" firstAttribute="leading" secondItem="dxT-lI-shr" secondAttribute="leading" constant="15" id="9qY-am-XU8"/>
-                            <constraint firstItem="xQR-fj-sMF" firstAttribute="centerY" secondItem="22v-HE-XAn" secondAttribute="centerY" id="H89-Ax-b2N"/>
-                            <constraint firstItem="YML-nC-RF5" firstAttribute="leading" secondItem="dxT-lI-shr" secondAttribute="leading" id="LhL-z9-G4x"/>
-                            <constraint firstItem="YML-nC-RF5" firstAttribute="trailing" secondItem="dxT-lI-shr" secondAttribute="trailing" id="O1n-Im-Lxe"/>
-                            <constraint firstItem="YML-nC-RF5" firstAttribute="height" secondItem="dxT-lI-shr" secondAttribute="height" multiplier="0.1" id="m2R-RC-QEY"/>
-                            <constraint firstItem="YML-nC-RF5" firstAttribute="top" secondItem="L5h-d6-2Dz" secondAttribute="top" id="pbe-0w-8TO"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="dxT-lI-shr"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="w3q-XD-urb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="elL-AH-qhK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7886" y="1438"/>
-        </scene>
         <!--Name View Controller Scene-->
         <scene sceneID="sYB-aU-wSe">
             <objects>
-                <viewController title="Name View Controller Scene" modalPresentationStyle="fullScreen" id="1Tj-eY-9bI" customClass="AccountViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Name View Controller Scene" modalPresentationStyle="fullScreen" id="1Tj-eY-9bI" customClass="EditNameViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Juv-wE-tSi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -900,83 +843,103 @@
                                     <segue destination="jfO-p1-poQ" kind="show" id="cbI-8s-Xov"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1dp-mp-qVH">
+                                <rect key="frame" x="31" y="117" width="352" height="122.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1uY-Th-mf7">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="46"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYx-Fk-nKS">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="46"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vhD-Ii-IEl">
+                                                <rect key="frame" x="88" y="0.0" width="264" height="46"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VYx-Fk-nKS" firstAttribute="width" secondItem="1uY-Th-mf7" secondAttribute="width" multiplier="0.25" id="3Fy-vr-yqU"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRY-ns-FAO">
+                                        <rect key="frame" x="0.0" y="76" width="352" height="46.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cif-zc-WDd">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="46.5"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hCp-LW-wFS">
+                                                <rect key="frame" x="88" y="0.0" width="264" height="46.5"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cif-zc-WDd" firstAttribute="width" secondItem="VYx-Fk-nKS" secondAttribute="width" id="VfC-rw-VUD"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Both fields are required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o2r-IC-3EG">
+                                <rect key="frame" x="123.5" y="254.5" width="167" height="13"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8w-dV-Ztp">
+                                <rect key="frame" x="114" y="287.5" width="186" height="41"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDoneTapped:" destination="1Tj-eY-9bI" eventType="touchUpInside" id="pp5-Ws-E55"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1dp-mp-qVH" firstAttribute="height" secondItem="EJj-pg-1uS" secondAttribute="height" multiplier="0.15" id="0nK-xR-Ppq"/>
+                            <constraint firstItem="o2r-IC-3EG" firstAttribute="centerX" secondItem="Juv-wE-tSi" secondAttribute="centerX" id="1mI-tN-hgI"/>
                             <constraint firstItem="x4x-vi-KPP" firstAttribute="leading" secondItem="EJj-pg-1uS" secondAttribute="leading" id="3zD-Yn-LzG"/>
+                            <constraint firstItem="1dp-mp-qVH" firstAttribute="width" secondItem="EJj-pg-1uS" secondAttribute="width" multiplier="0.85" id="G6N-KA-AUZ"/>
                             <constraint firstItem="x4x-vi-KPP" firstAttribute="trailing" secondItem="EJj-pg-1uS" secondAttribute="trailing" id="IiW-LF-hwM"/>
                             <constraint firstItem="5hB-Df-WIF" firstAttribute="height" secondItem="x4x-vi-KPP" secondAttribute="height" multiplier="0.5" id="IzW-kd-fkw"/>
                             <constraint firstItem="ai4-aN-qrz" firstAttribute="leading" secondItem="EJj-pg-1uS" secondAttribute="leading" constant="15" id="QSR-3n-BJE"/>
+                            <constraint firstItem="o2r-IC-3EG" firstAttribute="top" secondItem="1dp-mp-qVH" secondAttribute="bottom" constant="15" id="UCM-yB-6RN"/>
+                            <constraint firstItem="e8w-dV-Ztp" firstAttribute="top" secondItem="o2r-IC-3EG" secondAttribute="bottom" constant="20" id="X0G-la-baQ"/>
+                            <constraint firstItem="1dp-mp-qVH" firstAttribute="top" secondItem="x4x-vi-KPP" secondAttribute="bottom" constant="35" id="b6i-T5-UKP"/>
+                            <constraint firstItem="e8w-dV-Ztp" firstAttribute="centerX" secondItem="Juv-wE-tSi" secondAttribute="centerX" id="css-wL-F7i"/>
                             <constraint firstItem="x4x-vi-KPP" firstAttribute="height" secondItem="EJj-pg-1uS" secondAttribute="height" multiplier="0.1" id="d8N-pE-PMc"/>
+                            <constraint firstItem="e8w-dV-Ztp" firstAttribute="width" secondItem="EJj-pg-1uS" secondAttribute="width" multiplier="0.45" id="e51-Pp-R0g"/>
+                            <constraint firstItem="1dp-mp-qVH" firstAttribute="centerX" secondItem="Juv-wE-tSi" secondAttribute="centerX" id="mEJ-VV-Ypg"/>
                             <constraint firstItem="ai4-aN-qrz" firstAttribute="centerY" secondItem="5hB-Df-WIF" secondAttribute="centerY" id="n4H-OK-g4v"/>
                             <constraint firstItem="5hB-Df-WIF" firstAttribute="centerY" secondItem="x4x-vi-KPP" secondAttribute="centerY" constant="15" id="okn-v2-5fd"/>
+                            <constraint firstItem="e8w-dV-Ztp" firstAttribute="height" secondItem="EJj-pg-1uS" secondAttribute="height" multiplier="0.05" id="tSo-kJ-fX0"/>
                             <constraint firstItem="5hB-Df-WIF" firstAttribute="centerX" secondItem="Juv-wE-tSi" secondAttribute="centerX" id="w8q-6h-Hzp"/>
                             <constraint firstItem="x4x-vi-KPP" firstAttribute="top" secondItem="Juv-wE-tSi" secondAttribute="top" id="zhw-Pw-qzw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EJj-pg-1uS"/>
                     </view>
                     <navigationItem key="navigationItem" id="lxS-VY-AUL"/>
+                    <connections>
+                        <outlet property="ErrorLabel" destination="o2r-IC-3EG" id="wrZ-qz-6US"/>
+                        <outlet property="FirstNameTextField" destination="vhD-Ii-IEl" id="UCf-5H-hXN"/>
+                        <outlet property="LastNameTextField" destination="hCp-LW-wFS" id="mvi-VB-wi0"/>
+                        <segue destination="jfO-p1-poQ" kind="show" identifier="NameEditedSegue" id="622-Q9-IY6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clv-8n-eK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7112" y="1438"/>
-        </scene>
-        <!--Username View Controller Scene-->
-        <scene sceneID="c2z-8m-YxP">
-            <objects>
-                <viewController title="Username View Controller Scene" modalPresentationStyle="fullScreen" id="gfY-B2-JvS" customClass="AccountViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sQO-rh-07k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar opaque="NO" contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OKb-gq-A5z">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
-                                <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </textAttributes>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVP-9r-g6K">
-                                <rect key="frame" x="119" y="35.5" width="176" height="41"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="1" height="1"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yk-s5-qPq">
-                                <rect key="frame" x="15" y="43.5" width="15" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="7yb-vd-wqE"/>
-                                    <constraint firstAttribute="height" constant="25" id="9ru-4d-9kl"/>
-                                </constraints>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system"/>
-                                <connections>
-                                    <segue destination="jfO-p1-poQ" kind="show" id="PMd-M5-WhQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="OKb-gq-A5z" firstAttribute="top" secondItem="sQO-rh-07k" secondAttribute="top" id="Dkf-gx-iZa"/>
-                            <constraint firstItem="1yk-s5-qPq" firstAttribute="centerY" secondItem="PVP-9r-g6K" secondAttribute="centerY" id="EAZ-7k-93H"/>
-                            <constraint firstItem="PVP-9r-g6K" firstAttribute="centerX" secondItem="sQO-rh-07k" secondAttribute="centerX" id="MCd-6I-2uw"/>
-                            <constraint firstItem="1yk-s5-qPq" firstAttribute="leading" secondItem="F3P-mT-e0f" secondAttribute="leading" constant="15" id="RWp-r9-f5Y"/>
-                            <constraint firstItem="PVP-9r-g6K" firstAttribute="centerY" secondItem="OKb-gq-A5z" secondAttribute="centerY" constant="15" id="UkY-Uk-ZkE"/>
-                            <constraint firstItem="PVP-9r-g6K" firstAttribute="height" secondItem="OKb-gq-A5z" secondAttribute="height" multiplier="0.5" id="VQA-63-O8U"/>
-                            <constraint firstItem="OKb-gq-A5z" firstAttribute="height" secondItem="F3P-mT-e0f" secondAttribute="height" multiplier="0.1" id="beh-TY-0Nl"/>
-                            <constraint firstItem="OKb-gq-A5z" firstAttribute="trailing" secondItem="F3P-mT-e0f" secondAttribute="trailing" id="htD-pX-WNg"/>
-                            <constraint firstItem="OKb-gq-A5z" firstAttribute="leading" secondItem="F3P-mT-e0f" secondAttribute="leading" id="iiG-xs-gr0"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="F3P-mT-e0f"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="l2y-2w-KhV"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Vx6-z8-G0N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8675" y="1438"/>
+            <point key="canvasLocation" x="7111.594202898551" y="1437.7232142857142"/>
         </scene>
         <!--Friends-->
         <scene sceneID="E3b-SJ-Pjp">
@@ -987,6 +950,232 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="df1-Uo-oRJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7036" y="419"/>
+        </scene>
+        <!--Email View Controller Scene-->
+        <scene sceneID="UmJ-E9-EtA">
+            <objects>
+                <viewController title="Email View Controller Scene" modalPresentationStyle="fullScreen" id="a2D-IN-zLp" customClass="EditEmailViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jEg-Ek-vDq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sca-hw-mCO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1c1-Ib-O1K">
+                                <rect key="frame" x="148" y="35.5" width="118" height="41"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GbH-OA-AB5">
+                                <rect key="frame" x="15" y="43.5" width="15" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="Drp-oV-za5"/>
+                                    <constraint firstAttribute="width" constant="15" id="GMX-vc-KE1"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <segue destination="jfO-p1-poQ" kind="show" id="pZF-zp-de7"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-KK-Ejt">
+                                <rect key="frame" x="31" y="117" width="352" height="49"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cO1-dH-ITv">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="49"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueU-BE-1gp">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="49"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uTa-tV-g03">
+                                                <rect key="frame" x="88" y="0.0" width="264" height="49"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ueU-BE-1gp" firstAttribute="width" secondItem="cO1-dH-ITv" secondAttribute="width" multiplier="0.25" id="Wui-Y1-SIl"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Field is required" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gT-XR-xiT">
+                                <rect key="frame" x="150.5" y="181" width="113" height="13"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hO7-bi-EB8">
+                                <rect key="frame" x="114" y="214" width="186" height="41"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDoneTapped:" destination="a2D-IN-zLp" eventType="touchUpInside" id="tNy-LZ-dr5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0gT-XR-xiT" firstAttribute="centerX" secondItem="jEg-Ek-vDq" secondAttribute="centerX" id="2TE-kA-HLP"/>
+                            <constraint firstItem="sca-hw-mCO" firstAttribute="leading" secondItem="2ST-50-jPS" secondAttribute="leading" id="4NF-9B-idc"/>
+                            <constraint firstItem="1c1-Ib-O1K" firstAttribute="centerY" secondItem="sca-hw-mCO" secondAttribute="centerY" constant="15" id="BQx-Bw-meD"/>
+                            <constraint firstItem="5gV-KK-Ejt" firstAttribute="centerX" secondItem="jEg-Ek-vDq" secondAttribute="centerX" id="Fd5-yH-diy"/>
+                            <constraint firstItem="hO7-bi-EB8" firstAttribute="width" secondItem="2ST-50-jPS" secondAttribute="width" multiplier="0.45" id="KtE-BG-TR3"/>
+                            <constraint firstItem="0gT-XR-xiT" firstAttribute="top" secondItem="5gV-KK-Ejt" secondAttribute="bottom" constant="15" id="RRa-fI-v58"/>
+                            <constraint firstItem="hO7-bi-EB8" firstAttribute="centerX" secondItem="jEg-Ek-vDq" secondAttribute="centerX" id="S1G-Eu-vlz"/>
+                            <constraint firstItem="5gV-KK-Ejt" firstAttribute="height" secondItem="2ST-50-jPS" secondAttribute="height" multiplier="0.06" id="TVy-s3-P3f"/>
+                            <constraint firstItem="sca-hw-mCO" firstAttribute="top" secondItem="jEg-Ek-vDq" secondAttribute="top" id="cVR-R3-D2U"/>
+                            <constraint firstItem="1c1-Ib-O1K" firstAttribute="centerX" secondItem="jEg-Ek-vDq" secondAttribute="centerX" id="e9t-XF-5vz"/>
+                            <constraint firstItem="GbH-OA-AB5" firstAttribute="centerY" secondItem="1c1-Ib-O1K" secondAttribute="centerY" id="h9o-1e-TDh"/>
+                            <constraint firstItem="sca-hw-mCO" firstAttribute="trailing" secondItem="2ST-50-jPS" secondAttribute="trailing" id="hgh-L8-GSn"/>
+                            <constraint firstItem="GbH-OA-AB5" firstAttribute="leading" secondItem="2ST-50-jPS" secondAttribute="leading" constant="15" id="n8z-tI-XRO"/>
+                            <constraint firstItem="1c1-Ib-O1K" firstAttribute="height" secondItem="sca-hw-mCO" secondAttribute="height" multiplier="0.5" id="nXw-3U-krG"/>
+                            <constraint firstItem="hO7-bi-EB8" firstAttribute="top" secondItem="0gT-XR-xiT" secondAttribute="bottom" constant="20" id="uVa-n1-gwg"/>
+                            <constraint firstItem="5gV-KK-Ejt" firstAttribute="top" secondItem="sca-hw-mCO" secondAttribute="bottom" constant="35" id="ubg-5e-NOx"/>
+                            <constraint firstItem="5gV-KK-Ejt" firstAttribute="width" secondItem="2ST-50-jPS" secondAttribute="width" multiplier="0.85" id="weE-tZ-xPs"/>
+                            <constraint firstItem="sca-hw-mCO" firstAttribute="height" secondItem="2ST-50-jPS" secondAttribute="height" multiplier="0.1" id="wrJ-h2-XqZ"/>
+                            <constraint firstItem="hO7-bi-EB8" firstAttribute="height" secondItem="2ST-50-jPS" secondAttribute="height" multiplier="0.05" id="z9v-rF-fgd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2ST-50-jPS"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8EW-RV-Wjc"/>
+                    <connections>
+                        <outlet property="EmailTextField" destination="uTa-tV-g03" id="XQi-y7-TAA"/>
+                        <outlet property="ErrorLabel" destination="0gT-XR-xiT" id="27u-tf-VRf"/>
+                        <segue destination="jfO-p1-poQ" kind="show" identifier="EmailEditedSegue" id="0YD-1L-aAO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ffb-ig-rWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7893" y="1438"/>
+        </scene>
+        <!--Username View Controller Scene-->
+        <scene sceneID="lAa-ik-24N">
+            <objects>
+                <viewController title="Username View Controller Scene" modalPresentationStyle="fullScreen" id="PHg-Nm-PnW" customClass="EditUsernameViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mkg-Vm-MvS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar opaque="NO" contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uZU-Ak-0wx">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1R-KT-dJI">
+                                <rect key="frame" x="119" y="35.5" width="176" height="41"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgY-A6-cIW">
+                                <rect key="frame" x="15" y="43.5" width="15" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="VQa-nS-hbk"/>
+                                    <constraint firstAttribute="height" constant="25" id="uBv-1h-wDX"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <segue destination="jfO-p1-poQ" kind="show" id="tto-3f-Hvp"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tp9-68-pnN">
+                                <rect key="frame" x="31" y="117" width="352" height="49"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zhp-8b-LVA">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="49"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aH-km-OeJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="88" height="49"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eNy-Ao-o1N">
+                                                <rect key="frame" x="88" y="0.0" width="264" height="49"/>
+                                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="3aH-km-OeJ" firstAttribute="width" secondItem="Zhp-8b-LVA" secondAttribute="width" multiplier="0.25" id="HHj-SR-kND"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0i-Oy-oqQ">
+                                <rect key="frame" x="188.5" y="181" width="37" height="13"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="13"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oW-jg-XZV">
+                                <rect key="frame" x="114" y="214" width="186" height="41"/>
+                                <color key="backgroundColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="17"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="onDoneTapped:" destination="PHg-Nm-PnW" eventType="touchUpInside" id="rgC-YG-EL0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="E1R-KT-dJI" firstAttribute="height" secondItem="uZU-Ak-0wx" secondAttribute="height" multiplier="0.5" id="15P-jJ-O6x"/>
+                            <constraint firstItem="tp9-68-pnN" firstAttribute="width" secondItem="i9p-Oa-51h" secondAttribute="width" multiplier="0.85" id="4W2-sd-cCN"/>
+                            <constraint firstItem="9oW-jg-XZV" firstAttribute="width" secondItem="i9p-Oa-51h" secondAttribute="width" multiplier="0.45" id="5Wf-Wr-j9E"/>
+                            <constraint firstItem="p0i-Oy-oqQ" firstAttribute="top" secondItem="tp9-68-pnN" secondAttribute="bottom" constant="15" id="5X1-TN-eY2"/>
+                            <constraint firstItem="E1R-KT-dJI" firstAttribute="centerX" secondItem="Mkg-Vm-MvS" secondAttribute="centerX" id="7Gi-zE-Ra1"/>
+                            <constraint firstItem="9oW-jg-XZV" firstAttribute="centerX" secondItem="Mkg-Vm-MvS" secondAttribute="centerX" id="CuJ-X2-Uyl"/>
+                            <constraint firstItem="hgY-A6-cIW" firstAttribute="centerY" secondItem="E1R-KT-dJI" secondAttribute="centerY" id="Exa-EX-em6"/>
+                            <constraint firstItem="9oW-jg-XZV" firstAttribute="height" secondItem="i9p-Oa-51h" secondAttribute="height" multiplier="0.05" id="JAS-sh-zyS"/>
+                            <constraint firstItem="uZU-Ak-0wx" firstAttribute="leading" secondItem="i9p-Oa-51h" secondAttribute="leading" id="P0k-3F-Dak"/>
+                            <constraint firstItem="hgY-A6-cIW" firstAttribute="leading" secondItem="i9p-Oa-51h" secondAttribute="leading" constant="15" id="POl-Og-uTp"/>
+                            <constraint firstItem="tp9-68-pnN" firstAttribute="top" secondItem="uZU-Ak-0wx" secondAttribute="bottom" constant="35" id="Q8w-P0-eTt"/>
+                            <constraint firstItem="uZU-Ak-0wx" firstAttribute="height" secondItem="i9p-Oa-51h" secondAttribute="height" multiplier="0.1" id="RnP-Ca-mdV"/>
+                            <constraint firstItem="tp9-68-pnN" firstAttribute="height" secondItem="i9p-Oa-51h" secondAttribute="height" multiplier="0.06" id="dLJ-R4-uil"/>
+                            <constraint firstItem="E1R-KT-dJI" firstAttribute="centerY" secondItem="uZU-Ak-0wx" secondAttribute="centerY" constant="15" id="lbF-gG-2n7"/>
+                            <constraint firstItem="tp9-68-pnN" firstAttribute="centerX" secondItem="Mkg-Vm-MvS" secondAttribute="centerX" id="n71-xY-B9D"/>
+                            <constraint firstItem="9oW-jg-XZV" firstAttribute="top" secondItem="p0i-Oy-oqQ" secondAttribute="bottom" constant="20" id="o5S-DJ-1ba"/>
+                            <constraint firstItem="p0i-Oy-oqQ" firstAttribute="centerX" secondItem="Mkg-Vm-MvS" secondAttribute="centerX" id="syi-yQ-pae"/>
+                            <constraint firstItem="uZU-Ak-0wx" firstAttribute="top" secondItem="Mkg-Vm-MvS" secondAttribute="top" id="vxr-vg-zyD"/>
+                            <constraint firstItem="uZU-Ak-0wx" firstAttribute="trailing" secondItem="i9p-Oa-51h" secondAttribute="trailing" id="xQe-0N-yW4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i9p-Oa-51h"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Khu-Sz-T2A"/>
+                    <connections>
+                        <outlet property="ErrorLabel" destination="p0i-Oy-oqQ" id="Wwq-Lw-LXZ"/>
+                        <outlet property="UsernameTextField" destination="eNy-Ao-o1N" id="6Az-rb-K9D"/>
+                        <segue destination="jfO-p1-poQ" kind="show" identifier="UsernameEditedSegue" id="r3D-Xz-sCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hzn-5n-G3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8674" y="1438"/>
         </scene>
     </scenes>
     <resources>
@@ -1000,7 +1189,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hY4-Vg-HyL"/>
-        <segue reference="wdO-8x-Yro"/>
-        <segue reference="cjc-5u-9AX"/>
+        <segue reference="r3D-Xz-sCX"/>
+        <segue reference="soo-fo-DnZ"/>
     </inferredMetricsTieBreakers>
 </document>
