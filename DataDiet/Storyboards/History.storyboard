@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xRU-gL-ipi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scanner-->
+        <scene sceneID="nbZ-Ga-TPT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Scanner" id="p3G-6A-HhG" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FTS-yf-AE1"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2DO-0u-XcQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8827" y="-144"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="GAF-8B-jCs">
+            <objects>
+                <viewController title="History View Controller" modalPresentationStyle="fullScreen" id="xRU-gL-ipi" customClass="HistoryViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IoB-sR-zzO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sqg-AL-eLv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
+                                <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R79-yz-7Wp">
+                                <rect key="frame" x="167.5" y="35.5" width="79.5" height="41"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgx-ei-IlG">
+                                <rect key="frame" x="0.0" y="855" width="414" height="41"/>
+                                <items>
+                                    <barButtonItem title="Clear" id="vGQ-lX-3wB">
+                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7C-hJ-dVf">
+                                <rect key="frame" x="15" y="43.5" width="15" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="15" id="M2M-gQ-bJN"/>
+                                    <constraint firstAttribute="height" constant="25" id="V2o-k1-bW8"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.left" catalog="system"/>
+                                <connections>
+                                    <segue destination="p3G-6A-HhG" kind="show" id="8m8-5w-cax"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="akf-X3-JbW">
+                                <rect key="frame" x="0.0" y="82" width="414" height="773"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HistoryCell" id="FPX-0Z-7tj" customClass="HistoryTableViewCell" customModule="DataDiet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FPX-0Z-7tj" id="VO7-8P-XSK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7JB-Tq-itM">
+                                                    <rect key="frame" x="12" y="10" width="390" height="80"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIs-j9-OE6">
+                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="26.5"/>
+                                                            <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="15"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanned:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0U-p8-Sew">
+                                                            <rect key="frame" x="0.0" y="26.5" width="390" height="27"/>
+                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Found:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcX-y1-qJZ">
+                                                            <rect key="frame" x="0.0" y="53.5" width="390" height="26.5"/>
+                                                            <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="13"/>
+                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="7JB-Tq-itM" secondAttribute="bottom" constant="10" id="7Gm-as-I99"/>
+                                                <constraint firstItem="7JB-Tq-itM" firstAttribute="leading" secondItem="VO7-8P-XSK" secondAttribute="leading" constant="12" id="M8O-4P-l8A"/>
+                                                <constraint firstItem="7JB-Tq-itM" firstAttribute="top" secondItem="VO7-8P-XSK" secondAttribute="top" constant="10" id="Rrz-WJ-ezl"/>
+                                                <constraint firstAttribute="trailing" secondItem="7JB-Tq-itM" secondAttribute="trailing" constant="12" id="SNc-U0-13R"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="FoundSettingsLabel" destination="IcX-y1-qJZ" id="Uub-Wf-NFf"/>
+                                            <outlet property="ProductTitleLabel" destination="bIs-j9-OE6" id="MFx-t7-Z5E"/>
+                                            <outlet property="ScannedSettingsLabel" destination="r0U-p8-Sew" id="3xl-9w-dBm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R79-yz-7Wp" firstAttribute="height" secondItem="Sqg-AL-eLv" secondAttribute="height" multiplier="0.5" id="98I-Bt-skT"/>
+                            <constraint firstItem="Sqg-AL-eLv" firstAttribute="height" secondItem="QGH-31-pHP" secondAttribute="height" multiplier="0.1" id="ASk-fa-ykg"/>
+                            <constraint firstItem="zgx-ei-IlG" firstAttribute="trailing" secondItem="QGH-31-pHP" secondAttribute="trailing" id="Axp-lI-8b3"/>
+                            <constraint firstAttribute="bottom" secondItem="zgx-ei-IlG" secondAttribute="bottom" id="COg-6c-eat"/>
+                            <constraint firstItem="akf-X3-JbW" firstAttribute="centerX" secondItem="IoB-sR-zzO" secondAttribute="centerX" id="VN3-JV-IKB"/>
+                            <constraint firstItem="zgx-ei-IlG" firstAttribute="centerX" secondItem="IoB-sR-zzO" secondAttribute="centerX" id="WPE-lq-scb"/>
+                            <constraint firstItem="D7C-hJ-dVf" firstAttribute="leading" secondItem="QGH-31-pHP" secondAttribute="leading" constant="15" id="ecs-XL-ZE0"/>
+                            <constraint firstItem="Sqg-AL-eLv" firstAttribute="top" secondItem="IoB-sR-zzO" secondAttribute="top" id="iZU-97-gEy"/>
+                            <constraint firstItem="D7C-hJ-dVf" firstAttribute="centerY" secondItem="R79-yz-7Wp" secondAttribute="centerY" id="kNb-ts-tZT"/>
+                            <constraint firstItem="zgx-ei-IlG" firstAttribute="top" secondItem="akf-X3-JbW" secondAttribute="bottom" id="leT-bc-aAA"/>
+                            <constraint firstItem="Sqg-AL-eLv" firstAttribute="trailing" secondItem="QGH-31-pHP" secondAttribute="trailing" id="o35-Sp-S1T"/>
+                            <constraint firstItem="R79-yz-7Wp" firstAttribute="centerY" secondItem="Sqg-AL-eLv" secondAttribute="centerY" constant="15" id="ogS-HB-cXt"/>
+                            <constraint firstItem="zgx-ei-IlG" firstAttribute="leading" secondItem="QGH-31-pHP" secondAttribute="leading" id="rLz-jN-cEw"/>
+                            <constraint firstItem="zgx-ei-IlG" firstAttribute="height" secondItem="QGH-31-pHP" secondAttribute="height" multiplier="0.05" id="s10-df-czL"/>
+                            <constraint firstItem="akf-X3-JbW" firstAttribute="top" secondItem="Sqg-AL-eLv" secondAttribute="bottom" id="tPK-Ej-ipX"/>
+                            <constraint firstItem="akf-X3-JbW" firstAttribute="width" secondItem="QGH-31-pHP" secondAttribute="width" id="uC2-MY-1e0"/>
+                            <constraint firstItem="R79-yz-7Wp" firstAttribute="centerX" secondItem="IoB-sR-zzO" secondAttribute="centerX" id="upg-RH-xku"/>
+                            <constraint firstItem="Sqg-AL-eLv" firstAttribute="leading" secondItem="QGH-31-pHP" secondAttribute="leading" id="zsa-Ce-baJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QGH-31-pHP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ud4-uX-Due"/>
+                    <connections>
+                        <outlet property="HistoryTableView" destination="akf-X3-JbW" id="Vjb-WT-KdX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hk7-Iy-opE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9366.6666666666679" y="-1.3392857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="chevron.left" catalog="system" width="48" height="64"/>
+    </resources>
+</document>

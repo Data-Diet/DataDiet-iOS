@@ -49,14 +49,12 @@ class ProductViewController: UIViewController {
     //this function is fetching the json from URL
     func getJsonFromUrl(){
         //creating a NSURL
-    }
-    
+    }    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
         if segue.identifier == SegueIdProductJSON {
             product = sender as? Product
-            print(product?.URL ?? "")
         }
     }
     
