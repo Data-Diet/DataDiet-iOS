@@ -31,7 +31,6 @@
 		1AEA31E62382B3B800E5EECE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E52382B3B800E5EECE /* Settings.storyboard */; };
 		1AEA31E82382B4C800E5EECE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E72382B4C800E5EECE /* Login.storyboard */; };
 		1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */; };
-		1AEA320E238351E700E5EECE /* AllergiesSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320D238351E600E5EECE /* AllergiesSettingsController.swift */; };
 		1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */; };
 		1AEA32122384DB8800E5EECE /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA32112384DB8800E5EECE /* Friends.storyboard */; };
 		1AEA32172385334200E5EECE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA32162385334200E5EECE /* GoogleService-Info.plist */; };
@@ -90,7 +89,6 @@
 		1AEA31E52382B3B800E5EECE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		1AEA31E72382B4C800E5EECE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePersonalSettings.swift; sourceTree = "<group>"; };
-		1AEA320D238351E600E5EECE /* AllergiesSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergiesSettingsController.swift; sourceTree = "<group>"; };
 		1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalSettingsViewController.swift; sourceTree = "<group>"; };
 		1AEA32112384DB8800E5EECE /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		1AEA32162385334200E5EECE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -245,7 +243,6 @@
 			isa = PBXGroup;
 			children = (
 				076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */,
-				1AEA320D238351E600E5EECE /* AllergiesSettingsController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */,
 				1AEA31DF2382994B00E5EECE /* AccountViewController.swift */,
@@ -552,7 +549,6 @@
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				1AEA32272385666400E5EECE /* ImportSettingsViewController.swift in Sources */,
-				1AEA320E238351E700E5EECE /* AllergiesSettingsController.swift in Sources */,
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
 				1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */,
 				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,

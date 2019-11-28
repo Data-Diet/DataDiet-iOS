@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="08K-2i-Myz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="08K-2i-Myz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -128,6 +128,14 @@
                                 <state key="normal" image="chevron.left" catalog="system"/>
                                 <connections>
                                     <segue destination="O7V-fW-EGW" kind="show" id="TJa-HL-MJP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtg-Uf-h45">
+                                <rect key="frame" x="348" y="41" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="jtA-rp-z0G" kind="show" id="BHP-PR-dtX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -340,7 +348,8 @@
         <image name="person.badge.plus" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="nS1-Mo-tLW"/>
         <segue reference="898-sg-h3g"/>
-        <segue reference="Mif-bF-cbb"/>
+        <segue reference="LOd-Yl-rdh"/>
     </inferredMetricsTieBreakers>
 </document>

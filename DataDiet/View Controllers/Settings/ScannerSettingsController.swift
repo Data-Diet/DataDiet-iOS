@@ -50,7 +50,6 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         }
     }
 
-    
     @IBAction func importSettings(_ sender: Any) {
         // will check for database changes when importing friend settings
     }

@@ -799,8 +799,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="za8-xu-IV4"/>
                     <connections>
-                        <outlet property="Navbar" destination="b25-fz-1De" id="uUH-g0-CU5"/>
-                        <outlet property="Toolbar" destination="F2h-cs-Aub" id="XWK-IB-JaE"/>
+                        <outlet property="FriendsTableView" destination="h6Z-3I-nBl" id="Hlh-Bh-nI2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QJX-Nk-MSV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1190,6 +1189,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="hY4-Vg-HyL"/>
         <segue reference="r3D-Xz-sCX"/>
-        <segue reference="soo-fo-DnZ"/>
+        <segue reference="cjc-5u-9AX"/>
     </inferredMetricsTieBreakers>
 </document>
