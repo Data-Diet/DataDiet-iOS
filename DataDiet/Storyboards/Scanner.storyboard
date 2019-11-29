@@ -129,11 +129,11 @@
                                 <rect key="frame" x="0.0" y="82" width="414" height="814"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="fOF-Gg-Ema">
-                                        <rect key="frame" x="0.0" y="401" width="414" height="495"/>
+                                        <rect key="frame" x="0.0" y="192" width="414" height="704"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NCy-Fi-2Jt">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="495"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="704"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <prototypes>
@@ -149,12 +149,8 @@
                                             </tableView>
                                         </subviews>
                                     </scrollView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wKj-HY-Iez">
-                                        <rect key="frame" x="0.0" y="82" width="414" height="203"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="l1a-gm-4WP">
-                                        <rect key="frame" x="0.0" y="293" width="414" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="l1a-gm-4WP">
+                                        <rect key="frame" x="0.0" y="84" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                         <nil key="textColor"/>
@@ -200,14 +196,13 @@
                     <connections>
                         <outlet property="IngredientTableView" destination="NCy-Fi-2Jt" id="vwq-4F-ZDp"/>
                         <outlet property="Navbar" destination="AhO-Jo-bcD" id="yI2-95-SpX"/>
-                        <outlet property="productImage" destination="wKj-HY-Iez" id="3TP-2i-HJj"/>
                         <outlet property="productTitle" destination="l1a-gm-4WP" id="ee6-FC-RUd"/>
                         <outlet property="scrollView" destination="fOF-Gg-Ema" id="Bia-5c-5TO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h0L-m8-fnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6461" y="736"/>
+            <point key="canvasLocation" x="6460.8695652173919" y="735.9375"/>
         </scene>
     </scenes>
     <resources>

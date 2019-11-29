@@ -71,16 +71,24 @@ struct USDARequest{
             request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
            
             let task = session.dataTask(with: request as URLRequest as URLRequest, completionHandler: { (data, response, error) in
-               guard let data = data else { return }
-               
-               if let TitleString = String(data: data, encoding: .utf8) {
-                let title = String(TitleString.substring(from: "description" + "\"" + ":" + "\"", to: ".") ?? "Title Not Found")
-                   completionHandler(title)
-               }
-               print()
-               print("USDA product response:")
-               print(String(data: data, encoding: .utf8))
-               print()
+                guard let data = data else { return }
+                
+                var productTitle = String()
+                
+                if let BrandString = String(data: data, encoding: .utf8) {
+                let title = String(BrandString.substring(from: "brandOwner" + "\"" + ":" + "\"", to: "\"") ?? "")
+                    productTitle += title
+                }
+            
+                if let NameString = String(data: data, encoding: .utf8) {
+                 let title = String(NameString.substring(from: "description" + "\"" + ":" + "\"", to: "\"") ?? "")
+                    productTitle += ": " + title
+                }
+                completionHandler(productTitle)
+                print()
+                print("USDA product response:")
+                print(String(data: data, encoding: .utf8))
+                print()
             } )
             task.resume()
         } catch {
