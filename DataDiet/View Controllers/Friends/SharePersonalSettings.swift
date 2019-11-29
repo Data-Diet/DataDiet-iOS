@@ -16,7 +16,8 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     var scannerData: DocumentReference!
     var friendsUIDs = [String]()
     var friendNames = [String]()
-    var friendsSharedList = [Bool]()    
+    var friendsSharedList = [Bool]()
+    var profilePhotos = [UIImage]()
     var defaultSelected: [String: Bool] = [:]
     
     @IBOutlet weak var FriendsTableView: UITableView!
@@ -52,12 +53,13 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
                                 } else {
                                     self.friendNames.append("\(name["first_name"] as! String)" + " \(name["last_name"] as! String)")
                                 }
+                                self.profilePhotos.append(self.retrieveProfilePic(photoURLString: name["profilePicURL"] as! String)!)
+                                self.friendsUIDs.append(key as! String)
+                                self.friendsSharedList.append(friendsKeyValues["\(key)"] as! Bool)
+                                self.FriendsTableView.reloadData()
                             } else {
                                 print("Document does not exist")
                             }
-                            self.friendsUIDs.append(key as! String)
-                            self.friendsSharedList.append(friendsKeyValues["\(key)"] as! Bool)
-                            self.FriendsTableView.reloadData()
                         }
                     }
                 }
@@ -68,6 +70,7 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell")!
         cell.textLabel?.text = friendNames[indexPath.row]
+        cell.imageView?.image = profilePhotos[indexPath.row]
         
         let switchView = UISwitch(frame: .zero)
         switchView.setOn(friendsSharedList[indexPath.row], animated: true)
@@ -93,10 +96,27 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
                     UsersWhoHaveShared.setData([userID : sender.isOn])
                 }
             }
-            
         }
     }
         
+    func retrieveProfilePic(photoURLString : String) -> UIImage? {
+        let photoURL = URL(string: photoURLString)
+        let data = try? Data(contentsOf: photoURL!)
+        if let imageData = data {
+            let image = UIImage(data: imageData)!
+            return resizeImage(with: image, scaledTo: CGSize(width: 50, height: 50))
+        }
+        return nil
+    }
+    
+    func resizeImage(with image: UIImage, scaledTo newSize: CGSize) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
+    
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
