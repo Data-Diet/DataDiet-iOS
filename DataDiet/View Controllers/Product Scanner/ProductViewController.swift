@@ -163,5 +163,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == SegueIdProductJSON {
+            product = sender as? Product
+        }
     }
 }
