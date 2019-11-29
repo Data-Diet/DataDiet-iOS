@@ -13,6 +13,7 @@ import FirebaseStorage
 
 class FindFriendsViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     var users: [User] = []
     
     override func viewDidLoad() {
