@@ -10,9 +10,9 @@ import UIKit
 import CoreData
 import Firebase
 import GoogleSignIn
-import FacebookCore
-import FBSDKCoreKit
-import FBSDKLoginKit
+//import FacebookCore
+//import FBSDKCoreKit
+//import FBSDKLoginKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */; };
 		076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */; };
+		076E0A2A238CE3FF004A7527 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E0A29238CE3FF004A7527 /* FindFriendsViewController.swift */; };
+		076E0A2C238DA20D004A7527 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E0A2B238DA20D004A7527 /* FriendCell.swift */; };
+		076E0A2E238DA3CF004A7527 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E0A2D238DA3CF004A7527 /* User.swift */; };
 		07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A349632374F32A00C23FF4 /* TestViewController.swift */; };
 		0E88DFABD1EBAF25EA41E263 /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27B2FDA11E48F38A014B5FE /* Pods_DataDiet.framework */; };
 		1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */; };
@@ -61,6 +64,9 @@
 /* Begin PBXFileReference section */
 		07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		076E0A29238CE3FF004A7527 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
+		076E0A2B238DA20D004A7527 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		076E0A2D238DA3CF004A7527 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		07A349632374F32A00C23FF4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		07AEF68FE83F6276A1FF1385 /* Pods-DataDietUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.debug.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0838E4C52258FAD9037A317E /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1428112385D41E009EFF6F /* Product.swift */,
+				076E0A2D238DA3CF004A7527 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */,
+				076E0A29238CE3FF004A7527 /* FindFriendsViewController.swift */,
+				076E0A2B238DA20D004A7527 /* FriendCell.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -546,8 +555,10 @@
 				1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */,
 				1A7F195D238CC67A001307E8 /* ProductChecker.swift in Sources */,
 				1AEA322523855AEB00E5EECE /* ImageSetter.swift in Sources */,
+				076E0A2C238DA20D004A7527 /* FriendCell.swift in Sources */,
 				1A55EF6522B888370010681A /* ScannerViewController.swift in Sources */,
 				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
+				076E0A2E238DA3CF004A7527 /* User.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
 				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,
