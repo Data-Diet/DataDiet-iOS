@@ -32,6 +32,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet var Navbar: UINavigationBar!
     @IBOutlet var Toolbar: UIToolbar!
+    
     @IBAction func addAllergy(_ sender: UIButton) {
         allergies.append(AllergiesTextField.text!)
         let indexPath = IndexPath(row: allergies.count - 1, section: 0)
@@ -49,7 +50,6 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         }
     }
 
-    
     @IBAction func importSettings(_ sender: Any) {
         // will check for database changes when importing friend settings
     }
