@@ -83,7 +83,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
             image = imageSelected
             profilePic.image = imageSelected
         }
-        if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+        else if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
             image = imageOriginal
             profilePic.image = imageOriginal
         }
