@@ -21,6 +21,9 @@
                                     <constraint firstAttribute="height" constant="40" id="kzn-VW-6mf"/>
                                 </constraints>
                                 <state key="normal" image="HistoryButton2"/>
+                                <connections>
+                                    <segue destination="FiZ-Pu-Xp1" kind="show" id="ava-gj-9lJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-te-gSO">
                                 <rect key="frame" x="175" y="797" width="65" height="65"/>
@@ -94,7 +97,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v8k-w0-9hj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6985" y="-5"/>
+            <point key="canvasLocation" x="6983" y="-267"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="nzH-xD-iuz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="History" id="FiZ-Pu-Xp1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UEH-Pk-n34"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lMm-gf-wO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6979" y="264"/>
         </scene>
         <!--Product View Controller-->
         <scene sceneID="7Zb-kb-qOj">

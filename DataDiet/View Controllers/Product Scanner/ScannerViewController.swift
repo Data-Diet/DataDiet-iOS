@@ -115,14 +115,21 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         canScan = false
         let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + productBarcode + ".json"
         
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+        let data = USDARequest()
+        data.checkIfExists(barcodeNumber: self.productBarcode) { (totalHits) in
+            DispatchQueue.main.async {
+                if (totalHits > 0) {
+                    self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+                } else {
+                    self.showToast(message : "Sorry! No product was found with the barcode: " + self.productBarcode, font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.thin))
+                }
+            }
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ProductViewSegue") {
-            var ProductVC = segue.destination as! ProductViewController
+            let ProductVC = segue.destination as! ProductViewController
             ProductVC.productBarcode = self.productBarcode
         }
     }
@@ -179,5 +186,28 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         videoPreview.bringSubviewToFront(ImageGalleryButton)
         videoPreview.bringSubviewToFront(HistoryButton)
         videoPreview.bringSubviewToFront(SettingsButton)
+    }
+}
+
+extension UIViewController {
+
+    func showToast(message : String, font: UIFont) {
+
+        let toastLabel = UILabel(frame: CGRect(x: 25, y: self.view.frame.size.height - 500, width: self.view.frame.size.width - 50, height: 70))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.font = font
+        toastLabel.numberOfLines = 100
+        toastLabel.textAlignment = .center;
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+             toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
     }
 }

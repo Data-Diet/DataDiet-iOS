@@ -121,7 +121,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             let scannerData = db.collection("users").document(userID).collection("History").document(productBarcode)
             scannerData.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    scannerData.updateData(["found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray]) { err in
+                    scannerData.updateData(["found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
                         if let err = err {
                             print("Error updating document: \(err)")
                         } else {
@@ -129,7 +129,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
                         }
                     }
                 } else {
-                    scannerData.setData(["found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray]) { err in
+                    scannerData.setData(["found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
                         if let err = err {
                             print("Error writing document: \(err)")
                         } else {
