@@ -75,7 +75,6 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                                     
                                    self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
                                    self.friendsUIDs.append(key as! String)
-                                    
                                 } else {
                                     print("Document does not exist")
                                 }
@@ -84,6 +83,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                     }
                     //Retreive the friend that the user wants to have imported into scanner
                     self.fetchFriendSelected(userID : userID)
+                    self.FriendsTableView.reloadData()
                 }
             }
         }
@@ -108,7 +108,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         
         if let userID = Auth.auth().currentUser?.uid {
             //If one switch is toggled, need to turn off others
-            selectOneSwitchOnly(userID: userID, senderTag: sender.tag)
+            selectOneSwitchOnly(userID: userID, senderTag: sender.tag, senderIsOn: sender.isOn)
             
             //If pressed -> update user's current scanner to friend's personal settings
             if(friendSelected[sender.tag] == true) {
@@ -120,7 +120,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
     
-    func selectOneSwitchOnly(userID : String, senderTag : Int) {
+    func selectOneSwitchOnly(userID : String, senderTag : Int, senderIsOn : Bool) {
         let friendDoc = db.collection("users").document(userID).collection("Friends").document("FriendSelected")
         for i in 0...friendSelected.count - 1 {
             if(i != senderTag) {
@@ -128,7 +128,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                 friendDoc.updateData([friendsUIDs[i]: false])
                 FriendsTableView.reloadData()
             } else {
-                friendDoc.updateData([friendsUIDs[senderTag]: true])
+                friendDoc.updateData([friendsUIDs[senderTag]: senderIsOn])
             }
         }
     }
