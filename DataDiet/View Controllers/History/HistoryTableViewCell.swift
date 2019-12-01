@@ -27,6 +27,7 @@ class HistoryTableViewCell: UITableViewCell {
     }
     */
     
+    // Use product details to fill in history labels
     func setProductDetails(product: Product) {
         ProductTitleLabel.text = product.title
         ScannedSettingsLabel.text = "Scanned: " + product.dietsScanned.joined(separator: ", ") + (product.dietsScanned.isEmpty ? "" : ", ") + product.allergensScanned.joined(separator: ", ")
