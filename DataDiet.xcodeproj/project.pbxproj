@@ -38,6 +38,11 @@
 		1AEA32272385666400E5EECE /* ImportSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA32262385666400E5EECE /* ImportSettingsViewController.swift */; };
 		44CAD1F702AE9E3AB589BE6D /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2655C3B5FC26A25BAA0E3607 /* Pods_DataDietTests.framework */; };
 		7BAF1D40501E58033C4F8AFE /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838E4C52258FAD9037A317E /* Pods_DataDietUITests.framework */; };
+		FEE6592A239377B100A608C2 /* EditUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65927239377B100A608C2 /* EditUsernameViewController.swift */; };
+		FEE6592B239377B100A608C2 /* EditEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65928239377B100A608C2 /* EditEmailViewController.swift */; };
+		FEE6592C239377B100A608C2 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65929239377B100A608C2 /* EditNameViewController.swift */; };
+		FEE6593023937C4100A608C2 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6592F23937C4100A608C2 /* FriendCell.swift */; };
+		FEE65936239381D600A608C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65935239381D600A608C2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +106,11 @@
 		E27B2FDA11E48F38A014B5FE /* Pods_DataDiet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDiet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6678862BF446524B8C4049D /* Pods-DataDietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.release.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FED84FBDD1C20F3A7C2E1BEB /* Pods-DataDiet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.release.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.release.xcconfig"; sourceTree = "<group>"; };
+		FEE65927239377B100A608C2 /* EditUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUsernameViewController.swift; sourceTree = "<group>"; };
+		FEE65928239377B100A608C2 /* EditEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEmailViewController.swift; sourceTree = "<group>"; };
+		FEE65929239377B100A608C2 /* EditNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		FEE6592F23937C4100A608C2 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		FEE65935239381D600A608C2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1428112385D41E009EFF6F /* Product.swift */,
+				FEE65935239381D600A608C2 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -243,6 +254,9 @@
 			isa = PBXGroup;
 			children = (
 				076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */,
+				FEE65928239377B100A608C2 /* EditEmailViewController.swift */,
+				FEE65929239377B100A608C2 /* EditNameViewController.swift */,
+				FEE65927239377B100A608C2 /* EditUsernameViewController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */,
 				1AEA31DF2382994B00E5EECE /* AccountViewController.swift */,
@@ -265,6 +279,7 @@
 		1AEA32212385599C00E5EECE /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				FEE6592F23937C4100A608C2 /* FriendCell.swift */,
 				1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */,
 			);
 			path = Friends;
@@ -539,21 +554,26 @@
 				1A1428122385D41E009EFF6F /* Product.swift in Sources */,
 				1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */,
 				1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */,
+				FEE6592C239377B100A608C2 /* EditNameViewController.swift in Sources */,
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
 				1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */,
 				1AEA322523855AEB00E5EECE /* ImageSetter.swift in Sources */,
 				1A55EF6522B888370010681A /* ScannerViewController.swift in Sources */,
 				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
+				FEE6592B239377B100A608C2 /* EditEmailViewController.swift in Sources */,
+				FEE6593023937C4100A608C2 /* FriendCell.swift in Sources */,
 				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				1AEA32272385666400E5EECE /* ImportSettingsViewController.swift in Sources */,
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
 				1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */,
+				FEE6592A239377B100A608C2 /* EditUsernameViewController.swift in Sources */,
 				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,
 				1A452D5F238095010063899E /* LoginViewController.swift in Sources */,
 				076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */,
+				FEE65936239381D600A608C2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
