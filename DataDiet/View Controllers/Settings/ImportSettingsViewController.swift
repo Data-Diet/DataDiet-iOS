@@ -68,37 +68,22 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                         self.db.collection("users").document(key as! String).getDocument() { (document, error) in
                             //Check if friend has shared with user
                             if(friendsKeyValues["\(key)"] as! Bool == true) {
-                                //construct friend names (Pioritizes usernames)
                                 if let document = document, document.exists {
                                    let username = document.data()?["username"] as! String
                                    let firstName = document.data()?["first_name"] as! String
                                    let lastName = document.data()?["last_name"] as! String
+                                    
                                    self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
-                    
                                    self.friendsUIDs.append(key as! String)
+                                    
                                 } else {
                                     print("Document does not exist")
                                 }
                             }
                         }
                     }
-                    
-                    //Retreive user's friend selected from firebase
-                    let friendSelected = self.db.collection("users").document(userID).collection("Friends").document("FriendSelected")
-                    friendSelected.getDocument() { (document, error) in
-                        if let document = document, document.exists {
-                            let name: Dictionary = document.data()! as Dictionary
-                            for id in self.friendsUIDs {
-                                if(name[id] != nil) {
-                                    self.friendSelected.append(name[id] as! Bool)
-                                    self.FriendsTableView.reloadData()
-                                }
-                            }
-                        } else {
-                            friendSelected.setData(self.defaultSelected)
-                        }
-                    }
-                    
+                    //Retreive the friend that the user wants to have imported into scanner
+                    self.fetchFriendSelected(userID : userID)
                 }
             }
         }
@@ -122,60 +107,85 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         friendSelected[sender.tag] = sender.isOn;
         
         if let userID = Auth.auth().currentUser?.uid {
-            
-            //Update firebase if you want to share or unshare settings with friend
-            let friendDoc = db.collection("users").document(userID).collection("Friends").document("FriendSelected")
-            
-            //Untoggle rest of switches if one is selected
-            for i in 0...friendSelected.count - 1 {
-                if(i != sender.tag) {
-                    friendSelected[i] = false
-                    friendDoc.updateData([friendsUIDs[i]: false])
-                    FriendsTableView.reloadData()
-                } else {
-                    friendDoc.updateData([friendsUIDs[sender.tag]: sender.isOn])
-                }
-            }
+            //If one switch is toggled, need to turn off others
+            selectOneSwitchOnly(userID: userID, senderTag: sender.tag)
             
             //If pressed -> update user's current scanner to friend's personal settings
-            let currentScanner = db.collection("users").document(userID).collection("Settings").document("Scanner")
             if(friendSelected[sender.tag] == true) {
-                
-                //Retrieve personal settings of friend
-                self.scannerData = self.db.collection("users").document(friendsUIDs[sender.tag]).collection("Settings").document("Personal")
-                self.scannerData.getDocument() { (document, error) in
-                    if let document = document, document.exists {
-                        let scannerSettings = document.data()
-                        for i in 0 ... self.diets.count - 1 {
-                            self.dietsSelected[i] = scannerSettings![self.diets[i]] as! Bool
-                        }
-                        self.allergies = scannerSettings!["Allergies"] as! [String]
-                    }
-                    //Load data into user scanner
-                    currentScanner.updateData(["Allergies" : self.allergies])
-                    for j in 0...self.diets.count-1 {
-                        currentScanner.updateData([self.diets[j]: self.dietsSelected[j]])
-                    }
-                }
-                
+                fetchFriendPersonalSettings(userID: userID, senderTag: sender.tag)
             } else {
-                
-                //If unpressed -> load back user's current personal settings
-                let personalSettings = db.collection("users").document(userID).collection("Settings").document("Personal")
-                personalSettings.getDocument() { (document, error) in
-                    if let document = document, document.exists {
-                        let scannerSettings = document.data()
-                        for i in 0 ... self.diets1.count - 1 {
-                            self.dietsSelected1[i] = scannerSettings![self.diets[i]] as! Bool
-                        }
-                        self.allergies1 = scannerSettings!["Allergies"] as! [String]
+                //If unpressed -> Grab user's personal settings and load into user scanner
+                fetchUserPersonalSettings(userID: userID)
+            }
+        }
+    }
+    
+    func selectOneSwitchOnly(userID : String, senderTag : Int) {
+        let friendDoc = db.collection("users").document(userID).collection("Friends").document("FriendSelected")
+        for i in 0...friendSelected.count - 1 {
+            if(i != senderTag) {
+                friendSelected[i] = false
+                friendDoc.updateData([friendsUIDs[i]: false])
+                FriendsTableView.reloadData()
+            } else {
+                friendDoc.updateData([friendsUIDs[senderTag]: true])
+            }
+        }
+    }
+    
+    func fetchFriendPersonalSettings(userID : String, senderTag : Int) {
+        let currentScanner = db.collection("users").document(userID).collection("Settings").document("Scanner")
+        if(friendSelected[senderTag] == true) {
+            //Retrieve personal settings of friend
+            self.scannerData = self.db.collection("users").document(friendsUIDs[senderTag]).collection("Settings").document("Personal")
+            self.scannerData.getDocument() { (document, error) in
+                if let document = document, document.exists {
+                    let scannerSettings = document.data()
+                    for i in 0 ... self.diets.count - 1 {
+                        self.dietsSelected[i] = scannerSettings![self.diets[i]] as! Bool
                     }
-                    currentScanner.updateData(["Allergies" : self.allergies1])
-                    for j in 0...self.diets.count-1 {
-                        currentScanner.updateData([self.diets[j]: self.dietsSelected1[j]])
+                    self.allergies = scannerSettings!["Allergies"] as! [String]
+                }
+                //Load data into user scanner
+                currentScanner.updateData(["Allergies" : self.allergies])
+                for j in 0...self.diets.count-1 {
+                    currentScanner.updateData([self.diets[j]: self.dietsSelected[j]])
+                }
+            }
+        }
+    }
+        
+    func fetchUserPersonalSettings(userID : String) {
+        let currentScanner = db.collection("users").document(userID).collection("Settings").document("Scanner")
+        let personalSettings = db.collection("users").document(userID).collection("Settings").document("Personal")
+        personalSettings.getDocument() { (document, error) in
+            if let document = document, document.exists {
+                let scannerSettings = document.data()
+                for i in 0 ... self.diets1.count - 1 {
+                    self.dietsSelected1[i] = scannerSettings![self.diets[i]] as! Bool
+                }
+                self.allergies1 = scannerSettings!["Allergies"] as! [String]
+            }
+            currentScanner.updateData(["Allergies" : self.allergies1])
+            for j in 0...self.diets.count-1 {
+                currentScanner.updateData([self.diets[j]: self.dietsSelected1[j]])
+            }
+        }
+    }
+
+    func fetchFriendSelected(userID : String) {
+        let friendSelected = self.db.collection("users").document(userID).collection("Friends").document("FriendSelected")
+        friendSelected.getDocument() { (document, error) in
+            if let document = document, document.exists {
+                let name: Dictionary = document.data()! as Dictionary
+                for id in self.friendsUIDs {
+                    if(name[id] != nil) {
+                        self.friendSelected.append(name[id] as! Bool)
+                        self.FriendsTableView.reloadData()
                     }
                 }
-                
+            } else {
+                friendSelected.setData(self.defaultSelected)
             }
         }
     }
