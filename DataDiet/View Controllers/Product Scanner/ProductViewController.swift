@@ -8,8 +8,10 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
-class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UISearchResultsUpdating {
+    
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var productImage: UIImageView!
@@ -38,8 +40,14 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     let SegueIdProductJSON = "productJSON"
     
     var productIngredientsArray = [String]()
+    var filteredIngredientsData = [String]()
+    var resultSearchController = UISearchController()
+
     var productBarcode = ""
     var productTitleString = ""
+    
+    let ingredientGroup = DispatchGroup()
+    let titleGroup = DispatchGroup()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,31 +59,42 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         let IS = ImageSetter()
         IS.SetBarImage(Navbar: Navbar)
         
-        let ingredientGroup = DispatchGroup()
-        let titleGroup = DispatchGroup()
         ingredientGroup.enter()
         titleGroup.enter()
         
         print("productBarcode: " + self.productBarcode)
         
         db = Firestore.firestore()
-        loadDietsAndAllergens()
         
         let data = USDARequest()
         data.getTitle(barcodeNumber: self.productBarcode) { (title) in
             //Can access all the ingredients in here if barcode is specified
             self.productTitleString = title
             print(self.productIngredientsArray)
-            titleGroup.leave()
+            self.titleGroup.leave()
         }
         
         data.getIngredients(barcodeNumber: self.productBarcode) { (ingredientsArray) in
             //Can access all the ingredients in here if barcode is specified
-            self.productIngredientsArray = ingredientsArray
-            print(self.productIngredientsArray)
-            ingredientGroup.leave()
+            print("self.alleryArray.count: ")
+            print(self.alleryArray.count)
+            if self.alleryArray.count > 0 {
+                for ingredient in ingredientsArray {
+                    for allergen in self.alleryArray {
+                        if ingredient.lowercased().contains(allergen.lowercased()) {
+                            self.productIngredientsArray.insert(ingredient, at: self.productIngredientsArray.startIndex)
+                            break;
+                        } else if (allergen == self.alleryArray[self.alleryArray.count - 1]){
+                            self.productIngredientsArray.append(ingredient)
+                        }
+                    }
+                }
+            } else {
+                self.productIngredientsArray = ingredientsArray
+            }
+            
+            self.ingredientGroup.leave()
         }
-
         // does not wait. But the code in notify() gets run
         // after enter() and leave() calls are balanced
         
@@ -88,31 +107,19 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             self.uploadToHistory()
             print(self.allergensFound)
         }
-    }
-    
-    func loadDietsAndAllergens() {
-        if let userID = Auth.auth().currentUser?.uid {
-            print(userID)
-            let scannerData = db.collection("users").document(userID).collection("Settings").document("Scanner")
-            scannerData.getDocument { (document, error) in
-                if let document = document, document.exists {
-                    let scannerSettings = document.data()
-                    for i in 0 ... self.diets.count - 1 {
-                        self.dietsSelected[i] = scannerSettings![self.diets[i]] as! Bool
-                    }
-                    self.alleryArray = scannerSettings!["Allergies"] as! [String]
-                }
-                else {
-                    scannerData.setData(self.defaultSettings) { err in
-                        if let err = err {
-                            print("Error writing document: \(err)")
-                        } else {
-                            print("Document successfully written!")
-                        }
-                    }
-                }
-            }
-        }
+        
+        resultSearchController = ({
+            let controller = UISearchController(searchResultsController: nil)
+            controller.searchResultsUpdater = self
+            controller.dimsBackgroundDuringPresentation = false
+            controller.searchBar.sizeToFit()
+
+            IngredientTableView.tableHeaderView = controller.searchBar
+
+            return controller
+        })()
+        
+        IngredientTableView.reloadData()
     }
     
     func uploadToHistory() {
@@ -121,7 +128,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             let scannerData = db.collection("users").document(userID).collection("History").document(productBarcode)
             scannerData.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    scannerData.updateData(["found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
+                    scannerData.updateData(["product_title" : self.productTitleString, "found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
                         if let err = err {
                             print("Error updating document: \(err)")
                         } else {
@@ -129,7 +136,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
                         }
                     }
                 } else {
-                    scannerData.setData(["found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
+                    scannerData.setData(["product_title" : self.productTitleString, "found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
                         if let err = err {
                             print("Error writing document: \(err)")
                         } else {
@@ -151,15 +158,42 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell", for: indexPath)
+        
+        if (resultSearchController.isActive) {
+            cell.textLabel?.text = filteredIngredientsData[indexPath.row]
+        } else {
+            cell.textLabel?.text = productIngredientsArray[indexPath.row]
 
-        let cell = tableView.dequeueReusableCell(withIdentifier: "IngredientCell")!
-        cell.textLabel?.text = productIngredientsArray[indexPath.row]
+        }
+        
+        for allergen in self.alleryArray {
+            let ingredient = cell.textLabel?.text?.lowercased()
+            print("ingredient: " + (ingredient ?? "nunt"))
+            if ingredient?.contains(allergen.lowercased()) ?? false {
+                cell.textLabel?.textColor = UIColor.red
+            }
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("productIngredientsArray.count: " + String(productIngredientsArray.count))
-        return productIngredientsArray.count
+        if  (resultSearchController.isActive) {
+            return filteredIngredientsData.count
+        } else {
+            return productIngredientsArray.count
+        }
+    }
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredIngredientsData.removeAll(keepingCapacity: false)
+
+        let searchPredicate = NSPredicate(format: "SELF contains[cd] %@", searchController.searchBar.text!)
+        let array = (productIngredientsArray as NSArray).filtered(using: searchPredicate)
+        filteredIngredientsData = array as! [String]
+
+        self.IngredientTableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

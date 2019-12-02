@@ -120,7 +120,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             self.productBarcode = self.productsScanned[indexPath.row].upc
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+                if (totalHits > 0) {
+                    self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+                } else {
+                    self.showToast(message : "Sorry! No product was found with the barcode: " + self.productBarcode, font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.thin))
+                }
             }
         
             }))

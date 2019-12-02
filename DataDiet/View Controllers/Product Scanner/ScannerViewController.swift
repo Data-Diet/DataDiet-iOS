@@ -12,6 +12,21 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     @IBOutlet var HistoryButton: UIButton!
     @IBOutlet var SettingsButton: UIButton!
     
+    let diets = ["Vegan", "Vegetarian", "Pescatarian", "Kosher", "Ketogenic", "Paleolithic"]
+    var dietsSelected = [Bool](repeating: false, count: 6)
+    var alleryArray = [String]()
+    let defaultSettings: [String: Any] = [
+           "Vegan": false,
+           "Vegetarian": false,
+           "Pescatarian": false,
+           "Kosher": false,
+           "Ketogenic": false,
+           "Paleolithic": false,
+           "Allergies": [String]()
+       ]
+    
+    var db: Firestore!
+    
     var canScan = false
     var productBarcode = ""
     
@@ -19,7 +34,10 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        db = Firestore.firestore()
+        loadDietsAndAllergens()
+        
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
         
@@ -131,6 +149,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         if (segue.identifier == "ProductViewSegue") {
             let ProductVC = segue.destination as! ProductViewController
             ProductVC.productBarcode = self.productBarcode
+            ProductVC.alleryArray = self.alleryArray
         }
     }
     
@@ -186,6 +205,31 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         videoPreview.bringSubviewToFront(ImageGalleryButton)
         videoPreview.bringSubviewToFront(HistoryButton)
         videoPreview.bringSubviewToFront(SettingsButton)
+    }
+    
+    func loadDietsAndAllergens() {
+        if let userID = Auth.auth().currentUser?.uid {
+            print(userID)
+            let scannerData = db.collection("users").document(userID).collection("Settings").document("Scanner")
+            scannerData.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let scannerSettings = document.data()
+                    for i in 0 ... self.diets.count - 1 {
+                        self.dietsSelected[i] = scannerSettings![self.diets[i]] as! Bool
+                    }
+                    self.alleryArray = scannerSettings!["Allergies"] as! [String]
+                }
+                else {
+                    scannerData.setData(self.defaultSettings) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

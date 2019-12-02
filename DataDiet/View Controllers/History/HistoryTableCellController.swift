@@ -10,6 +10,7 @@ import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var ProductTitleLabel: UILabel!
     @IBOutlet weak var ScannedSettingsLabel: UILabel!
     @IBOutlet weak var FoundSettingsLabel: UILabel!

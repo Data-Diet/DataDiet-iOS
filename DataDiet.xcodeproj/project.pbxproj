@@ -30,6 +30,8 @@
 		1A7161072393179D00F636A3 /* OpenFoodFactsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7161062393179D00F636A3 /* OpenFoodFactsAPI.swift */; };
 		1A71610923931CB700F636A3 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A71610823931CB700F636A3 /* History.storyboard */; };
 		1A7F195D238CC67A001307E8 /* ProductChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F195C238CC67A001307E8 /* ProductChecker.swift */; };
+		1A8ED72923935116004D99D1 /* HistoryTableCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED72823935116004D99D1 /* HistoryTableCellController.swift */; };
+		1A8ED72B23935149004D99D1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED72A23935149004D99D1 /* HistoryViewController.swift */; };
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
 		1ADBE6232391E48E00711837 /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBE6222391E48E00711837 /* FindFriendViewController.swift */; };
 		1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA31DF2382994B00E5EECE /* AccountViewController.swift */; };
@@ -94,6 +96,8 @@
 		1A7161062393179D00F636A3 /* OpenFoodFactsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodFactsAPI.swift; sourceTree = "<group>"; };
 		1A71610823931CB700F636A3 /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		1A7F195C238CC67A001307E8 /* ProductChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductChecker.swift; sourceTree = "<group>"; };
+		1A8ED72823935116004D99D1 /* HistoryTableCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableCellController.swift; sourceTree = "<group>"; };
+		1A8ED72A23935149004D99D1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSettingsController.swift; sourceTree = "<group>"; };
 		1ADBE6222391E48E00711837 /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
 		1AEA31DF2382994B00E5EECE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
@@ -209,9 +213,19 @@
 			path = DataDietUITests;
 			sourceTree = "<group>";
 		};
+		1A8ED727239350E1004D99D1 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				1A8ED72823935116004D99D1 /* HistoryTableCellController.swift */,
+				1A8ED72A23935149004D99D1 /* HistoryViewController.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		1AD19E91235A63880004A331 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A8ED727239350E1004D99D1 /* History */,
 				1AEA32212385599C00E5EECE /* Friends */,
 				1AEA32202385599400E5EECE /* User Authenication */,
 				1AEA321F2385598300E5EECE /* Settings */,
@@ -555,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8ED72B23935149004D99D1 /* HistoryViewController.swift in Sources */,
 				1A1428122385D41E009EFF6F /* Product.swift in Sources */,
 				1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */,
 				1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */,
@@ -573,6 +588,7 @@
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				1AEA32272385666400E5EECE /* ImportSettingsViewController.swift in Sources */,
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
+				1A8ED72923935116004D99D1 /* HistoryTableCellController.swift in Sources */,
 				1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */,
 				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,
 				1A452D5F238095010063899E /* LoginViewController.swift in Sources */,
