@@ -2,7 +2,7 @@ import AVFoundation
 import UIKit
 import Firebase
 
-class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -16,54 +16,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var productBarcode = ""
     
     let SegueIdProductJSON = "ProductView"
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-//
-//        let format = VisionBarcodeFormat.all
-//        let barcodeOptions = VisionBarcodeDetectorOptions(formats: format)
-//
-//        var vision = Vision.vision()
-//
-//        let barcodeDetector = vision.barcodeDetector(options: barcodeOptions)
-//
-//        func imageOrientation(
-//            deviceOrientation: UIDeviceOrientation,
-//            cameraPosition: AVCaptureDevice.Position
-//            ) -> VisionDetectorImageOrientation {
-//            switch deviceOrientation {
-//                case .portrait:
-//                    return cameraPosition == .front ? .leftTop : .rightTop
-//                case .landscapeLeft:
-//                    return cameraPosition == .front ? .bottomLeft : .topLeft
-//                case .portraitUpsideDown:
-//                    return cameraPosition == .front ? .rightBottom : .leftBottom
-//                case .landscapeRight:
-//                    return cameraPosition == .front ? .topRight : .bottomRight
-//                case .faceDown, .faceUp, .unknown:
-//                    return .leftTop
-//            }
-//        }
-//
-//        let cameraPosition = AVCaptureDevice.Position.back  // Set to the capture device you used.
-//        let metadata = VisionImageMetadata()
-//        metadata.orientation = imageOrientation(
-//            deviceOrientation: UIDevice.current.orientation,
-//            cameraPosition: cameraPosition
-//        )
-//
-//        let image = VisionImage(buffer: CMSampleBuffer.self as! CMSampleBuffer)
-//        image.metadata = metadata
-//
-//        barcodeDetector.detect(in: image) { features, error in
-//          guard error == nil, let features = features, !features.isEmpty else {
-//            // ...
-//            return
-//          }
-//
-//          // ...
-//        }
-
                 
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
@@ -139,26 +94,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
             print(metadataObjects)
             
-//            if metadataObjects.count > 1 {
-//                let alert = UIAlertController(title: "Alert", message: "Scanning multiple barcodes is a planned implementation, please scan one barcode at a time.", preferredStyle: .alert)
-//                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
-//                      switch action.style{
-//                      case .default:
-//                            print("default")
-//
-//                      case .cancel:
-//                            print("cancel")
-//
-//                      case .destructive:
-//                            print("destructive")
-//
-//
-//                }}))
-//                 DispatchQueue.main.sync {
-//                    self.present(alert, animated: true, completion: nil)
-//                }
-//            }
-            
             if let metadataObject = metadataObjects.first {
                 guard let readableObject = metadataObject as? AVMetadataMachineReadableCodeObject else { return }
                 guard let stringValue = readableObject.stringValue else { return }
@@ -171,9 +106,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                 print("No Barcodes Found")
                 canScan = false
             }
-            DispatchQueue.main.async {
-                self.dismiss(animated: true)
-            }
         }
     }
     
@@ -183,23 +115,9 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         canScan = false
         let productJSONURL = "https://world.openfoodfacts.org/api/v0/product/" + productBarcode + ".json"
         
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        let data = USDARequest()
-        data.getIngredients(barcodeNumber: self.productBarcode) { (ingredientsArray) in
-            //Can access all the ingredients in here if barcode is specified
-            for element in ingredientsArray { //Testing
-                print(element)
-            }
-        }
-
-        
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
         }
-        
-        captureSession.startRunning()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -207,6 +125,36 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             var ProductVC = segue.destination as! ProductViewController
             ProductVC.productBarcode = self.productBarcode
         }
+    }
+    
+    @IBAction func ImageGalleryPicker(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = false
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+        didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageSelected = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            
+            let detector:CIDetector=CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: [CIDetectorAccuracy:CIDetectorAccuracyHigh])!
+            let ciImage:CIImage=CIImage(image:imageSelected)!
+            var qrCodeLink=""
+
+            let features=detector.features(in: ciImage)
+            for feature in features as! [CIQRCodeFeature] {
+                qrCodeLink += feature.messageString!
+            }
+
+            if qrCodeLink == "" {
+                print("nothing")
+            } else {
+                print("message: \(qrCodeLink)")
+            }
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
     
     override var prefersStatusBarHidden: Bool {

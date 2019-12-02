@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */; };
 		076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */; };
-		076E0A2A238CE3FF004A7527 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E0A29238CE3FF004A7527 /* FindFriendsViewController.swift */; };
 		076E0A2C238DA20D004A7527 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E0A2B238DA20D004A7527 /* FriendCell.swift */; };
 		076E0A2E238DA3CF004A7527 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076E0A2D238DA3CF004A7527 /* User.swift */; };
 		07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A349632374F32A00C23FF4 /* TestViewController.swift */; };
@@ -28,13 +27,14 @@
 		1A55EF7B22B8883A0010681A /* DataDietTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF7A22B8883A0010681A /* DataDietTests.swift */; };
 		1A55EF8622B8883A0010681A /* DataDietUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A55EF8522B8883A0010681A /* DataDietUITests.swift */; };
 		1A70FF1223825BE500932997 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A70FF1123825BE500932997 /* Constants.swift */; };
+		1A7F195D238CC67A001307E8 /* ProductChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7F195C238CC67A001307E8 /* ProductChecker.swift */; };
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
+		1ADBE6232391E48E00711837 /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBE6222391E48E00711837 /* FindFriendViewController.swift */; };
 		1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA31DF2382994B00E5EECE /* AccountViewController.swift */; };
 		1AEA31E42382B16500E5EECE /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E32382B16500E5EECE /* Scanner.storyboard */; };
 		1AEA31E62382B3B800E5EECE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E52382B3B800E5EECE /* Settings.storyboard */; };
 		1AEA31E82382B4C800E5EECE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E72382B4C800E5EECE /* Login.storyboard */; };
 		1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */; };
-		1AEA320E238351E700E5EECE /* AllergiesSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320D238351E600E5EECE /* AllergiesSettingsController.swift */; };
 		1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */; };
 		1AEA32122384DB8800E5EECE /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA32112384DB8800E5EECE /* Friends.storyboard */; };
 		1AEA32172385334200E5EECE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA32162385334200E5EECE /* GoogleService-Info.plist */; };
@@ -64,7 +64,6 @@
 /* Begin PBXFileReference section */
 		07349109236BA51E002BA7D0 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		076E0A29238CE3FF004A7527 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 		076E0A2B238DA20D004A7527 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		076E0A2D238DA3CF004A7527 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		07A349632374F32A00C23FF4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -90,13 +89,14 @@
 		1A55EF8522B8883A0010681A /* DataDietUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDietUITests.swift; sourceTree = "<group>"; };
 		1A55EF8722B8883A0010681A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A70FF1123825BE500932997 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A7F195C238CC67A001307E8 /* ProductChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductChecker.swift; sourceTree = "<group>"; };
 		1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSettingsController.swift; sourceTree = "<group>"; };
+		1ADBE6222391E48E00711837 /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
 		1AEA31DF2382994B00E5EECE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		1AEA31E32382B16500E5EECE /* Scanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		1AEA31E52382B3B800E5EECE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		1AEA31E72382B4C800E5EECE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePersonalSettings.swift; sourceTree = "<group>"; };
-		1AEA320D238351E600E5EECE /* AllergiesSettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllergiesSettingsController.swift; sourceTree = "<group>"; };
 		1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalSettingsViewController.swift; sourceTree = "<group>"; };
 		1AEA32112384DB8800E5EECE /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		1AEA32162385334200E5EECE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -252,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */,
-				1AEA320D238351E600E5EECE /* AllergiesSettingsController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */,
 				1AEA31DF2382994B00E5EECE /* AccountViewController.swift */,
@@ -276,8 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */,
-				076E0A29238CE3FF004A7527 /* FindFriendsViewController.swift */,
 				076E0A2B238DA20D004A7527 /* FriendCell.swift */,
+				1ADBE6222391E48E00711837 /* FindFriendViewController.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -287,6 +286,7 @@
 			children = (
 				1A452D622380D64D0063899E /* USDA_API.swift */,
 				1AEA322423855AEB00E5EECE /* ImageSetter.swift */,
+				1A7F195C238CC67A001307E8 /* ProductChecker.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -553,8 +553,9 @@
 				1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */,
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
 				1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */,
-				076E0A2A238CE3FF004A7527 /* FindFriendsViewController.swift in Sources */,
+				1A7F195D238CC67A001307E8 /* ProductChecker.swift in Sources */,
 				1AEA322523855AEB00E5EECE /* ImageSetter.swift in Sources */,
+				1ADBE6232391E48E00711837 /* FindFriendViewController.swift in Sources */,
 				076E0A2C238DA20D004A7527 /* FriendCell.swift in Sources */,
 				1A55EF6522B888370010681A /* ScannerViewController.swift in Sources */,
 				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
@@ -564,7 +565,6 @@
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
 				1AEA32272385666400E5EECE /* ImportSettingsViewController.swift in Sources */,
-				1AEA320E238351E700E5EECE /* AllergiesSettingsController.swift in Sources */,
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
 				1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */,
 				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,
@@ -751,6 +751,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVHDS8H54U;
 				INFOPLIST_FILE = DataDiet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -759,7 +760,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -772,6 +773,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LVHDS8H54U;
 				INFOPLIST_FILE = DataDiet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -780,7 +782,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

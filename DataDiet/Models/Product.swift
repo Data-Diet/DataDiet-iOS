@@ -7,15 +7,13 @@
 //
 import UIKit
 
-class Product {
+struct Product {
     
     var title: String
-    var URL: String
-    var image: UIImage
-    
-    init(URL: String) {
-        self.URL = URL
-        self.title = ""
-        self.image = UIImage.init()
-    }
+    var upc: String
+    var dietsScanned = [String]()
+    var allergensScanned = [String]()
+    var dietsFound = [String]()
+    var allergensFound = [String]()
+
 }

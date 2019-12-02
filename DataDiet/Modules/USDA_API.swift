@@ -28,32 +28,6 @@ struct USDARequest{
      
     let API_KEY = "aGdpm2mtlYcffnTgvTbh8axBPC9wdn8Z4tF0HvJ5"
     
-    func containsFoodProduct(barcodeNumber: String, completionHandler: @escaping ((Array<String>) -> Bool)) {
-        var params:[String: Any]?
-        let session = URLSession.shared
-        let url = "https://api.nal.usda.gov/fdc/v1/search?api_key=\(API_KEY)"
-        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        params = ["generalSearchInput":"\(barcodeNumber)"]
- 
-        do {
-            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
-            let task = session.dataTask(with: request as URLRequest as URLRequest, completionHandler: { (data, response, error) in
-               guard let data = data else { return }
-               
-               if let ingredientsString = String(data: data, encoding: .utf8) {
-                   let ingredients = self.formatIngredients(ingredientsList: ingredientsString)
-                   completionHandler(ingredients)
-               }
-               
-            } )
-            task.resume()
-        } catch {
-            print ("Error")
-        }
-    }
-    
     func getIngredients(barcodeNumber: String, completionHandler: @escaping ((Array<String>) -> Void)) {
          var params:[String: Any]?
          let session = URLSession.shared
@@ -72,18 +46,55 @@ struct USDARequest{
                 if let ingredientsString = String(data: data, encoding: .utf8) {
                     let ingredients = self.formatIngredients(ingredientsList: ingredientsString)
                     completionHandler(ingredients)
-    
-                    print()
-                    print("USDA product response:")
-                    print(ingredientsString)
-                    print()
                 }
+                print()
+                print("USDA product response:")
+                print(String(data: data, encoding: .utf8))
+                print()
              } )
              task.resume()
          } catch {
              print ("Error")
          }
      }
+    
+    func getTitle(barcodeNumber: String, completionHandler: @escaping ((String) -> Void)) {
+        var params:[String: Any]?
+        let session = URLSession.shared
+        let url = "https://api.nal.usda.gov/fdc/v1/search?api_key=\(API_KEY)"
+        let request = NSMutableURLRequest(url: NSURL(string: url)! as URL)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        params = ["generalSearchInput":"\(barcodeNumber)"]
+       
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: params, options: JSONSerialization.WritingOptions())
+           
+            let task = session.dataTask(with: request as URLRequest as URLRequest, completionHandler: { (data, response, error) in
+                guard let data = data else { return }
+                
+                var productTitle = String()
+                
+                if let BrandString = String(data: data, encoding: .utf8) {
+                let title = String(BrandString.substring(from: "brandOwner" + "\"" + ":" + "\"", to: "\"") ?? "")
+                    productTitle += title
+                }
+            
+                if let NameString = String(data: data, encoding: .utf8) {
+                 let title = String(NameString.substring(from: "description" + "\"" + ":" + "\"", to: "\"") ?? "")
+                    productTitle += ": " + title
+                }
+                completionHandler(productTitle)
+                print()
+                print("USDA product response:")
+                print(String(data: data, encoding: .utf8))
+                print()
+            } )
+            task.resume()
+        } catch {
+            print ("Error")
+        }
+    }
     
     //Function used to format ingredients list into an array
     func formatIngredients(ingredientsList: String) -> Array<String> {
@@ -99,7 +110,6 @@ struct USDARequest{
         rmChars = rmChars.replacingOccurrences(of: "and/or ", with: "")
         return rmChars.components(separatedBy: ", ")
     }
-    
 }
 
 //Function used for getting ingrdients list from JSON data
