@@ -12,5 +12,6 @@ struct User {
     var image: UIImage
     var username: String
     var fullname: String
+    var UID: String
 }
 
