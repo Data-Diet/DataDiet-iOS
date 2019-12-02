@@ -31,13 +31,15 @@
 		1A8ED72923935116004D99D1 /* HistoryTableCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED72823935116004D99D1 /* HistoryTableCellController.swift */; };
 		1A8ED72B23935149004D99D1 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8ED72A23935149004D99D1 /* HistoryViewController.swift */; };
 		1A9B18212395C363005D125C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B18202395C363005D125C /* User.swift */; };
+		1A9B18232395D2DE005D125C /* PendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B18222395D2DD005D125C /* PendingCell.swift */; };
+		1A9B18272395D37C005D125C /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B18262395D37C005D125C /* FindFriendsViewController.swift */; };
+		1A9B18292395D583005D125C /* SharePersonalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B18282395D583005D125C /* SharePersonalSettings.swift */; };
+		1A9B182B2395D7A2005D125C /* PendingFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9B182A2395D7A1005D125C /* PendingFriendsViewController.swift */; };
 		1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */; };
-		1ADBE6232391E48E00711837 /* FindFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADBE6222391E48E00711837 /* FindFriendViewController.swift */; };
 		1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA31DF2382994B00E5EECE /* AccountViewController.swift */; };
 		1AEA31E42382B16500E5EECE /* Scanner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E32382B16500E5EECE /* Scanner.storyboard */; };
 		1AEA31E62382B3B800E5EECE /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E52382B3B800E5EECE /* Settings.storyboard */; };
 		1AEA31E82382B4C800E5EECE /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA31E72382B4C800E5EECE /* Login.storyboard */; };
-		1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */; };
 		1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */; };
 		1AEA32122384DB8800E5EECE /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA32112384DB8800E5EECE /* Friends.storyboard */; };
 		1AEA32172385334200E5EECE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA32162385334200E5EECE /* GoogleService-Info.plist */; };
@@ -106,13 +108,15 @@
 		1A8ED72823935116004D99D1 /* HistoryTableCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableCellController.swift; sourceTree = "<group>"; };
 		1A8ED72A23935149004D99D1 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		1A9B18202395C363005D125C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1A9B18222395D2DD005D125C /* PendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingCell.swift; sourceTree = "<group>"; };
+		1A9B18262395D37C005D125C /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
+		1A9B18282395D583005D125C /* SharePersonalSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharePersonalSettings.swift; sourceTree = "<group>"; };
+		1A9B182A2395D7A1005D125C /* PendingFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PendingFriendsViewController.swift; sourceTree = "<group>"; };
 		1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerSettingsController.swift; sourceTree = "<group>"; };
-		1ADBE6222391E48E00711837 /* FindFriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendViewController.swift; sourceTree = "<group>"; };
 		1AEA31DF2382994B00E5EECE /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		1AEA31E32382B16500E5EECE /* Scanner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scanner.storyboard; sourceTree = "<group>"; };
 		1AEA31E52382B3B800E5EECE /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		1AEA31E72382B4C800E5EECE /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharePersonalSettings.swift; sourceTree = "<group>"; };
 		1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalSettingsViewController.swift; sourceTree = "<group>"; };
 		1AEA32112384DB8800E5EECE /* Friends.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		1AEA32162385334200E5EECE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -305,9 +309,11 @@
 			isa = PBXGroup;
 			children = (
 				FEE6592F23937C4100A608C2 /* FriendCell.swift */,
-				1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */,
+				1A9B182A2395D7A1005D125C /* PendingFriendsViewController.swift */,
+				1A9B18222395D2DD005D125C /* PendingCell.swift */,
 				076E0A2B238DA20D004A7527 /* FriendCell.swift */,
-				1ADBE6222391E48E00711837 /* FindFriendViewController.swift */,
+				1A9B18262395D37C005D125C /* FindFriendsViewController.swift */,
+				1A9B18282395D583005D125C /* SharePersonalSettings.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -594,20 +600,21 @@
 				1A8ED72B23935149004D99D1 /* HistoryViewController.swift in Sources */,
 				1A1428122385D41E009EFF6F /* Product.swift in Sources */,
 				1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */,
-				1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */,
 				FEE6592C239377B100A608C2 /* EditNameViewController.swift in Sources */,
+				1A9B18272395D37C005D125C /* FindFriendsViewController.swift in Sources */,
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
 				1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */,
 				1A7F195D238CC67A001307E8 /* ProductChecker.swift in Sources */,
 				1A9B18212395C363005D125C /* User.swift in Sources */,
+				1A9B182B2395D7A2005D125C /* PendingFriendsViewController.swift in Sources */,
 				1AEA322523855AEB00E5EECE /* ImageSetter.swift in Sources */,
-				1ADBE6232391E48E00711837 /* FindFriendViewController.swift in Sources */,
 				076E0A2C238DA20D004A7527 /* FriendCell.swift in Sources */,
 				1A55EF6522B888370010681A /* ScannerViewController.swift in Sources */,
 				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
 				FEE6592B239377B100A608C2 /* EditEmailViewController.swift in Sources */,
 				FEE6593023937C4100A608C2 /* FriendCell.swift in Sources */,
+				1A9B18292395D583005D125C /* SharePersonalSettings.swift in Sources */,
 				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
@@ -619,6 +626,7 @@
 				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,
 				1A452D5F238095010063899E /* LoginViewController.swift in Sources */,
 				1A7161072393179D00F636A3 /* OpenFoodFactsAPI.swift in Sources */,
+				1A9B18232395D2DE005D125C /* PendingCell.swift in Sources */,
 				076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

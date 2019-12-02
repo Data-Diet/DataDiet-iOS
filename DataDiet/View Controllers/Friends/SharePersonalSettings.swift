@@ -21,7 +21,6 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     var defaultSelected: [String: Bool] = [:]
     var users: [User] = []
     
-
     @IBOutlet weak var FriendsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -49,7 +48,7 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
                                 let username = document.data()?["username"] as! String
                                 let firstName = document.data()?["first_name"] as! String
                                 let lastName = document.data()?["last_name"] as! String
-                                self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
+                                self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)", UID: ""))
     
                                 self.friendsUIDs.append(key as! String)
                                 self.friendsSharedList.append(friendsKeyValues["\(key)"] as! Bool)

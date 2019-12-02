@@ -73,7 +73,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                                    let firstName = document.data()?["first_name"] as! String
                                    let lastName = document.data()?["last_name"] as! String
                                     
-                                   self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
+                                    self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)", UID: ""))
                                    self.friendsUIDs.append(key as! String)
                                 } else {
                                     print("Document does not exist")
