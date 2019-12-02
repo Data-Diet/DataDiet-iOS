@@ -44,8 +44,13 @@
 		1AEA32172385334200E5EECE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AEA32162385334200E5EECE /* GoogleService-Info.plist */; };
 		1AEA322523855AEB00E5EECE /* ImageSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA322423855AEB00E5EECE /* ImageSetter.swift */; };
 		1AEA32272385666400E5EECE /* ImportSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEA32262385666400E5EECE /* ImportSettingsViewController.swift */; };
-		41AC36FBD6A6418E30A9A242 /* Pods_DataDiet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1A65308B51098036ABBF3E /* Pods_DataDiet.framework */; };
-		456AD3E80FD9158411B00FBD /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E4DB9332693468AE392E3F8 /* Pods_DataDietTests.framework */; };
+		44CAD1F702AE9E3AB589BE6D /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2655C3B5FC26A25BAA0E3607 /* Pods_DataDietTests.framework */; };
+		7BAF1D40501E58033C4F8AFE /* Pods_DataDietUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0838E4C52258FAD9037A317E /* Pods_DataDietUITests.framework */; };
+		FEE6592A239377B100A608C2 /* EditUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65927239377B100A608C2 /* EditUsernameViewController.swift */; };
+		FEE6592B239377B100A608C2 /* EditEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65928239377B100A608C2 /* EditEmailViewController.swift */; };
+		FEE6592C239377B100A608C2 /* EditNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65929239377B100A608C2 /* EditNameViewController.swift */; };
+		FEE6593023937C4100A608C2 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE6592F23937C4100A608C2 /* FriendCell.swift */; };
+		FEE65936239381D600A608C2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE65935239381D600A608C2 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,13 +115,18 @@
 		1AEA32162385334200E5EECE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1AEA322423855AEB00E5EECE /* ImageSetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSetter.swift; sourceTree = "<group>"; };
 		1AEA32262385666400E5EECE /* ImportSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportSettingsViewController.swift; sourceTree = "<group>"; };
-		2308E3EEEE671316CF94C21D /* Pods-DataDietTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.release.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.release.xcconfig"; sourceTree = "<group>"; };
-		4E4DB9332693468AE392E3F8 /* Pods_DataDietTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5DA36650F6D5B935686731FB /* Pods-DataDiet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.debug.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.debug.xcconfig"; sourceTree = "<group>"; };
-		9B7E0F140C0D5B2A308B4F55 /* Pods-DataDietUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.debug.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B5EE578A15948077DDAC2A8C /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE0F26282B14D67CCCF3680B /* Pods-DataDietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.release.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.release.xcconfig"; sourceTree = "<group>"; };
-		BF1A65308B51098036ABBF3E /* Pods_DataDiet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDiet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		238CCBB27224EA167AA977B3 /* Pods-DataDietTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.release.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.release.xcconfig"; sourceTree = "<group>"; };
+		2655C3B5FC26A25BAA0E3607 /* Pods_DataDietTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D5D5FB17D8007F5BA23B31A /* Pods-DataDietTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietTests.debug.xcconfig"; path = "Target Support Files/Pods-DataDietTests/Pods-DataDietTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B59C160E0ACAD227E54BC2A /* Pods-DataDiet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.debug.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.debug.xcconfig"; sourceTree = "<group>"; };
+		E27B2FDA11E48F38A014B5FE /* Pods_DataDiet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDiet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6678862BF446524B8C4049D /* Pods-DataDietUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDietUITests.release.xcconfig"; path = "Target Support Files/Pods-DataDietUITests/Pods-DataDietUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FED84FBDD1C20F3A7C2E1BEB /* Pods-DataDiet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataDiet.release.xcconfig"; path = "Target Support Files/Pods-DataDiet/Pods-DataDiet.release.xcconfig"; sourceTree = "<group>"; };
+		FEE65927239377B100A608C2 /* EditUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUsernameViewController.swift; sourceTree = "<group>"; };
+		FEE65928239377B100A608C2 /* EditEmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditEmailViewController.swift; sourceTree = "<group>"; };
+		FEE65929239377B100A608C2 /* EditNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditNameViewController.swift; sourceTree = "<group>"; };
+		FEE6592F23937C4100A608C2 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		FEE65935239381D600A608C2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				1A1428112385D41E009EFF6F /* Product.swift */,
-				076E0A2D238DA3CF004A7527 /* User.swift */,
+				FEE65935239381D600A608C2 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,6 +271,9 @@
 			isa = PBXGroup;
 			children = (
 				076A2E7E2374FB67008BEA5E /* SettingsViewController.swift */,
+				FEE65928239377B100A608C2 /* EditEmailViewController.swift */,
+				FEE65929239377B100A608C2 /* EditNameViewController.swift */,
+				FEE65927239377B100A608C2 /* EditUsernameViewController.swift */,
 				1AD19E93235A659C0004A331 /* ScannerSettingsController.swift */,
 				1AEA320F2383583000E5EECE /* PersonalSettingsViewController.swift */,
 				1AEA31DF2382994B00E5EECE /* AccountViewController.swift */,
@@ -283,6 +296,7 @@
 		1AEA32212385599C00E5EECE /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				FEE6592F23937C4100A608C2 /* FriendCell.swift */,
 				1AEA320B2382BEDF00E5EECE /* SharePersonalSettings.swift */,
 				076E0A2B238DA20D004A7527 /* FriendCell.swift */,
 				1ADBE6222391E48E00711837 /* FindFriendViewController.swift */,
@@ -573,6 +587,7 @@
 				1A1428122385D41E009EFF6F /* Product.swift in Sources */,
 				1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */,
 				1AEA320C2382BEDF00E5EECE /* SharePersonalSettings.swift in Sources */,
+				FEE6592C239377B100A608C2 /* EditNameViewController.swift in Sources */,
 				1A55EF6B22B888370010681A /* DataDiet.xcdatamodeld in Sources */,
 				1AEA31E02382994B00E5EECE /* AccountViewController.swift in Sources */,
 				1A7F195D238CC67A001307E8 /* ProductChecker.swift in Sources */,
@@ -583,6 +598,8 @@
 				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
 				076E0A2E238DA3CF004A7527 /* User.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
+				FEE6592B239377B100A608C2 /* EditEmailViewController.swift in Sources */,
+				FEE6593023937C4100A608C2 /* FriendCell.swift in Sources */,
 				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,
 				1A55EF6322B888370010681A /* AppDelegate.swift in Sources */,
@@ -590,10 +607,12 @@
 				1AD19E94235A659C0004A331 /* ScannerSettingsController.swift in Sources */,
 				1A8ED72923935116004D99D1 /* HistoryTableCellController.swift in Sources */,
 				1AEA32102383583000E5EECE /* PersonalSettingsViewController.swift in Sources */,
+				FEE6592A239377B100A608C2 /* EditUsernameViewController.swift in Sources */,
 				07A349642374F32A00C23FF4 /* TestViewController.swift in Sources */,
 				1A452D5F238095010063899E /* LoginViewController.swift in Sources */,
 				1A7161072393179D00F636A3 /* OpenFoodFactsAPI.swift in Sources */,
 				076A2E7F2374FB67008BEA5E /* SettingsViewController.swift in Sources */,
+				FEE65936239381D600A608C2 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

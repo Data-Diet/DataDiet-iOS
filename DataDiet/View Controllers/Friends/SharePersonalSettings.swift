@@ -19,7 +19,9 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     var friendsSharedList = [Bool]()
     var profilePhotos = [UIImage]()
     var defaultSelected: [String: Bool] = [:]
+    var users: [User] = []
     
+
     @IBOutlet weak var FriendsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -28,8 +30,7 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
         // Do any additional setup after loading the view.
         FriendsTableView.dataSource = self
         FriendsTableView.delegate = self
-        FriendsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "FriendCell")
-        
+
         db = Firestore.firestore()
         shareFriends()
     }
@@ -44,16 +45,12 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
                     //Query all of user's friends
                     for (key, _) in friendsKeyValues {
                         self.db.collection("users").document(key as! String).getDocument() { (document, error) in
-                            
-                            //construct friend names (Pioritizes usernames)
                             if let document = document, document.exists {
-                                let name: Dictionary = document.data()! as Dictionary
-                                if(name["username"] != nil) {
-                                    self.friendNames.append(name["username"] as! String)
-                                } else {
-                                    self.friendNames.append("\(name["first_name"] as! String)" + " \(name["last_name"] as! String)")
-                                }
-                                self.profilePhotos.append(self.retrieveProfilePic(photoURLString: name["profilePicURL"] as! String)!)
+                                let username = document.data()?["username"] as! String
+                                let firstName = document.data()?["first_name"] as! String
+                                let lastName = document.data()?["last_name"] as! String
+                                self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
+    
                                 self.friendsUIDs.append(key as! String)
                                 self.friendsSharedList.append(friendsKeyValues["\(key)"] as! Bool)
                                 self.FriendsTableView.reloadData()
@@ -68,15 +65,16 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell")!
-        cell.textLabel?.text = friendNames[indexPath.row]
-        cell.imageView?.image = profilePhotos[indexPath.row]
+        let user = users[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as! FriendCell
+        cell.setUser(user: user)
         
         let switchView = UISwitch(frame: .zero)
-        switchView.setOn(friendsSharedList[indexPath.row], animated: true)
+        switchView.setOn(friendsSharedList[indexPath.row] , animated: true)
         switchView.tag = indexPath.row
         switchView.addTarget(self, action: #selector(self.switchChanged(_:)), for: .valueChanged)
         cell.accessoryView = switchView
+        
         return cell
     }
     
@@ -104,25 +102,18 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
         let data = try? Data(contentsOf: photoURL!)
         if let imageData = data {
             let image = UIImage(data: imageData)!
-            return resizeImage(with: image, scaledTo: CGSize(width: 50, height: 50))
+            return image
         }
         return nil
     }
-    
-    func resizeImage(with image: UIImage, scaledTo newSize: CGSize) -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-        return newImage!
-    }
-    
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friendNames.count
+        return users.count
     }
     
 }
+
