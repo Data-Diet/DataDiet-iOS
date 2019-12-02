@@ -17,6 +17,8 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     var collectionRef: CollectionReference!
     var productBarcode = String()
 
+    @IBOutlet var Navbar: UINavigationBar!
+    @IBOutlet var Toolbar: UIToolbar!
     @IBOutlet weak var HistoryTableView: UITableView!
     
     @IBAction func clearHistory(_ sender: Any) {
@@ -48,6 +50,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         HistoryTableView.dataSource = self
         HistoryTableView.delegate = self
+        
+        let IS = ImageSetter()
+        
+        IS.SetBarImage(Navbar: Navbar)
+        IS.SetBarImage(Toolbar: Toolbar)
         
         db = Firestore.firestore()
         loadHistory()
