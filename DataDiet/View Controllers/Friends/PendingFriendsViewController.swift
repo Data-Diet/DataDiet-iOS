@@ -22,7 +22,7 @@ class PendingFriendsViewController: UIViewController {
         tableView.dataSource = self
         createArray()
 
-        // Do any additional setup after loading the view.
+        // test
     }
     
     func retrieveProfilePic(_ accountInfo: QueryDocumentSnapshot) -> UIImage? {

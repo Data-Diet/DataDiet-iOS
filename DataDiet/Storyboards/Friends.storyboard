@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="08K-2i-Myz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -355,7 +354,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Find Friends" image="magnifyingglass" catalog="system" id="Qec-NA-Rly"/>
                     <connections>
-                        <outlet property="tableView" destination="dDB-bC-UeC" id="gN8-gE-NsP"/>
+                        <outlet property="tableView" destination="dDB-bC-UeC" id="zHI-zd-A9l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JFu-zH-tHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -488,7 +487,7 @@
         <image name="person.badge.plus" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="898-sg-h3g"/>
+        <segue reference="1He-Ox-FGf"/>
         <segue reference="Mif-bF-cbb"/>
     </inferredMetricsTieBreakers>
 </document>

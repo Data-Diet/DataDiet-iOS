@@ -13,7 +13,8 @@ protocol FriendCellDelegate {
 }
 
 class FriendCell: UITableViewCell {
-
+    
+    // 
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!

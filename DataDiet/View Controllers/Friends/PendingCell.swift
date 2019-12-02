@@ -22,7 +22,7 @@ class PendingCell: UITableViewCell {
     var delegate: PendingCellDelegate?
     var userItem: User!
     
-    
+    // set
     func setUser(user: User){
         userItem = user
         profileImageView.image = user.image

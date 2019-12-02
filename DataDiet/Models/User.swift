@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// struct for users in table cell
 struct User {
     var image: UIImage
     var username: String
