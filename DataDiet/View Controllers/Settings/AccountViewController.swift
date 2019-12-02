@@ -27,6 +27,7 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
     
 
     @IBAction func changeProfilePhoto(_ sender: Any) {
+        // If change profile photo is clicked, use image picker to choose photo from library
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.allowsEditing = true
@@ -56,6 +57,7 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
             return
         }
         
+        // If profile photo was updated, store new one in Firebase storage
         let storageRef = Storage.storage().reference(forURL: "gs://datadiet-1329a.appspot.com")
         let storageProfileRef = storageRef.child("profile_pics").child(uid)
         let metadata = StorageMetadata()
@@ -67,6 +69,7 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
         }
             storageProfileRef.downloadURL { (url, error) in
                 if let metaImageUrl = url?.absoluteString{
+                    // Update the profile photo url in Firebase database
                     self.userData.updateData(["profilePicURL": metaImageUrl]) { err in
                         if let err = err {
                             print("Error updating document: \(err)")
@@ -97,6 +100,7 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
     }
     
     func loadInfo() {
+        // Get reference to account info document using uid of current user
         if let userID = Auth.auth().currentUser?.uid {
             userData = db.collection("users").document(userID)
             userData.getDocument { (document, error) in
@@ -104,6 +108,7 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
                     self.uid = userID
                     let accountInfo = document.data()
                     
+                    // Use document info to fill in name, email, and username labels
                     let firstName = (accountInfo!["first_name"] as! String)
                     let lastName = (accountInfo!["last_name"] as! String)
                     self.NameLabel?.text = (firstName + " " + lastName)
@@ -111,6 +116,7 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
                     self.EmailLabel?.text = (accountInfo!["email"] as! String)
                     self.UsernameLabel?.text = (accountInfo!["username"] as! String)
                     
+                    // Use profile photo url to set the profile photo image view
                     let photoURLString = (accountInfo!["profilePicURL"] as! String)
                     let photoURL = URL(string: photoURLString)
                     let data = try? Data(contentsOf: photoURL!)
