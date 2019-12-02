@@ -164,12 +164,12 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.textLabel?.text = filteredIngredientsData[indexPath.row]
         } else {
             cell.textLabel?.text = productIngredientsArray[indexPath.row]
-
         }
         
         for allergen in self.alleryArray {
             let ingredient = cell.textLabel?.text?.lowercased()
             print("ingredient: " + (ingredient ?? "nunt"))
+            print("allergen: " + (allergen ?? "nunt"))
             if ingredient?.contains(allergen.lowercased()) ?? false {
                 cell.textLabel?.textColor = UIColor.red
             }
