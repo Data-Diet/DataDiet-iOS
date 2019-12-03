@@ -43,6 +43,10 @@ class EditUsernameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
 
         ErrorLabel.text = ""
         db = Firestore.firestore()
@@ -93,19 +97,19 @@ extension UITextField {
     func usernameExists(field: String, completion: @escaping (Bool) -> Void){
         // Get reference to users collection and check all username fields to see if the username entered already exists
         let collectionRef = Firestore.firestore().collection("users")
-                collectionRef.whereField("username", isEqualTo: field).getDocuments { (snapshot, err) in
-                if let err = err {
-                    print("Error getting document: \(err)")
-                } else if (snapshot?.isEmpty)!{
-                    completion(false)
-                } else {
-                    for document in (snapshot?.documents)!{
-                        if document.data()["username"] != nil{
-                            print("\(document.documentID) =>  \(document.data())")
-                            completion(true)
-                        }
+            collectionRef.whereField("username", isEqualTo: field).getDocuments { (snapshot, err) in
+            if let err = err {
+                print("Error getting document: \(err)")
+            } else if (snapshot?.isEmpty)!{
+                completion(false)
+            } else {
+                for document in (snapshot?.documents)!{
+                    if document.data()["username"] != nil{
+                        print("\(document.documentID) =>  \(document.data())")
+                        completion(true)
                     }
                 }
             }
+        }
     }
 }

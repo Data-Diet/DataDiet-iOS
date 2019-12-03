@@ -71,6 +71,10 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
         let IS = ImageSetter()
         
         IS.SetBarImage(Navbar: Navbar)

@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FVB-3h-AjJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -88,33 +87,25 @@
                                     <segue destination="6tD-2K-hE4" kind="presentation" id="2oB-nK-Se7"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="NbK-8W-XrV">
-                                <rect key="frame" x="93" y="566" width="228" height="161.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="TQU-fD-PPJ">
+                                <rect key="frame" x="93" y="569" width="228" height="76"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="__________ OR __________" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Jtk-gv-CMz">
-                                        <rect key="frame" x="0.0" y="0.0" width="228" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="228" height="17"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZr-mc-EAw">
-                                        <rect key="frame" x="0.0" y="57" width="228" height="47.5"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="11"/>
-                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Continue with Facebook" backgroundImage="FB">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svZ-da-GBR" customClass="GIDSignInButton">
-                                        <rect key="frame" x="0.0" y="114.5" width="228" height="47"/>
+                                        <rect key="frame" x="0.0" y="26" width="228" height="50"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQU-fQ-c37">
-                                <rect key="frame" x="177.5" y="732.5" width="59" height="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VQU-fQ-c37">
+                                <rect key="frame" x="178" y="653" width="59" height="22"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="10"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="New User?">
@@ -130,28 +121,30 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="yr0-G7-ZcY" secondAttribute="bottom" id="3w1-Jl-aeZ"/>
                             <constraint firstItem="1g9-Qv-zcC" firstAttribute="top" secondItem="KLI-Nu-WBx" secondAttribute="bottom" constant="5" id="4ot-T3-OxN"/>
+                            <constraint firstItem="TQU-fD-PPJ" firstAttribute="top" secondItem="0QP-hn-j25" secondAttribute="top" constant="569" id="5sk-M0-oUL"/>
                             <constraint firstItem="QAF-Af-sMe" firstAttribute="width" secondItem="yr0-G7-ZcY" secondAttribute="width" multiplier="0.5" id="BXX-Fp-V5i"/>
+                            <constraint firstItem="VQU-fQ-c37" firstAttribute="top" secondItem="TQU-fD-PPJ" secondAttribute="bottom" constant="8" id="Bnh-xK-gVh"/>
                             <constraint firstItem="1g9-Qv-zcC" firstAttribute="centerX" secondItem="0QP-hn-j25" secondAttribute="centerX" id="FtT-s4-sRH"/>
-                            <constraint firstItem="NbK-8W-XrV" firstAttribute="centerX" secondItem="0QP-hn-j25" secondAttribute="centerX" id="HYE-NY-Q1n"/>
                             <constraint firstItem="KLI-Nu-WBx" firstAttribute="centerX" secondItem="0QP-hn-j25" secondAttribute="centerX" id="IuA-Vc-Qvy"/>
-                            <constraint firstItem="VQU-fQ-c37" firstAttribute="top" secondItem="NbK-8W-XrV" secondAttribute="bottom" constant="5" id="Jtx-EM-1sn"/>
+                            <constraint firstItem="TQU-fD-PPJ" firstAttribute="top" secondItem="1g9-Qv-zcC" secondAttribute="bottom" constant="8" id="KPb-Zv-0vc"/>
                             <constraint firstItem="KLI-Nu-WBx" firstAttribute="width" secondItem="yr0-G7-ZcY" secondAttribute="width" multiplier="0.55" id="Oy4-6k-GuG"/>
-                            <constraint firstItem="NbK-8W-XrV" firstAttribute="top" secondItem="1g9-Qv-zcC" secondAttribute="bottom" constant="5" id="TOI-45-Fw4"/>
+                            <constraint firstItem="VQU-fQ-c37" firstAttribute="leading" secondItem="U6w-kt-SgZ" secondAttribute="leading" constant="178" id="SQI-ZZ-gVg"/>
+                            <constraint firstItem="TQU-fD-PPJ" firstAttribute="leading" secondItem="KLI-Nu-WBx" secondAttribute="leading" id="SRA-C9-oR1"/>
+                            <constraint firstItem="VQU-fQ-c37" firstAttribute="centerX" secondItem="1g9-Qv-zcC" secondAttribute="centerX" id="TzA-7q-tYy"/>
                             <constraint firstAttribute="trailing" secondItem="yr0-G7-ZcY" secondAttribute="trailing" id="VEQ-b2-p2f"/>
                             <constraint firstItem="yr0-G7-ZcY" firstAttribute="top" secondItem="0QP-hn-j25" secondAttribute="top" id="YOW-hT-Q7o"/>
+                            <constraint firstItem="VQU-fQ-c37" firstAttribute="centerX" secondItem="TQU-fD-PPJ" secondAttribute="centerX" id="Zl5-uZ-f1J"/>
                             <constraint firstItem="bon-cq-K21" firstAttribute="height" secondItem="yr0-G7-ZcY" secondAttribute="height" multiplier="0.25" id="crI-E5-ZlE"/>
-                            <constraint firstItem="NbK-8W-XrV" firstAttribute="width" secondItem="UbZ-cb-8vZ" secondAttribute="width" id="dH0-7B-ITa"/>
                             <constraint firstItem="bon-cq-K21" firstAttribute="top" secondItem="QAF-Af-sMe" secondAttribute="bottom" constant="10" id="dKl-o2-X5E"/>
                             <constraint firstItem="bon-cq-K21" firstAttribute="width" secondItem="yr0-G7-ZcY" secondAttribute="width" multiplier="0.45" id="eOY-nt-y5a"/>
                             <constraint firstItem="QAF-Af-sMe" firstAttribute="height" secondItem="yr0-G7-ZcY" secondAttribute="height" multiplier="0.05" id="fST-1Y-uAL"/>
                             <constraint firstItem="KLI-Nu-WBx" firstAttribute="top" secondItem="bon-cq-K21" secondAttribute="bottom" id="fWw-uN-4iF"/>
+                            <constraint firstItem="U6w-kt-SgZ" firstAttribute="bottom" secondItem="VQU-fQ-c37" secondAttribute="bottom" constant="187" id="gJO-V4-YFH"/>
                             <constraint firstItem="yr0-G7-ZcY" firstAttribute="leading" secondItem="0QP-hn-j25" secondAttribute="leading" id="hR3-U6-3rp"/>
                             <constraint firstItem="QAF-Af-sMe" firstAttribute="centerX" secondItem="0QP-hn-j25" secondAttribute="centerX" id="ihK-vi-VI4"/>
                             <constraint firstItem="QAF-Af-sMe" firstAttribute="top" secondItem="U6w-kt-SgZ" secondAttribute="top" constant="50" id="lc4-ri-eSd"/>
                             <constraint firstItem="bon-cq-K21" firstAttribute="centerX" secondItem="0QP-hn-j25" secondAttribute="centerX" id="qa3-uW-5mL"/>
                             <constraint firstItem="KLI-Nu-WBx" firstAttribute="height" secondItem="yr0-G7-ZcY" secondAttribute="height" multiplier="0.18" id="xF8-za-YJf"/>
-                            <constraint firstItem="VQU-fQ-c37" firstAttribute="centerX" secondItem="0QP-hn-j25" secondAttribute="centerX" id="xdV-YL-eVH"/>
-                            <constraint firstItem="NbK-8W-XrV" firstAttribute="height" secondItem="yr0-G7-ZcY" secondAttribute="height" multiplier="0.18" id="y36-u3-DZf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U6w-kt-SgZ"/>
                     </view>
@@ -166,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wl3-J0-s2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5675" y="-1"/>
+            <point key="canvasLocation" x="5673.913043478261" y="-1.3392857142857142"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="m3c-cS-aIH">
@@ -330,7 +323,6 @@
     </scenes>
     <resources>
         <image name="CircleAppIcon " width="200" height="199.5"/>
-        <image name="FB" width="285" height="69"/>
         <image name="LoginBackground" width="1680" height="633"/>
     </resources>
     <inferredMetricsTieBreakers>

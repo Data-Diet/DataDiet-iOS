@@ -167,7 +167,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                 self.allergies1 = scannerSettings!["Allergies"] as! [String]
             }
             currentScanner.updateData(["Allergies" : self.allergies1])
-            for j in 0...self.diets.count-1 {
+            for j in 0...self.diets.count - 1 {
                 currentScanner.updateData([self.diets[j]: self.dietsSelected1[j]])
             }
         }
