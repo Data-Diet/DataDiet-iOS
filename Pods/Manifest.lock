@@ -46,6 +46,9 @@ PODS:
     - FirebaseAnalytics (= 6.0.1)
   - Firebase/CoreOnly (6.2.0):
     - FirebaseCore (= 6.0.2)
+  - Firebase/Database (6.2.0):
+    - Firebase/CoreOnly
+    - FirebaseDatabase (~> 6.0.0)
   - Firebase/Firestore (6.2.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.3.2)
@@ -77,6 +80,10 @@ PODS:
   - FirebaseCore (6.0.2):
     - GoogleUtilities/Environment (~> 6.0)
     - GoogleUtilities/Logger (~> 6.0)
+  - FirebaseDatabase (6.0.0):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.0)
+    - leveldb-library (~> 1.18)
   - FirebaseFirestore (1.3.2):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.0)
@@ -198,6 +205,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
+  - Firebase/Database
   - Firebase/Firestore
   - Firebase/MLVision
   - Firebase/MLVisionBarcodeModel
@@ -219,6 +227,7 @@ SPEC REPOS:
     - FirebaseAuth
     - FirebaseAuthInterop
     - FirebaseCore
+    - FirebaseDatabase
     - FirebaseFirestore
     - FirebaseInstanceID
     - FirebaseMLCommon
@@ -253,6 +262,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 7fa2cc010b93770831a4e7a60651b52c3b8d111a
   FirebaseAuthInterop: 0ffa57668be100582bb7643d4fcb7615496c41fc
   FirebaseCore: b0f0262acebfa540e5f97b3832dbb13186980822
+  FirebaseDatabase: f48e067716864be2b855cf716b927ef375d6cfa0
   FirebaseFirestore: d9c55dfd0cd648f420cc8340c4940dc3eab2d860
   FirebaseInstanceID: cdb3827746d53ece7ae87a5c51c25c3055443366
   FirebaseMLCommon: d430756ba2a16bac8fefc81ea416e7f822f052fd
@@ -273,6 +283,6 @@ SPEC CHECKSUMS:
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
 
-PODFILE CHECKSUM: de5e77af28a3626ccd4caf0a23516a2f77083c8e
+PODFILE CHECKSUM: 00059fc0050af52e0105516940fef94ccaf06fbd
 
 COCOAPODS: 1.8.4

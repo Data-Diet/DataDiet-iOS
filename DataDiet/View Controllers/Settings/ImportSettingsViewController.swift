@@ -19,7 +19,11 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
     var friendSelected = [Bool]()
     var profilePhotos = [UIImage]()
     var defaultSelected: [String: Bool] = [:]
+<<<<<<< HEAD
     var users: [ShareUser] = []
+=======
+    var users: [User] = []
+>>>>>>> develop
     
     //Used to store friend's personal settings
     let diets = ["Vegan", "Vegetarian", "Pescatarian", "Kosher", "Ketogenic", "Paleolithic"]
@@ -40,6 +44,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
     var dietsSelected1 = [Bool](repeating: false, count: 6)
     var allergies1 = [String]()
     
+
     @IBOutlet weak var FriendsTableView: UITableView!
     
     override func viewDidLoad() {
@@ -72,7 +77,11 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                                    let firstName = document.data()?["first_name"] as! String
                                    let lastName = document.data()?["last_name"] as! String
                                     
+<<<<<<< HEAD
                                    self.users.append(ShareUser(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
+=======
+                                    self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)", UID: ""))
+>>>>>>> develop
                                    self.friendsUIDs.append(key as! String)
                                 } else {
                                     print("Document does not exist")
@@ -90,8 +99,13 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
+<<<<<<< HEAD
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShareFriendCell") as! ShareFriendCell
         cell.setShareUser(user: user)
+=======
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as! FriendCell
+        cell.setUser(user: user)
+>>>>>>> develop
         
         let switchView = UISwitch(frame: .zero)
         switchView.setOn(friendSelected[indexPath.row] , animated: true)

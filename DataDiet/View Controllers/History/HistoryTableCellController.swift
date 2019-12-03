@@ -10,6 +10,7 @@ import UIKit
 
 class HistoryTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var ProductTitleLabel: UILabel!
     @IBOutlet weak var ScannedSettingsLabel: UILabel!
     @IBOutlet weak var FoundSettingsLabel: UILabel!
@@ -27,6 +28,7 @@ class HistoryTableViewCell: UITableViewCell {
     }
     */
     
+    // Use product details to fill in history labels
     func setProductDetails(product: Product) {
         ProductTitleLabel.text = product.title
         ScannedSettingsLabel.text = "Scanned: " + product.dietsScanned.joined(separator: ", ") + (product.dietsScanned.isEmpty ? "" : ", ") + product.allergensScanned.joined(separator: ", ")

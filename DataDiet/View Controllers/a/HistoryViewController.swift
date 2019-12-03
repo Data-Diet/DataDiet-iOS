@@ -17,8 +17,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     var collectionRef: CollectionReference!
     var productBarcode = String()
 
-    @IBOutlet var Navbar: UINavigationBar!
-    @IBOutlet var Toolbar: UIToolbar!
     @IBOutlet weak var HistoryTableView: UITableView!
     
     @IBAction func clearHistory(_ sender: Any) {
@@ -50,11 +48,6 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
 
         HistoryTableView.dataSource = self
         HistoryTableView.delegate = self
-        
-        let IS = ImageSetter()
-        
-        IS.SetBarImage(Navbar: Navbar)
-        IS.SetBarImage(Toolbar: Toolbar)
         
         db = Firestore.firestore()
         loadHistory()
@@ -127,7 +120,11 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             self.productBarcode = self.productsScanned[indexPath.row].upc
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+                if (totalHits > 0) {
+                    self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+                } else {
+                    self.showToast(message : "Sorry! No product was found with the barcode: " + self.productBarcode, font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.thin))
+                }
             }
         
             }))

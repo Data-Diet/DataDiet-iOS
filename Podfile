@@ -7,6 +7,7 @@ target 'DataDiet' do
 
   # Pods for DataDiet
   pod 'Firebase'
+  pod 'Firebase/Database'
   pod 'Firebase/Core'
   pod 'Firebase/Analytics'
   pod 'Firebase/MLVision'

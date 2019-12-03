@@ -34,6 +34,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet var Toolbar: UIToolbar!
     
     @IBAction func addAllergy(_ sender: UIButton) {
+        // If add is pressed, append new allergy to allergies array, update UI to show inserted row, and update allergies in scanner settings document
         allergies.append(AllergiesTextField.text!)
         let indexPath = IndexPath(row: allergies.count - 1, section: 0)
         AllergiesTableView.beginUpdates()
@@ -49,9 +50,22 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
             }
         }
     }
+    
+    @IBAction func resetSettings(_ sender: Any) {
+        // Display an alert if reset is pressed to confirm that the user wants to reset their settings to the default
+        let alert = UIAlertController(title: "Reset settings?", message: "Resetting your settings to the default will uncheck all diets and delete all allergies and intolerances.", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Reset", style: UIAlertAction.Style.default, handler: { action in
+            
+            // If reset is confirmed, update the scanner settings document to its default fields and refresh UI to reflect changes
+            self.scannerData.setData(self.defaultSettings)
+            self.dietsSelected = [Bool](repeating: false, count: 6)
+            self.allergies = [String]()
+            self.DietsTableView?.reloadData()
+            self.AllergiesTableView?.reloadData()
 
-    @IBAction func importSettings(_ sender: Any) {
-        // will check for database changes when importing friend settings
+            }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -75,6 +89,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func loadSettings() {
+        // Get reference to scanner settings document using uid of current user and use fields of that document to populate the diets selected and allergies arrays
         if let userID = Auth.auth().currentUser?.uid {
             scannerData = db.collection("users").document(userID).collection("Settings").document("Scanner")
             scannerData.getDocument { (document, error) in
@@ -94,6 +109,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
                         }
                     }
                 }
+                // Reload both table views to reflect the document information stored in the arrays
                 self.DietsTableView?.reloadData()
                 self.AllergiesTableView?.reloadData()
             }
@@ -102,9 +118,12 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == self.DietsTableView {
+            // If the table view being loaded is the diets, reuse the diet cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "DietCell")!
+            // Use the diets array to fill in the diet label
             cell.textLabel?.text = diets[indexPath.row]
         
+            // Use the diets selected array to determine whether to make the switch on or off and watch for changes to that switch
             let switchView = UISwitch(frame: .zero)
             switchView.setOn(dietsSelected[indexPath.row], animated: true)
             switchView.tag = indexPath.row
@@ -114,7 +133,9 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
             return cell
         }
         else {
+            // If the table view being loaded is the allergies, reuse the allergy cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "AllergyCell")!
+            // Use the allergies array to fill in the allergy label
             cell.textLabel?.text = allergies[indexPath.row]
             return cell
         }
@@ -122,6 +143,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
 
     @objc func switchChanged(_ sender: UISwitch!) {
         dietsSelected[sender.tag] = sender.isOn;
+        // If a switch is changed, update the scanner settings document with the appropriate value for the corresponding diet
         scannerData.updateData([diets[sender.tag]: sender.isOn]) { err in
             if let err = err {
                 print("Error updating document: \(err)")
@@ -146,6 +168,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // If the user deletes an allergy, remove it from the allergies array, update UI to show deleted row, and update allergies in scanner settings document
         if tableView == self.AllergiesTableView && editingStyle == .delete {
             allergies.remove(at: indexPath.row)
             tableView.beginUpdates()

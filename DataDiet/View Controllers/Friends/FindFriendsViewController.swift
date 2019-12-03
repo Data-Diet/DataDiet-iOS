@@ -79,7 +79,7 @@ class FindFriendsViewController: UIViewController {
                             let username = document.data()["username"] as! String
                             let firstName = document.data()["first_name"] as! String
                             let lastName = document.data()["last_name"] as! String
-                            let UID = document.documentID 
+                            let UID = document.documentID
                             self.users.append(User(image:self.retrieveProfilePic(document)!, username: "@\(username)", fullname: "\(firstName) \(lastName)", UID: UID))
                             }
                         }

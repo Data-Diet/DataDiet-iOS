@@ -19,7 +19,11 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     var friendsSharedList = [Bool]()
     var profilePhotos = [UIImage]()
     var defaultSelected: [String: Bool] = [:]
+<<<<<<< HEAD
     var users: [ShareUser] = []
+=======
+    var users: [User] = []
+>>>>>>> develop
     
     @IBOutlet weak var FriendsTableView: UITableView!
     
@@ -48,7 +52,11 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
                                 let username = document.data()?["username"] as! String
                                 let firstName = document.data()?["first_name"] as! String
                                 let lastName = document.data()?["last_name"] as! String
+<<<<<<< HEAD
                                 self.users.append(ShareUser(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
+=======
+                                self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)", UID: ""))
+>>>>>>> develop
     
                                 self.friendsUIDs.append(key as! String)
                                 self.friendsSharedList.append(friendsKeyValues["\(key)"] as! Bool)
@@ -65,8 +73,13 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
+<<<<<<< HEAD
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShareFriendCell") as! ShareFriendCell
         cell.setShareUser(user: user)
+=======
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as! FriendCell
+        cell.setUser(user: user)
+>>>>>>> develop
         
         let switchView = UISwitch(frame: .zero)
         switchView.setOn(friendsSharedList[indexPath.row] , animated: true)
@@ -116,4 +129,7 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> develop

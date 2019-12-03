@@ -20,12 +20,15 @@ class EditNameViewController: UIViewController {
     @IBOutlet weak var ErrorLabel: UILabel!
     
     @IBAction func onDoneTapped(_ sender: Any) {
+        // When done is tapped, check text fields to see if name can be updated
         let newFirstName = FirstNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let newLastName = LastNameTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        // If either first or last name text fields are empty, show error message
         if newFirstName == "" || newLastName == "" {
             ErrorLabel.alpha = 1
         } else {
             ErrorLabel.alpha = 0
+            // Update the first and last name fields in the document then segue back to account info
             userData.updateData(["first_name": newFirstName as Any]) { err in
                 if let err = err {
                     print("Error updating document: \(err)")
@@ -55,11 +58,13 @@ class EditNameViewController: UIViewController {
     }
     
     func loadInfo() {
+        // Get reference to account info document using current user id
         if let userID = Auth.auth().currentUser?.uid {
             userData = db.collection("users").document(userID)
             userData.getDocument { (document, error) in
                 if let document = document, document.exists {
                     let accountInfo = document.data()
+                    // Use document info to initialize first and last name text fields
                     let firstName = (accountInfo!["first_name"] as! String)
                     let lastName = (accountInfo!["last_name"] as! String)
                     self.FirstNameTextField.text = firstName
