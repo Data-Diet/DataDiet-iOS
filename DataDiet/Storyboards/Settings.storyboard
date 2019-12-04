@@ -50,71 +50,6 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-05-Jxa">
-                                <rect key="frame" x="0.0" y="82" width="414" height="403"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXV-P9-xZf">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Scanner" image="Scanner">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="JXR-Is-jf9" kind="show" id="LNJ-6o-rAM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oae-EB-h9k">
-                                        <rect key="frame" x="0.0" y="80.5" width="414" height="80.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Account" image="Account">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="jfO-p1-poQ" kind="show" id="wdO-8x-Yro"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIy-1w-abw">
-                                        <rect key="frame" x="0.0" y="161" width="414" height="80.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Friends" image="Friends">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="aeQ-Ru-YRb" kind="show" id="jTF-Wz-gjo"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db6-2e-Bi0">
-                                        <rect key="frame" x="0.0" y="241.5" width="414" height="81"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Security" image="Security">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-mG-4u4">
-                                        <rect key="frame" x="0.0" y="322.5" width="414" height="80.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
-                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" title="Privacy" image="Privacy">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY8-B9-jmR">
                                 <rect key="frame" x="0.0" y="852" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -142,22 +77,86 @@
                                     <segue destination="lZ7-29-SwG" kind="show" id="SAa-h8-J4t"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-05-Jxa">
+                                <rect key="frame" x="0.0" y="101" width="414" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXV-P9-xZf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Scanner" image="Scanner">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="JXR-Is-jf9" kind="show" id="LNJ-6o-rAM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oae-EB-h9k">
+                                        <rect key="frame" x="0.0" y="70" width="414" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Account" image="Account">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jfO-p1-poQ" kind="show" id="wdO-8x-Yro"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIy-1w-abw">
+                                        <rect key="frame" x="0.0" y="140" width="414" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Friends" image="Friends">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="aeQ-Ru-YRb" kind="show" id="jTF-Wz-gjo"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="db6-2e-Bi0">
+                                        <rect key="frame" x="0.0" y="170" width="414" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Security" image="Security">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5h-mG-4u4">
+                                        <rect key="frame" x="0.0" y="170" width="414" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                        <inset key="titleEdgeInsets" minX="55" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Privacy" image="Privacy">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="IC7-0z-iCU" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" constant="15" id="26n-E7-gcx"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="width" secondItem="lt0-g4-QRt" secondAttribute="width" id="7e7-KB-Vpt"/>
                             <constraint firstItem="Hoy-8m-PsA" firstAttribute="centerX" secondItem="lt0-g4-QRt" secondAttribute="centerX" id="HcO-WJ-iVU"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" id="J89-HP-8Be"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="top" secondItem="lt0-g4-QRt" secondAttribute="top" id="NnV-E4-uIq"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="Oql-P8-4qY" secondAttribute="bottom" id="TCZ-fx-jfl"/>
+                            <constraint firstItem="NNy-2G-LM1" firstAttribute="trailing" secondItem="p6x-05-Jxa" secondAttribute="trailing" id="PjX-6C-Oyo"/>
                             <constraint firstItem="Hoy-8m-PsA" firstAttribute="height" secondItem="Oql-P8-4qY" secondAttribute="height" multiplier="0.5" id="Wwv-AH-Jmk"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="height" secondItem="NNy-2G-LM1" secondAttribute="height" multiplier="0.1" id="Xff-Mk-h1D"/>
+                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="Oql-P8-4qY" secondAttribute="bottom" constant="19" id="Xnf-d8-Ox9"/>
                             <constraint firstItem="Hoy-8m-PsA" firstAttribute="centerY" secondItem="Oql-P8-4qY" secondAttribute="centerY" constant="15" id="g3y-s7-83W"/>
                             <constraint firstItem="NNy-2G-LM1" firstAttribute="trailing" secondItem="p6x-05-Jxa" secondAttribute="trailing" id="i5W-5w-P2T"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="height" secondItem="lt0-g4-QRt" secondAttribute="height" multiplier="0.45" id="qNb-mX-brC"/>
                             <constraint firstItem="IC7-0z-iCU" firstAttribute="centerY" secondItem="Hoy-8m-PsA" secondAttribute="centerY" id="qkz-N5-y2L"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" id="ukd-N1-QVT"/>
+                            <constraint firstItem="p6x-05-Jxa" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" id="ugJ-qR-6nO"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="trailing" secondItem="NNy-2G-LM1" secondAttribute="trailing" id="wo0-PP-N8f"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NNy-2G-LM1"/>
@@ -171,7 +170,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dnV-7z-qip" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7893" y="-1"/>
+            <point key="canvasLocation" x="7892.753623188406" y="-1.3392857142857142"/>
         </scene>
         <!--Account View Controller Scene-->
         <scene sceneID="qtN-bp-pXo">
@@ -1124,12 +1123,7 @@
                             </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv9-3U-4ye">
                                 <rect key="frame" x="0.0" y="855" width="414" height="41"/>
-                                <items>
-                                    <barButtonItem title="Import" id="7Ob-QG-NOy">
-                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </barButtonItem>
-                                </items>
+                                <items/>
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTF-Kl-YNY">
@@ -1237,8 +1231,8 @@
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HbM-sK-Pvb"/>
-        <segue reference="622-Q9-IY6"/>
+        <segue reference="LNJ-6o-rAM"/>
+        <segue reference="wdO-8x-Yro"/>
         <segue reference="cjc-5u-9AX"/>
     </inferredMetricsTieBreakers>
 </document>

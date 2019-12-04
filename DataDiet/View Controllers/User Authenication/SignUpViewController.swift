@@ -181,7 +181,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
                 // Check for errors
                 if err != nil {
                     // There was error creating user
-                    self.showError("Error creating user!")
+                    self.showError(err?.localizedDescription ?? "Error creating account!")
                 } else {
                     // Make storage reference to Firebase Storage
                     let storageRef = Storage.storage().reference(forURL: "gs://datadiet-1329a.appspot.com")
