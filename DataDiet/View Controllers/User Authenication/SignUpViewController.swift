@@ -29,6 +29,10 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
         errorLabel.alpha = 0
         // initialize image view
         profilePic.layer.cornerRadius = 50
@@ -57,11 +61,11 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
     // if everything is correct then this method returns nil otherwise it returns the error message as a string to give error label
     @objc func doesUsernameExist(){
         if usernameTextField.text?.isEmpty == false {
-            usernameTextField.checkUsername(field: usernameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)) {
+            usernameTextField.checkUsername(field: usernameTextField.text!.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)) {
                 (success) in
                 if success == true {
-                    print("Username already exist!")
-                    self.showError("Username already exist!")
+                    print("Username already exists!")
+                    self.showError("Username already exists!")
                 } else{
                     print("Username is not taken")
                     self.errorLabel.text = ""
@@ -153,7 +157,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
         
         if error != nil {
             showError(error!)
-        } else if errorLabel.text == "Username already exist!"{
+        } else if errorLabel.text == "Username already exists!"{
             print("Not signing in")
         }else {
             // Create cleaned version of data
@@ -165,10 +169,10 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             
             guard let imageSelected = self.image else {
-                print("Picture is nil")
+                self.showError("Please provide a picture.")
                 return
             }
-            guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
+            guard let imageData = imageSelected.jpegData(compressionQuality: 0.2) else {
                 return
             }
             
@@ -177,7 +181,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
                 // Check for errors
                 if err != nil {
                     // There was error creating user
-                    self.showError("Error creating user!")
+                    self.showError(err?.localizedDescription ?? "Error creating account!")
                 } else {
                     // Make storage reference to Firebase Storage
                     let storageRef = Storage.storage().reference(forURL: "gs://datadiet-1329a.appspot.com")

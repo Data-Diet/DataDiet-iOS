@@ -52,6 +52,10 @@ class EditNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+        
         ErrorLabel.alpha = 0
         db = Firestore.firestore()
         loadInfo()

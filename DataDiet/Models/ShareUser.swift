@@ -1,7 +1,8 @@
-// vb
+//
+//  ShareUser.swift
 //  DataDiet
 //
-//  Created by Eric Zamora on 11/26/19.
+//  Created by Kenneth Mai on 12/2/19.
 //  Copyright © 2019 DataDiet. All rights reserved.
 //
 
@@ -9,10 +10,9 @@ import Foundation
 import UIKit
 
 // struct for users in table cell
-struct User {
+struct ShareUser {
     var image: UIImage
     var username: String
     var fullname: String
-    var UID: String
 }
 

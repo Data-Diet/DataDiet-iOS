@@ -8,33 +8,18 @@
 
 import UIKit
 
-protocol FriendCellDelegate {
-    func didTapAdd(UID: String)
-}
-
-class FriendCell: UITableViewCell {
+class ShareFriendCell: UITableViewCell {
     
-    // 
+    //
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
-    @IBOutlet weak var addButton: UIButton!
     
-    var delegate: FriendCellDelegate?
-    var userItem: User!
-    
-    
-    func setUser(user: User){
-        userItem = user
+    func setShareUser(user: ShareUser){
         profileImageView.image = user.image
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
         fullNameLabel.text = user.fullname
         usernameLabel.text = user.username
     }
-    
-    @IBAction func addButtonTapped(_ sender: Any) {
-        delegate?.didTapAdd(UID: userItem.UID)
-    }
-    
 }

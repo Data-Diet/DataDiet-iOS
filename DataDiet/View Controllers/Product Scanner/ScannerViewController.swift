@@ -151,6 +151,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             ProductVC.productBarcode = self.productBarcode
             ProductVC.alleryArray = self.alleryArray
         }
+        if (segue.identifier == "ProductViewSegue") {
+            let ProductVC = segue.destination as! ProductViewController
+            ProductVC.productBarcode = self.productBarcode
+            ProductVC.alleryArray = self.alleryArray
+        }
     }
     
     @IBAction func ImageGalleryPicker(_ sender: Any) {

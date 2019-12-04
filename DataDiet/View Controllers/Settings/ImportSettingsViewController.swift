@@ -19,7 +19,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
     var friendSelected = [Bool]()
     var profilePhotos = [UIImage]()
     var defaultSelected: [String: Bool] = [:]
-    var users: [User] = []
+    var users: [ShareUser] = []
     
     //Used to store friend's personal settings
     let diets = ["Vegan", "Vegetarian", "Pescatarian", "Kosher", "Ketogenic", "Paleolithic"]
@@ -73,7 +73,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                                    let firstName = document.data()?["first_name"] as! String
                                    let lastName = document.data()?["last_name"] as! String
                                     
-                                   self.users.append(User(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
+                                   self.users.append(ShareUser(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
                                    self.friendsUIDs.append(key as! String)
                                 } else {
                                     print("Document does not exist")
@@ -91,8 +91,8 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendCell") as! FriendCell
-        cell.setUser(user: user)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ShareFriendCell") as! ShareFriendCell
+        cell.setShareUser(user: user)
         
         let switchView = UISwitch(frame: .zero)
         switchView.setOn(friendSelected[indexPath.row] , animated: true)
@@ -167,7 +167,7 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                 self.allergies1 = scannerSettings!["Allergies"] as! [String]
             }
             currentScanner.updateData(["Allergies" : self.allergies1])
-            for j in 0...self.diets.count-1 {
+            for j in 0...self.diets.count - 1 {
                 currentScanner.updateData([self.diets[j]: self.dietsSelected1[j]])
             }
         }
