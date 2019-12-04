@@ -459,6 +459,9 @@
                                     <barButtonItem title="Clear" id="O9C-yH-3vA">
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="resetSettings:" destination="JXR-Is-jf9" id="QRm-0v-kMu"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -641,6 +644,9 @@
                                     <barButtonItem title="Clear" id="7o8-Ge-Gw1">
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="resetSettings:" destination="lnA-fj-MxJ" id="hA0-xX-Vhg"/>
+                                        </connections>
                                     </barButtonItem>
                                 </items>
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1231,7 +1237,6 @@
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DbO-AL-0wR"/>
         <segue reference="HbM-sK-Pvb"/>
         <segue reference="622-Q9-IY6"/>
         <segue reference="cjc-5u-9AX"/>
