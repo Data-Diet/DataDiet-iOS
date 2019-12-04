@@ -107,9 +107,12 @@ extension PendingFriendsViewController: PendingCellDelegate {
         let currentUID: String! = Auth.auth().currentUser?.uid
         let db = Firestore.firestore()
         // check if user exist in friends list if it does then don't send friend request
-        db.collection("users").document(currentUID).collection("Friends").document("FriendList").setData([UID : true], merge: true)
-        db.collection("users").document(UID).collection("Friends").document("FriendList").setData([currentUID : true], merge: true)
+        db.collection("users").document(currentUID).collection("Friends").document("FriendList").setData([UID : false], merge: true)
+        db.collection("users").document(UID).collection("Friends").document("FriendList").setData([currentUID : false], merge: true)
+        db.collection("users").document(currentUID).collection("Friends").document("FriendSelected").setData([UID : false], merge: true)
+        db.collection("users").document(UID).collection("Friends").document("FriendSelected").setData([currentUID : false], merge: true)
         db.collection("users").document(currentUID).collection("Friends").document("Pending").updateData([UID : FieldValue.delete()])
+
         print(UID)
         if let indexPath = tableView.indexPath(for: cell) {
             users.remove(at: indexPath.row)
