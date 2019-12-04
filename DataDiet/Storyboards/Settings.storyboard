@@ -497,7 +497,6 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="square.and.arrow.down" catalog="system"/>
                                 <connections>
-                                    <action selector="importSettings:" destination="JXR-Is-jf9" eventType="touchUpInside" id="iyl-QW-Zf7"/>
                                     <segue destination="mFJ-sm-Jtm" kind="show" id="DbO-AL-0wR"/>
                                 </connections>
                             </button>
@@ -1232,8 +1231,9 @@
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="DbO-AL-0wR"/>
         <segue reference="HbM-sK-Pvb"/>
         <segue reference="622-Q9-IY6"/>
-        <segue reference="soo-fo-DnZ"/>
+        <segue reference="cjc-5u-9AX"/>
     </inferredMetricsTieBreakers>
 </document>
