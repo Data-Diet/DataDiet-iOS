@@ -172,7 +172,7 @@ class SignUpViewController: UIViewController, UIPickerViewDelegate, UIImagePicke
                 self.showError("Please provide a picture.")
                 return
             }
-            guard let imageData = imageSelected.jpegData(compressionQuality: 0.2) else {
+            guard let imageData = imageSelected.jpegData(compressionQuality: 0.1) else {
                 return
             }
             

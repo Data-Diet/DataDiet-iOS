@@ -25,7 +25,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let diets = ["Vegan", "Vegetarian", "Pescatarian", "Kosher", "Ketogenic", "Paleolithic"]
     var dietsSelected = [Bool](repeating: false, count: 6)
-    var alleryArray = [String]()
+    var allergyArray = [String]()
     let defaultSettings: [String: Any] = [
            "Vegan": false,
            "Vegetarian": false,
@@ -76,15 +76,15 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         data.getIngredients(barcodeNumber: self.productBarcode) { (ingredientsArray) in
             //Can access all the ingredients in here if barcode is specified
-            print("self.alleryArray.count: ")
-            print(self.alleryArray.count)
-            if self.alleryArray.count > 0 {
+            print("self.allergyArray.count: ")
+            print(self.allergyArray.count)
+            if self.allergyArray.count > 0 {
                 for ingredient in ingredientsArray {
-                    for allergen in self.alleryArray {
+                    for allergen in self.allergyArray {
                         if ingredient.lowercased().contains(allergen.lowercased()) {
                             self.productIngredientsArray.insert(ingredient, at: self.productIngredientsArray.startIndex)
                             break;
-                        } else if (allergen == self.alleryArray[self.alleryArray.count - 1]){
+                        } else if (allergen == self.allergyArray[self.allergyArray.count - 1]){
                             self.productIngredientsArray.append(ingredient)
                         }
                     }
@@ -103,7 +103,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         ingredientGroup.notify(queue: .main) {
             self.IngredientTableView.reloadData()
-            self.allergensFound = self.productChecker.findAllergens(Ingredients: self.productIngredientsArray, Allergens: self.alleryArray)
+            self.allergensFound = self.productChecker.findAllergens(Ingredients: self.productIngredientsArray, Allergens: self.allergyArray)
             self.uploadToHistory()
             print(self.allergensFound)
         }
@@ -128,7 +128,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             let scannerData = db.collection("users").document(userID).collection("History").document(productBarcode)
             scannerData.getDocument { (document, error) in
                 if let document = document, document.exists {
-                    scannerData.updateData(["product_title" : self.productTitleString, "found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
+                    scannerData.updateData(["product_title" : self.productTitleString, "found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.allergyArray, "scanned_diets": []]) { err in
                         if let err = err {
                             print("Error updating document: \(err)")
                         } else {
@@ -136,7 +136,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
                         }
                     }
                 } else {
-                    scannerData.setData(["product_title" : self.productTitleString, "found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.alleryArray, "scanned_diets": []]) { err in
+                    scannerData.setData(["product_title" : self.productTitleString, "found_diets" : [], "found_allergens" : self.allergensFound, "scan_time" : FieldValue.serverTimestamp(), "upc_number" : self.productBarcode, "scanned_allergens": self.allergyArray, "scanned_diets": []]) { err in
                         if let err = err {
                             print("Error writing document: \(err)")
                         } else {
@@ -166,12 +166,14 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             cell.textLabel?.text = productIngredientsArray[indexPath.row]
         }
         
-        for allergen in self.alleryArray {
+        for allergen in self.allergyArray {
             let ingredient = cell.textLabel?.text?.lowercased()
             print("ingredient: " + (ingredient ?? "nunt"))
             print("allergen: " + (allergen ?? "nunt"))
             if ingredient?.contains(allergen.lowercased()) ?? false {
                 cell.textLabel?.textColor = UIColor.red
+            } else {
+                cell.textLabel?.textColor = UIColor.black 
             }
         }
         return cell

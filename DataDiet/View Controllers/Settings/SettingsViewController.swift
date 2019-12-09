@@ -10,6 +10,7 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import GoogleSignIn
+import Hero
 
 class SettingsViewController: UIViewController {
 
@@ -29,17 +30,14 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        let transition = CATransition()
+        transition.duration = 1
+        transition.type = CATransitionType.push
+        transition.subtype = CATransitionSubtype.fromTop
+        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
+        self.view.window!.layer.add(transition, forKey: kCATransition)
     }
-    */
-
     
     
     @IBAction func logOutTapped(_ sender: Any) {

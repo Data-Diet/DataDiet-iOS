@@ -16,6 +16,17 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     var db: Firestore!
     var collectionRef: CollectionReference!
     var productBarcode = String()
+    
+    var allergyArray = [String]()
+    let defaultSettings: [String: Any] = [
+        "Vegan": false,
+        "Vegetarian": false,
+        "Pescatarian": false,
+        "Kosher": false,
+        "Ketogenic": false,
+        "Paleolithic": false,
+        "Allergies": [String]()
+    ]
 
     @IBOutlet var Navbar: UINavigationBar!
     @IBOutlet var Toolbar: UIToolbar!
@@ -47,6 +58,9 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        db = Firestore.firestore()
+        loadDietsAndAllergens()
 
         HistoryTableView.dataSource = self
         HistoryTableView.delegate = self
@@ -55,8 +69,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         IS.SetBarImage(Navbar: Navbar)
         IS.SetBarImage(Toolbar: Toolbar)
-        
-        db = Firestore.firestore()
+    
         loadHistory()
     }
 
@@ -134,10 +147,42 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.present(alert, animated: true, completion: nil)
     }
     
+    func loadDietsAndAllergens() {
+        if let userID = Auth.auth().currentUser?.uid {
+            print(userID)
+            let scannerData = db.collection("users").document(userID).collection("Settings").document("Scanner")
+            scannerData.getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let scannerSettings = document.data()
+                    self.allergyArray = scannerSettings!["Allergies"] as! [String]
+                }
+                else {
+                    scannerData.setData(self.defaultSettings) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        if let ScannerVC = UIStoryboard(name: "Scanner", bundle: nil).instantiateViewController(withIdentifier: "ScannerViewController") as? ScannerViewController
+        {
+            ScannerVC.hero.modalAnimationType = .push(direction: .up)
+            present(ScannerVC, animated: true, completion: nil)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "ProductViewSegue") {
             let ProductVC = segue.destination as! ProductViewController
             ProductVC.productBarcode = self.productBarcode
+            ProductVC.allergyArray = self.allergyArray
+            ProductVC.hero.modalAnimationType = .push(direction: .left)
         }
     }
 

@@ -30,6 +30,8 @@ class PendingCell: UITableViewCell {
         profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
         fullnameLabel.text = user.fullname
         usernameLabel.text = user.username
+        acceptButton.layer.cornerRadius = 7
+        acceptButton.clipsToBounds = true
     }
     
     @IBAction func acceptTapped(_ sender: UIView) {

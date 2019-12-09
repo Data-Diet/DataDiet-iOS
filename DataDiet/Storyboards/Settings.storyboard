@@ -30,7 +30,7 @@
         <!--Settings View Controller-->
         <scene sceneID="4yX-Q9-sac">
             <objects>
-                <viewController storyboardIdentifier="SettingsView" modalPresentationStyle="fullScreen" id="c6i-J4-Xys" customClass="SettingsViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" modalPresentationStyle="fullScreen" id="c6i-J4-Xys" customClass="SettingsViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lt0-g4-QRt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,6 +74,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
+                                    <action selector="OnBackButtonPressed:" destination="c6i-J4-Xys" eventType="touchUpInside" id="lwV-Ss-O9s"/>
                                     <segue destination="lZ7-29-SwG" kind="show" id="SAa-h8-J4t"/>
                                 </connections>
                             </button>
@@ -162,6 +163,9 @@
                         <viewLayoutGuide key="safeArea" id="NNy-2G-LM1"/>
                     </view>
                     <navigationItem key="navigationItem" id="Il4-Qv-tiG"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="Navbar" destination="Oql-P8-4qY" id="K4u-Wt-H7E"/>
                         <outlet property="Toolbar" destination="LY8-B9-jmR" id="DHM-IW-xeV"/>
@@ -1191,6 +1195,17 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yi6-C2-JM7">
+                                <rect key="frame" x="371" y="43" width="23" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.counterclockwise" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="TouchUpInsideReload:" destination="mFJ-sm-Jtm" eventType="touchUpInside" id="APe-wT-GlF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1227,6 +1242,7 @@
         <image name="Privacy" width="30" height="37"/>
         <image name="Scanner" width="30" height="30"/>
         <image name="Security" width="30" height="39"/>
+        <image name="arrow.counterclockwise" catalog="system" width="56" height="64"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
     </resources>

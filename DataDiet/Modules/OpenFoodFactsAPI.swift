@@ -28,7 +28,7 @@ struct OpenFoodFactsRequest{
      
     let API_KEY = "aGdpm2mtlYcffnTgvTbh8axBPC9wdn8Z4tF0HvJ5"
     
-    func getIngredients(barcodeNumber: String, completionHandler: @escaping ((Array<String>) -> Void)) {
+    func getImage(barcodeNumber: String, completionHandler: @escaping ((Array<String>) -> Void)) {
          var params:[String: Any]?
          let session = URLSession.shared
          let url = "https://api.nal.usda.gov/fdc/v1/search?api_key=\(API_KEY)"

@@ -31,6 +31,8 @@ class FriendCell: UITableViewCell {
         profileImageView.layer.cornerRadius = profileImageView.bounds.width / 2
         fullNameLabel.text = user.fullname
         usernameLabel.text = user.username
+        addButton.layer.cornerRadius = 7
+        addButton.clipsToBounds = true
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {

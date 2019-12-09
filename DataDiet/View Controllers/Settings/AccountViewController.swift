@@ -53,7 +53,7 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
         guard let imageSelected = self.image else {
             return
         }
-        guard let imageData = imageSelected.jpegData(compressionQuality: 0.2) else {
+        guard let imageData = imageSelected.jpegData(compressionQuality: 0.1) else {
             return
         }
         

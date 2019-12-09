@@ -19,6 +19,8 @@ target 'DataDiet' do
   pod 'FacebookCore'
   pod 'FacebookLogin'
   pod 'FacebookShare'
+  pod 'Hero'
+  pod 'SteviaLayout'
 
   target 'DataDietTests' do
     inherit! :search_paths

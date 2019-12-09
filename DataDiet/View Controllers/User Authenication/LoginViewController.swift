@@ -30,6 +30,9 @@ class LoginViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
+        loginButton.layer.cornerRadius = 5
+        loginButton.clipsToBounds = true
 
         // Do any additional setup after loading the view.
         GIDSignIn.sharedInstance()?.presentingViewController = self
@@ -102,6 +105,4 @@ class LoginViewController: UIViewController {
             
         }
     }
-    
-
 }

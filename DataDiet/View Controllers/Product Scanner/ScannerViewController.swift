@@ -1,6 +1,7 @@
 import AVFoundation
 import UIKit
 import Firebase
+import Hero
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     var captureSession: AVCaptureSession!
@@ -14,7 +15,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     
     let diets = ["Vegan", "Vegetarian", "Pescatarian", "Kosher", "Ketogenic", "Paleolithic"]
     var dietsSelected = [Bool](repeating: false, count: 6)
-    var alleryArray = [String]()
+    var allergyArray = [String]()
     let defaultSettings: [String: Any] = [
            "Vegan": false,
            "Vegetarian": false,
@@ -34,6 +35,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        hero.isEnabled = true
         
         db = Firestore.firestore()
         loadDietsAndAllergens()
@@ -145,19 +147,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "ProductViewSegue") {
-            let ProductVC = segue.destination as! ProductViewController
-            ProductVC.productBarcode = self.productBarcode
-            ProductVC.alleryArray = self.alleryArray
-        }
-        if (segue.identifier == "ProductViewSegue") {
-            let ProductVC = segue.destination as! ProductViewController
-            ProductVC.productBarcode = self.productBarcode
-            ProductVC.alleryArray = self.alleryArray
-        }
-    }
-    
     @IBAction func ImageGalleryPicker(_ sender: Any) {
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
@@ -222,7 +211,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                     for i in 0 ... self.diets.count - 1 {
                         self.dietsSelected[i] = scannerSettings![self.diets[i]] as! Bool
                     }
-                    self.alleryArray = scannerSettings!["Allergies"] as! [String]
+                    self.allergyArray = scannerSettings!["Allergies"] as! [String]
                 }
                 else {
                     scannerData.setData(self.defaultSettings) { err in
@@ -234,6 +223,30 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
                     }
                 }
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ProductViewSegue") {
+            let ProductVC = segue.destination as! ProductViewController
+            ProductVC.productBarcode = self.productBarcode
+            ProductVC.allergyArray = self.allergyArray
+        }
+    }
+    
+    @IBAction func OnSettingsButtonPressed(_ sender: Any) {
+        if let SettingsVC = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController
+        {
+            SettingsVC.hero.modalAnimationType = .push(direction: .down)
+            present(SettingsVC, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func OnHistoryButtonPressed(_ sender: Any) {
+        if let HistoryVC = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController
+        {
+            HistoryVC.hero.modalAnimationType = .push(direction: .up)
+            present(HistoryVC, animated: true, completion: nil)
         }
     }
 }

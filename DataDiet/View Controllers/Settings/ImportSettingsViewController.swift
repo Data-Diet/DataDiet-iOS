@@ -43,6 +43,8 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
 
     @IBOutlet weak var FriendsTableView: UITableView!
     
+    let friendsGroup = DispatchGroup()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,8 +52,12 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         FriendsTableView.dataSource = self
         FriendsTableView.delegate = self
 
+        friendsGroup.enter()
         db = Firestore.firestore()
         shareFriends()
+        friendsGroup.notify(queue: .main) {
+            self.FriendsTableView.reloadData()
+        }
     }
     
     func shareFriends() {
@@ -72,7 +78,6 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                                    let username = document.data()?["username"] as! String
                                    let firstName = document.data()?["first_name"] as! String
                                    let lastName = document.data()?["last_name"] as! String
-                                    
                                    self.users.append(ShareUser(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
                                    self.friendsUIDs.append(key as! String)
                                 } else {
@@ -87,12 +92,15 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                 }
             }
         }
+        self.friendsGroup.leave()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let user = users[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShareFriendCell") as! ShareFriendCell
         cell.setShareUser(user: user)
+        
+        print("indexPath.row: " + String(indexPath.row))
         
         let switchView = UISwitch(frame: .zero)
         switchView.setOn(friendSelected[indexPath.row] , animated: true)
@@ -208,5 +216,10 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         return users.count
     }
     
+    @IBAction func TouchUpInsideReload(_ sender: Any) {
+        if (users.count > 0) {
+            self.FriendsTableView.reloadData()
+        }
+    }
  }
 

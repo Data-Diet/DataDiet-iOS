@@ -162,7 +162,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         self.window?.rootViewController = initialViewControlleripad
         self.window?.makeKeyAndVisible()
     }
-    
-
 }
 

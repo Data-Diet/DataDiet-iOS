@@ -2,25 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jsX-UO-i9V">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scanner-->
-        <scene sceneID="4Fx-Ht-tMx">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Scanner" id="VHq-iR-Y2T" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="MK1-OU-N7H"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="onE-ti-jUH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5674" y="-149"/>
-        </scene>
         <!--History View Controller-->
         <scene sceneID="3d5-UD-sMk">
             <objects>
-                <viewController title="History View Controller" modalPresentationStyle="fullScreen" id="jsX-UO-i9V" customClass="HistoryViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" title="History View Controller" modalPresentationStyle="fullScreen" id="jsX-UO-i9V" customClass="HistoryViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KOo-SR-QCW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +52,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VHq-iR-Y2T" kind="show" id="uQe-NS-YDT"/>
+                                    <action selector="OnBackButtonPressed:" destination="jsX-UO-i9V" eventType="touchUpInside" id="9YM-DQ-oWl"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-qs-fQk">
@@ -140,9 +131,13 @@
                         <viewLayoutGuide key="safeArea" id="Zex-ui-3P7"/>
                     </view>
                     <navigationItem key="navigationItem" id="FMz-e2-NuX"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="HistoryTableView" destination="TeF-qs-fQk" id="HNW-s0-WTa"/>
                         <outlet property="Navbar" destination="vex-KN-wCE" id="FyM-kI-FZU"/>
+                        <outlet property="OnBackButtonPressed" destination="08O-qM-v0B" id="MOo-du-Yhg"/>
                         <outlet property="Toolbar" destination="BZ1-AR-di1" id="Jjm-wO-RD4"/>
                         <segue destination="1Ip-1R-VZx" kind="show" identifier="ProductViewSegue" id="m0c-FG-Z7O"/>
                     </connections>

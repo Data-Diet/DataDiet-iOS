@@ -15,22 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEr-TC-uug" userLabel="History Button">
-                                <rect key="frame" x="354" y="822" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="kzn-VW-6mf"/>
-                                </constraints>
-                                <state key="normal" image="HistoryButton2"/>
-                                <connections>
-                                    <segue destination="FiZ-Pu-Xp1" kind="show" id="ava-gj-9lJ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-te-gSO">
-                                <rect key="frame" x="175" y="797" width="65" height="65"/>
+                                <rect key="frame" x="177" y="782" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="3oV-wl-dde"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="65" id="ffI-yG-l4w"/>
-                                    <constraint firstAttribute="height" constant="65" id="l14-4V-hOd"/>
+                                    <constraint firstAttribute="width" constant="60" id="3oV-wl-dde"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="cGv-2R-FZC"/>
+                                    <constraint firstAttribute="height" constant="60" id="l14-4V-hOd"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="n8c-Gj-UzP"/>
                                 </constraints>
                                 <state key="normal" image="ScanButton3"/>
                                 <connections>
@@ -39,43 +30,59 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdM-hg-qJf" userLabel="Settings Button">
-                                <rect key="frame" x="359" y="44" width="30" height="30"/>
+                                <rect key="frame" x="369" y="59" width="30" height="30"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="Prf-yz-zxK"/>
+                                    <constraint firstAttribute="width" constant="30" id="Wqp-Tr-kaW"/>
                                     <constraint firstAttribute="height" constant="30" id="dBk-V1-e3I"/>
                                 </constraints>
                                 <state key="normal" image="SettingsButton-1"/>
                                 <connections>
-                                    <segue destination="Khg-oB-2hH" kind="show" id="Mdh-W8-s00"/>
+                                    <action selector="OnSettingsButtonPressed:" destination="hWm-4Z-RT0" eventType="touchUpInside" id="aQl-Nl-TBc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaA-Za-ufg" userLabel="Image Gallery Button">
-                                <rect key="frame" x="25" y="825" width="34" height="34"/>
+                                <rect key="frame" x="20" y="808" width="34" height="34"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="2Sa-hG-u2g"/>
                                     <constraint firstAttribute="width" constant="34" id="574-U6-hmj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="34" id="gkK-gj-EBl"/>
                                 </constraints>
                                 <state key="normal" image="PhotoGallerButton2"/>
                                 <connections>
                                     <action selector="ImageGalleryPicker:" destination="hWm-4Z-RT0" eventType="touchUpInside" id="Jd8-iC-2bp"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEr-TC-uug" userLabel="History Button">
+                                <rect key="frame" x="359" y="807" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ZIZ-xB-aLf"/>
+                                    <constraint firstAttribute="width" constant="40" id="hvp-mg-rIW"/>
+                                    <constraint firstAttribute="height" constant="40" id="kzn-VW-6mf"/>
+                                </constraints>
+                                <state key="normal" image="HistoryButton2"/>
+                                <connections>
+                                    <action selector="OnHistoryButtonPressed:" destination="hWm-4Z-RT0" eventType="touchUpInside" id="JOP-Ss-Qto"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="BEr-TC-uug" firstAttribute="bottom" secondItem="fRX-te-gSO" secondAttribute="bottom" id="7ny-gf-ff6"/>
-                            <constraint firstItem="VdM-hg-qJf" firstAttribute="leading" secondItem="feC-W2-C9K" secondAttribute="leading" constant="359" id="Cay-Ka-KyD"/>
-                            <constraint firstItem="BEr-TC-uug" firstAttribute="trailing" secondItem="cJ5-SP-Qvf" secondAttribute="trailingMargin" id="MtM-wn-ze3"/>
-                            <constraint firstItem="FaA-Za-ufg" firstAttribute="top" secondItem="feC-W2-C9K" secondAttribute="top" constant="781" id="Xck-DB-C5C"/>
-                            <constraint firstItem="FaA-Za-ufg" firstAttribute="centerY" secondItem="BEr-TC-uug" secondAttribute="centerY" id="YQh-ID-dQN"/>
-                            <constraint firstItem="feC-W2-C9K" firstAttribute="trailing" secondItem="VdM-hg-qJf" secondAttribute="trailing" constant="25" id="b8m-Su-ExC"/>
-                            <constraint firstItem="BEr-TC-uug" firstAttribute="leading" secondItem="fRX-te-gSO" secondAttribute="trailing" constant="114" id="cui-6R-M0j"/>
-                            <constraint firstItem="fRX-te-gSO" firstAttribute="top" secondItem="feC-W2-C9K" secondAttribute="top" constant="753" id="kom-7I-PfQ"/>
-                            <constraint firstItem="VdM-hg-qJf" firstAttribute="top" secondItem="feC-W2-C9K" secondAttribute="top" id="pHp-eb-vbp"/>
-                            <constraint firstItem="BEr-TC-uug" firstAttribute="centerX" secondItem="VdM-hg-qJf" secondAttribute="centerX" id="tlM-Zc-iC9"/>
-                            <constraint firstItem="FaA-Za-ufg" firstAttribute="leading" secondItem="feC-W2-C9K" secondAttribute="leading" constant="25" id="yte-mk-27T"/>
+                            <constraint firstItem="feC-W2-C9K" firstAttribute="trailing" secondItem="BEr-TC-uug" secondAttribute="trailing" constant="15" id="FXO-2x-6RB"/>
+                            <constraint firstItem="fRX-te-gSO" firstAttribute="centerX" secondItem="cJ5-SP-Qvf" secondAttribute="centerX" id="IV8-Hc-B4N"/>
+                            <constraint firstItem="FaA-Za-ufg" firstAttribute="leading" secondItem="feC-W2-C9K" secondAttribute="leading" constant="20" id="UWZ-8f-Ohf"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="fRX-te-gSO" secondAttribute="bottom" constant="20" id="gbi-aF-dil"/>
+                            <constraint firstItem="feC-W2-C9K" firstAttribute="trailing" secondItem="VdM-hg-qJf" secondAttribute="trailing" constant="15" id="hqN-pc-ZM7"/>
+                            <constraint firstItem="feC-W2-C9K" firstAttribute="bottom" secondItem="FaA-Za-ufg" secondAttribute="bottom" constant="20" id="jrz-RK-qoY"/>
+                            <constraint firstItem="feC-W2-C9K" firstAttribute="bottom" secondItem="BEr-TC-uug" secondAttribute="bottom" constant="15" id="p5e-S0-J2r"/>
+                            <constraint firstItem="VdM-hg-qJf" firstAttribute="top" secondItem="feC-W2-C9K" secondAttribute="top" constant="15" id="tLi-2O-ux3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="feC-W2-C9K"/>
                     </view>
                     <navigationItem key="navigationItem" id="O3c-UD-Idk"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="HistoryButton" destination="BEr-TC-uug" id="Gii-xV-Izp"/>
                         <outlet property="ImageGalleryButton" destination="FaA-Za-ufg" id="ZIK-29-Jbl"/>
@@ -87,27 +94,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woY-wZ-Zsi" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6460.8695652173919" y="-5.3571428571428568"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="Oik-6p-Jtn">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="Khg-oB-2hH" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HOS-qi-OCT"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v8k-w0-9hj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6983" y="-267"/>
-        </scene>
-        <!--History-->
-        <scene sceneID="nzH-xD-iuz">
-            <objects>
-                <viewControllerPlaceholder storyboardName="History" id="FiZ-Pu-Xp1" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="UEH-Pk-n34"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lMm-gf-wO6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6979" y="264"/>
+            <point key="canvasLocation" x="6460" y="-5.8470764617691158"/>
         </scene>
         <!--Product View Controller-->
         <scene sceneID="jKj-xQ-F4K">
