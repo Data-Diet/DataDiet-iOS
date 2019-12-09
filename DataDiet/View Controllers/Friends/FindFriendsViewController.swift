@@ -31,6 +31,7 @@ class FindFriendsViewController: UIViewController {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = "Search for Friends"
         searchController.searchBar.sizeToFit()
+        searchController.searchBar.searchBarStyle = .minimal;
         tableView.tableHeaderView = searchController.searchBar
         definesPresentationContext = true
         tableView.reloadData()

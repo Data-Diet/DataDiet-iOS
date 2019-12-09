@@ -170,7 +170,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     @IBAction func OnBackButtonPressed(_ sender: Any) {
-        if let ScannerVC = UIStoryboard(name: "Scanner", bundle: nil).instantiateViewController(withIdentifier: "ScannerViewController") as? ScannerViewController
+        if let ScannerVC = UIStoryboard(name: "Scanner", bundle: nil).instantiateViewController(withIdentifier: "ScannerView") as? ScannerViewController
         {
             ScannerVC.hero.modalAnimationType = .push(direction: .up)
             present(ScannerVC, animated: true, completion: nil)

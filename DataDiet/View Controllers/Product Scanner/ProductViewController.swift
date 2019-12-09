@@ -113,6 +113,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             controller.searchResultsUpdater = self
             controller.dimsBackgroundDuringPresentation = false
             controller.searchBar.sizeToFit()
+            controller.searchBar.searchBarStyle = .minimal;
 
             IngredientTableView.tableHeaderView = controller.searchBar
 

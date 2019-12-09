@@ -235,7 +235,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     @IBAction func OnSettingsButtonPressed(_ sender: Any) {
-        if let SettingsVC = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsViewController") as? SettingsViewController
+        if let SettingsVC = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsView") as? SettingsViewController
         {
             SettingsVC.hero.modalAnimationType = .push(direction: .down)
             present(SettingsVC, animated: true, completion: nil)
@@ -243,7 +243,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     @IBAction func OnHistoryButtonPressed(_ sender: Any) {
-        if let HistoryVC = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController
+        if let HistoryVC = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: "HistoryView") as? HistoryViewController
         {
             HistoryVC.hero.modalAnimationType = .push(direction: .up)
             present(HistoryVC, animated: true, completion: nil)

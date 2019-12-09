@@ -23,7 +23,6 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
     @IBOutlet weak var ProfilePhoto: UIImageView!
     
     @IBOutlet var Navbar: UINavigationBar!
-    @IBOutlet var Toolbar: UIToolbar!
     
 
     @IBAction func changeProfilePhoto(_ sender: Any) {
@@ -90,8 +89,8 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
         
         if (Navbar != nil) {
             IS.SetBarImage(Navbar: Navbar)
-            IS.SetBarImage(Toolbar: Toolbar)
         }
+
         
         ProfilePhoto?.layer.masksToBounds = true
         ProfilePhoto?.layer.cornerRadius = ProfilePhoto.bounds.width / 2

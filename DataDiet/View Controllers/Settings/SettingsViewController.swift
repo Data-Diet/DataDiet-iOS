@@ -19,6 +19,9 @@ class SettingsViewController: UIViewController {
     @IBOutlet var Navbar: UINavigationBar!
     
     @IBOutlet var Toolbar: UIToolbar!
+    
+    let VT = ViewTransitioner()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,12 +34,16 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func OnBackButtonPressed(_ sender: Any) {
-        let transition = CATransition()
-        transition.duration = 1
-        transition.type = CATransitionType.push
-        transition.subtype = CATransitionSubtype.fromTop
-        transition.timingFunction = CAMediaTimingFunction(name:CAMediaTimingFunctionName.easeInEaseOut)
-        self.view.window!.layer.add(transition, forKey: kCATransition)
+        VT.ChangeView(FromViewController: self, StoryboardName: "Scanner", ViewID: "ScannerView", ViewControllerClass: ScannerViewController.self, PushDirection: .up)
+    }
+    @IBAction func OnScannerButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "ScannerSettingsView", ViewControllerClass: ScannerSettingsController.self, PushDirection: .left)
+    }
+    @IBAction func OnAccountButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "AccountSettingsView", ViewControllerClass: AccountViewController.self, PushDirection: .left)
+    }
+    @IBAction func OnFriendsButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Friends", ViewID: "FindFriendsView", ViewControllerClass: FindFriendsViewController.self, PushDirection: .left)
     }
     
     
