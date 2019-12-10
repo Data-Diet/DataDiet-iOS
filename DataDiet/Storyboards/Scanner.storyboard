@@ -160,6 +160,16 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fjo-7a-GDq">
+                                <rect key="frame" x="381" y="49" width="23" height="26"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.counterclockwise" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="TouchUpInsideReload:" destination="DvQ-up-9m6" eventType="touchUpInside" id="uor-gA-cbl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -172,10 +182,12 @@
                             <constraint firstItem="vbj-MM-LSL" firstAttribute="top" secondItem="fZg-2k-jyo" secondAttribute="top" constant="131" id="IiE-dB-2Sa"/>
                             <constraint firstAttribute="bottom" secondItem="vbj-MM-LSL" secondAttribute="bottom" id="Lqo-Tc-Eor"/>
                             <constraint firstItem="Qdu-ng-3U8" firstAttribute="centerX" secondItem="4X8-TZ-ww5" secondAttribute="centerX" id="Lrc-Mi-hmb"/>
+                            <constraint firstItem="fZg-2k-jyo" firstAttribute="trailing" secondItem="fjo-7a-GDq" secondAttribute="trailing" constant="10" id="QLB-8z-BGd"/>
                             <constraint firstItem="Qdu-ng-3U8" firstAttribute="centerX" secondItem="4X8-TZ-ww5" secondAttribute="centerX" id="XPU-s5-mII"/>
                             <constraint firstItem="fZg-2k-jyo" firstAttribute="trailing" secondItem="vbj-MM-LSL" secondAttribute="trailing" id="dXN-Xi-fw0"/>
                             <constraint firstItem="vbj-MM-LSL" firstAttribute="top" secondItem="T0Y-tb-WMM" secondAttribute="bottom" constant="3" id="hej-oZ-rxn"/>
                             <constraint firstItem="vbj-MM-LSL" firstAttribute="top" secondItem="Qdu-ng-3U8" secondAttribute="bottom" constant="93" id="iB0-NH-tQc"/>
+                            <constraint firstItem="T0Y-tb-WMM" firstAttribute="top" secondItem="fjo-7a-GDq" secondAttribute="bottom" constant="7" id="lXp-bk-frW"/>
                             <constraint firstItem="vbj-MM-LSL" firstAttribute="top" secondItem="rZW-65-SYa" secondAttribute="bottom" constant="100" id="oTr-v3-Vi4"/>
                             <constraint firstItem="fZg-2k-jyo" firstAttribute="trailing" secondItem="j5W-Nb-rJS" secondAttribute="trailing" id="sAJ-0V-VFk"/>
                             <constraint firstItem="vbj-MM-LSL" firstAttribute="top" secondItem="j5W-Nb-rJS" secondAttribute="bottom" constant="93" id="sn3-ui-UwW"/>
@@ -203,6 +215,7 @@
         <image name="PhotoGallerButton2" width="90.5" height="90.5"/>
         <image name="ScanButton3" width="90" height="90"/>
         <image name="SettingsButton-1" width="241.5" height="239"/>
+        <image name="arrow.counterclockwise" catalog="system" width="56" height="64"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
     </resources>
 </document>

@@ -175,6 +175,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             print("allergen: " + (allergen ?? "nunt"))
             if ingredient?.contains(allergen.lowercased()) ?? false {
                 cell.textLabel?.textColor = UIColor.red
+                break;
             } else {
                 cell.textLabel?.textColor = UIColor.black 
             }
@@ -209,6 +210,11 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBAction func OnBackHistoryButtonPressed(_ sender: Any) {
         if (!self.resultSearchController.isActive) {
             self.VT.ChangeView(FromViewController: self, StoryboardName: "History", ViewID: "HistoryView", ViewControllerClass: HistoryViewController.self, PushDirection: .right)
+        }
+    }
+    @IBAction func TouchUpInsideReload(_ sender: Any) {
+        if (!self.resultSearchController.isActive) {
+             self.IngredientTableView.reloadData()
         }
     }
 }

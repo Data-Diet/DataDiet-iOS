@@ -33,6 +33,7 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var DietsTableView: UITableView!
     @IBOutlet weak var AllergiesTextField: UITextField!
     @IBOutlet weak var AllergiesTableView: UITableView!
+    @IBOutlet weak var AddAllergyButton: UIButton!
     
     @IBOutlet var Navbar: UINavigationBar!
     @IBOutlet var Toolbar: UIToolbar!
@@ -83,6 +84,11 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         
         IS.SetBarImage(Navbar: Navbar)
         IS.SetBarImage(Toolbar: Toolbar)
+        
+        AddAllergyButton.layer.cornerRadius = 5
+        AddAllergyButton.clipsToBounds = true
+
+    AllergiesTextField.contentVerticalAlignment = .center
 
         DietsTableView?.dataSource = self
         DietsTableView?.delegate = self

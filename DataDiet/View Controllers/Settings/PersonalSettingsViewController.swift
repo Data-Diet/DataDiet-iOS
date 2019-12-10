@@ -32,6 +32,10 @@ class PersonalSettingsViewController: UIViewController, UITableViewDelegate, UIT
     @IBOutlet weak var DietsTableView: UITableView!
     @IBOutlet weak var AllergiesTextField: UITextField!
     @IBOutlet weak var AllergiesTableView: UITableView!
+    @IBOutlet weak var AddAllergyButton: UIButton!
+    
+    @IBOutlet weak var Navbar: UINavigationBar!
+    @IBOutlet weak var Toolbar: UIToolbar!
     
     @IBAction func addAllergy(_ sender: Any) {
         // If add is pressed, append new allergy to allergies array, update UI to show inserted row, and update allergies in personal settings document
@@ -72,6 +76,11 @@ class PersonalSettingsViewController: UIViewController, UITableViewDelegate, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let IS = ImageSetter()
+        
+        IS.SetBarImage(Navbar: Navbar)
+        IS.SetBarImage(Toolbar: Toolbar)
+        
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
@@ -80,9 +89,15 @@ class PersonalSettingsViewController: UIViewController, UITableViewDelegate, UIT
         DietsTableView.delegate = self
         DietsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "DietCell")
         
+        AddAllergyButton.layer.cornerRadius = 5
+        AddAllergyButton.clipsToBounds = true
+
+        
         AllergiesTableView.dataSource = self
         AllergiesTableView.delegate = self
         AllergiesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "AllergyCell")
+        
+        AllergiesTextField.contentVerticalAlignment = .center
         
         db = Firestore.firestore()
         loadSettings()

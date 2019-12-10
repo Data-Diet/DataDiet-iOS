@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="38" id="jKz-I6-i9y"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Clear" id="ELf-ql-n8F">
+                                    <barButtonItem title="Clear" width="467.33333333333331" id="ELf-ql-n8F">
                                         <inset key="largeContentSizeImageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="1"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
@@ -220,6 +220,16 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="bak-I1-5ds"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fcn-WB-4KX">
+                                <rect key="frame" x="343" y="49.333333333333336" width="22" height="25.666666666666664"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.counterclockwise" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
+                                </state>
+                                <connections>
+                                    <action selector="TouchUpInsideReload:" destination="d9W-KY-Ige" eventType="touchUpInside" id="xL6-hN-Jnf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -228,7 +238,9 @@
                             <constraint firstItem="5fn-cn-X9j" firstAttribute="top" secondItem="hR2-xC-O82" secondAttribute="bottom" id="4D1-jb-ewT"/>
                             <constraint firstItem="5fn-cn-X9j" firstAttribute="top" secondItem="nHQ-0o-37x" secondAttribute="top" constant="128" id="5C9-oo-cll"/>
                             <constraint firstItem="InO-AZ-6nf" firstAttribute="leading" secondItem="nHQ-0o-37x" secondAttribute="leading" id="9HQ-hP-r1V"/>
+                            <constraint firstItem="nHQ-0o-37x" firstAttribute="trailing" secondItem="Fcn-WB-4KX" secondAttribute="trailing" constant="10" id="BPg-N8-bts"/>
                             <constraint firstItem="InO-AZ-6nf" firstAttribute="trailing" secondItem="nHQ-0o-37x" secondAttribute="trailing" id="Gkt-P6-ERa"/>
+                            <constraint firstItem="hR2-xC-O82" firstAttribute="top" secondItem="Fcn-WB-4KX" secondAttribute="bottom" constant="7" id="MrE-E8-iYt"/>
                             <constraint firstItem="5fn-cn-X9j" firstAttribute="leading" secondItem="nHQ-0o-37x" secondAttribute="leading" id="Op9-W5-H0b"/>
                             <constraint firstItem="hR2-xC-O82" firstAttribute="leading" secondItem="CTu-My-Cf7" secondAttribute="leading" id="fn2-YG-5fE"/>
                             <constraint firstItem="5fn-cn-X9j" firstAttribute="trailing" secondItem="nHQ-0o-37x" secondAttribute="trailing" id="h2E-rh-prK"/>
@@ -256,6 +268,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.counterclockwise" catalog="system" width="56" height="64"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="chevron.up" catalog="system" width="64" height="36"/>
     </resources>
