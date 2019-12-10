@@ -140,7 +140,13 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             self.productBarcode = self.productsScanned[indexPath.row].upc
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+                let storyboard = UIStoryboard(name: "History", bundle: nil)
+                let controller = storyboard.instantiateViewController(withIdentifier: "HistoryProductView") as! ProductViewController
+
+                controller.productBarcode = self.productBarcode
+                controller.allergyArray = self.allergyArray
+                controller.hero.modalAnimationType = .push(direction: .left)
+                self.present(controller, animated: true, completion: nil)
             }
         
             }))

@@ -40,17 +40,18 @@
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snR-7V-X2m">
-                                <rect key="frame" x="10" y="50" width="15" height="25"/>
+                                <rect key="frame" x="10" y="50" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="ygL-IB-wTT"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="vKa-tu-vfh"/>
                                     <constraint firstAttribute="height" constant="25" id="ypD-4E-qRM"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system">
+                                <state key="normal" image="chevron.up" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
                                     <action selector="OnBackButtonPressed:" destination="jsX-UO-i9V" eventType="touchUpInside" id="9YM-DQ-oWl"/>
+                                    <action selector="OnHistoryBackButtonPressed:" destination="Adi-iK-nFG" eventType="touchUpInside" id="EFA-xh-rdE"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TeF-qs-fQk">
@@ -143,10 +144,10 @@
                         <outlet property="HistoryTableView" destination="TeF-qs-fQk" id="HNW-s0-WTa"/>
                         <outlet property="Navbar" destination="vex-KN-wCE" id="FyM-kI-FZU"/>
                         <outlet property="Toolbar" destination="BZ1-AR-di1" id="Jjm-wO-RD4"/>
-                        <segue destination="1Ip-1R-VZx" kind="show" identifier="ProductViewSegue" id="m0c-FG-Z7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8p-aj-Hne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Adi-iK-nFG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="6460" y="65.217391304347828"/>
         </scene>
@@ -174,9 +175,6 @@
                                 <state key="normal" image="chevron.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
-                                <connections>
-                                    <segue destination="jsX-UO-i9V" kind="show" id="yim-N0-jo2"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bT8-fc-RdF">
                                 <rect key="frame" x="140" y="42" width="95" height="40"/>
@@ -241,6 +239,9 @@
                         <viewLayoutGuide key="safeArea" id="jav-Wj-qWD"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vej-Ny-V7a"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="IngredientTableView" destination="Vug-90-1xS" id="nq9-5C-ILd"/>
                         <outlet property="Navbar" destination="WVb-Ho-hpu" id="tZM-gZ-Nw3"/>
@@ -254,5 +255,6 @@
     </scenes>
     <resources>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="chevron.up" catalog="system" width="64" height="36"/>
     </resources>
 </document>

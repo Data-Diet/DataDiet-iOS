@@ -9,8 +9,10 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Hero
 
 class EditNameViewController: UIViewController {
+    let VT = ViewTransitioner()
     
     var db: Firestore!
     var userData: DocumentReference!
@@ -44,7 +46,7 @@ class EditNameViewController: UIViewController {
                 }
             }
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "NameEditedSegue", sender: self)
+                self.VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "AccountSettingsView", ViewControllerClass: AccountViewController.self, PushDirection: .right)
             }
         }
     }
@@ -79,5 +81,8 @@ class EditNameViewController: UIViewController {
             }
         }
     }
-
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "AccountSettingsView", ViewControllerClass: AccountViewController.self, PushDirection: .right)
+    }
+    
 }

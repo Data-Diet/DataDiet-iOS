@@ -10,8 +10,10 @@ import UIKit
 import FirebaseAuth
 import Firebase
 import FirebaseStorage
+import Hero
 
 class FindFriendsViewController: UIViewController {
+    let VT = ViewTransitioner()
 
     @IBOutlet weak var tableView: UITableView!
     var users: [User] = []
@@ -89,6 +91,11 @@ class FindFriendsViewController: UIViewController {
                 }
     }
 
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SettingsView") as! SettingsViewController
+        self.present(controller, animated: true, completion: nil)
+    }
 }
 
 extension FindFriendsViewController: FriendCellDelegate {

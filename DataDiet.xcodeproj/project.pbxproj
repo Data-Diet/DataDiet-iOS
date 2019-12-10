@@ -14,6 +14,8 @@
 		1311820748653AB5C2BECD9E /* Pods_DataDietTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF4B3C56323FA6DA7B292AF3 /* Pods_DataDietTests.framework */; };
 		1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */; };
 		1A1428122385D41E009EFF6F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1428112385D41E009EFF6F /* Product.swift */; };
+		1A4386AA239E43700060CBE9 /* ViewTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4386A9239E43700060CBE9 /* ViewTransitioner.swift */; };
+		1A4386AC239F3CBB0060CBE9 /* FriendTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4386AB239F3CBA0060CBE9 /* FriendTabBarController.swift */; };
 		1A452D5F238095010063899E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D5E238095010063899E /* LoginViewController.swift */; };
 		1A452D612380C3B00063899E /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D602380C3B00063899E /* SignUpViewController.swift */; };
 		1A452D632380D64D0063899E /* USDA_API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A452D622380D64D0063899E /* USDA_API.swift */; };
@@ -81,6 +83,8 @@
 		08B8896224CD70110CDE13E1 /* Pods_DataDietUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DataDietUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A110BCE22C2A28D00ED1D0F /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		1A1428112385D41E009EFF6F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		1A4386A9239E43700060CBE9 /* ViewTransitioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTransitioner.swift; sourceTree = "<group>"; };
+		1A4386AB239F3CBA0060CBE9 /* FriendTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTabBarController.swift; sourceTree = "<group>"; };
 		1A452D5E238095010063899E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1A452D602380C3B00063899E /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1A452D622380D64D0063899E /* USDA_API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USDA_API.swift; sourceTree = "<group>"; };
@@ -329,6 +333,7 @@
 				076E0A2B238DA20D004A7527 /* FriendCell.swift */,
 				FEDCCD8B2395CC8200257C3A /* FindFriendsViewController.swift */,
 				1A65522B239615F500D4533B /* SharePersonalSettings.swift */,
+				1A4386AB239F3CBA0060CBE9 /* FriendTabBarController.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 				1A7161062393179D00F636A3 /* OpenFoodFactsAPI.swift */,
 				1AEA322423855AEB00E5EECE /* ImageSetter.swift */,
 				1A7F195C238CC67A001307E8 /* ProductChecker.swift */,
+				1A4386A9239E43700060CBE9 /* ViewTransitioner.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -625,12 +631,14 @@
 				1AEA322523855AEB00E5EECE /* ImageSetter.swift in Sources */,
 				FEDCCD8A2395CC2600257C3A /* ShareUser.swift in Sources */,
 				076E0A2C238DA20D004A7527 /* FriendCell.swift in Sources */,
+				1A4386AC239F3CBB0060CBE9 /* FriendTabBarController.swift in Sources */,
 				1A55EF6522B888370010681A /* ScannerViewController.swift in Sources */,
 				1A452D632380D64D0063899E /* USDA_API.swift in Sources */,
 				FE029E422395C90A00FB8F13 /* PendingFriendsViewController.swift in Sources */,
 				1A6552302396174500D4533B /* EditUsernameViewController.swift in Sources */,
 				FEDCCD8C2395CC8200257C3A /* FindFriendsViewController.swift in Sources */,
 				1A110BCF22C2A28D00ED1D0F /* ProductViewController.swift in Sources */,
+				1A4386AA239E43700060CBE9 /* ViewTransitioner.swift in Sources */,
 				0734910A236BA51F002BA7D0 /* ForgotPasswordViewController.swift in Sources */,
 				1A65522C239615F500D4533B /* SharePersonalSettings.swift in Sources */,
 				1A70FF1223825BE500932997 /* Constants.swift in Sources */,

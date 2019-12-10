@@ -4,6 +4,8 @@ import Firebase
 import Hero
 
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    let VT = ViewTransitioner()
+    
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
     
@@ -139,7 +141,13 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         data.checkIfExists(barcodeNumber: self.productBarcode) { (totalHits) in
             DispatchQueue.main.async {
                 if (totalHits > 0) {
-                    self.performSegue(withIdentifier: "ProductViewSegue", sender: self)
+                    let storyboard = UIStoryboard(name: "Scanner", bundle: nil)
+                    let controller = storyboard.instantiateViewController(withIdentifier: "ProductView") as! ProductViewController
+
+                    controller.productBarcode = self.productBarcode
+                    controller.allergyArray = self.allergyArray
+                    controller.hero.modalAnimationType = .push(direction: .left)
+                    self.present(controller, animated: true, completion: nil)
                 } else {
                     self.showToast(message : "Sorry! No product was found with the barcode: " + self.productBarcode, font: UIFont.systemFont(ofSize: 20, weight: UIFont.Weight.thin))
                 }
@@ -226,14 +234,6 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "ProductViewSegue") {
-            let ProductVC = segue.destination as! ProductViewController
-            ProductVC.productBarcode = self.productBarcode
-            ProductVC.allergyArray = self.allergyArray
-        }
-    }
-    
     @IBAction func OnSettingsButtonPressed(_ sender: Any) {
         if let SettingsVC = UIStoryboard(name: "Settings", bundle: nil).instantiateViewController(withIdentifier: "SettingsView") as? SettingsViewController
         {
@@ -243,11 +243,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     }
     
     @IBAction func OnHistoryButtonPressed(_ sender: Any) {
-        if let HistoryVC = UIStoryboard(name: "History", bundle: nil).instantiateViewController(withIdentifier: "HistoryView") as? HistoryViewController
-        {
-            HistoryVC.hero.modalAnimationType = .push(direction: .up)
-            present(HistoryVC, animated: true, completion: nil)
-        }
+        VT.ChangeView(FromViewController: self, StoryboardName: "History", ViewID: "HistoryView", ViewControllerClass: HistoryViewController.self, PushDirection: .up)
     }
 }
 

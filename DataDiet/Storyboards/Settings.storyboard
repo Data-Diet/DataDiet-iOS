@@ -232,7 +232,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="c6i-J4-Xys" kind="show" id="soo-fo-DnZ"/>
+                                    <action selector="OnBackButtonPressed:" destination="jfO-p1-poQ" eventType="touchUpInside" id="yij-mH-2UN"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Uq8-Na-gMF">
@@ -260,7 +260,7 @@
                                                     <color key="titleColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="1Tj-eY-9bI" kind="show" id="ftW-Db-ubg"/>
+                                                    <action selector="OnEditNamePressed:" destination="jfO-p1-poQ" eventType="touchUpInside" id="0Bi-f8-6cf"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -291,7 +291,7 @@
                                                     <color key="titleColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="a2D-IN-zLp" kind="show" id="tLk-U7-Ez3"/>
+                                                    <action selector="OnEditEmailPressed:" destination="jfO-p1-poQ" eventType="touchUpInside" id="efZ-58-rKv"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -318,7 +318,7 @@
                                                     <color key="titleColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="PHg-Nm-PnW" kind="show" id="ZSe-Kv-5Fp"/>
+                                                    <action selector="OnEditUsernamePressed:" destination="jfO-p1-poQ" eventType="touchUpInside" id="Qp5-pc-r6n"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -330,7 +330,7 @@
                                             <color key="titleColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="lnA-fj-MxJ" kind="show" id="sfv-5o-d7N"/>
+                                            <action selector="OnPersonalSettingsPressed:" destination="jfO-p1-poQ" eventType="touchUpInside" id="WBL-xk-esT"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -380,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6qe-8a-9H6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7886" y="710"/>
+            <point key="canvasLocation" x="7893" y="710"/>
         </scene>
         <!--Scanner Settings View Controller-->
         <scene sceneID="wjj-sk-IA0">
@@ -509,6 +509,9 @@
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="square.and.arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="OnImportButtonPressed:" destination="JXR-Is-jf9" eventType="touchUpInside" id="E36-1G-M0y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -688,7 +691,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jfO-p1-poQ" kind="show" id="rgr-nr-Ozi"/>
+                                    <action selector="OnBackButtonPressed:" destination="lnA-fj-MxJ" eventType="touchUpInside" id="HjV-oV-a0Z"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -782,7 +785,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jfO-p1-poQ" kind="show" id="cbI-8s-Xov"/>
+                                    <action selector="OnBackButtonPressed:" destination="1Tj-eY-9bI" eventType="touchUpInside" id="Crv-9r-zk5"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1dp-mp-qVH">
@@ -879,7 +882,6 @@
                         <outlet property="ErrorLabel" destination="o2r-IC-3EG" id="wrZ-qz-6US"/>
                         <outlet property="FirstNameTextField" destination="vhD-Ii-IEl" id="UCf-5H-hXN"/>
                         <outlet property="LastNameTextField" destination="hCp-LW-wFS" id="mvi-VB-wi0"/>
-                        <segue destination="jfO-p1-poQ" kind="show" identifier="NameEditedSegue" id="622-Q9-IY6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Clv-8n-eK5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -930,7 +932,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jfO-p1-poQ" kind="show" id="pZF-zp-de7"/>
+                                    <action selector="OnBackButtonPressed:" destination="a2D-IN-zLp" eventType="touchUpInside" id="YMh-ym-l2a"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="5gV-KK-Ejt">
@@ -1006,7 +1008,6 @@
                     <connections>
                         <outlet property="EmailTextField" destination="uTa-tV-g03" id="XQi-y7-TAA"/>
                         <outlet property="ErrorLabel" destination="0gT-XR-xiT" id="27u-tf-VRf"/>
-                        <segue destination="jfO-p1-poQ" kind="show" identifier="EmailEditedSegue" id="0YD-1L-aAO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ffb-ig-rWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1047,7 +1048,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jfO-p1-poQ" kind="show" id="tto-3f-Hvp"/>
+                                    <action selector="OnBackButtonPressed:" destination="PHg-Nm-PnW" eventType="touchUpInside" id="5EH-b5-Awr"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="tp9-68-pnN">
@@ -1123,7 +1124,6 @@
                     <connections>
                         <outlet property="ErrorLabel" destination="p0i-Oy-oqQ" id="Wwq-Lw-LXZ"/>
                         <outlet property="UsernameTextField" destination="eNy-Ao-o1N" id="6Az-rb-K9D"/>
-                        <segue destination="jfO-p1-poQ" kind="show" identifier="UsernameEditedSegue" id="r3D-Xz-sCX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hzn-5n-G3C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1133,14 +1133,15 @@
         <!--Friend Settings View Controller-->
         <scene sceneID="NqU-EC-gKA">
             <objects>
-                <viewController storyboardIdentifier="ImportSetttingsView" title="Friend Settings View Controller" modalPresentationStyle="fullScreen" id="mFJ-sm-Jtm" customClass="ImportSettingsViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImportSettingsView" title="Friend Settings View Controller" modalPresentationStyle="fullScreen" id="mFJ-sm-Jtm" customClass="ImportSettingsViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rew-MO-GqW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translucent="NO" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zze-KC-SaY">
-                                <rect key="frame" x="0.0" y="-2" width="414" height="98"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="82" id="agn-GU-3mn"/>
                                     <constraint firstAttribute="height" constant="82" id="he7-TY-9Y6"/>
                                 </constraints>
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1148,7 +1149,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friend Settings" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xn8-8t-Tdt">
                                 <rect key="frame" x="116" y="42" width="182" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="q6q-jx-hgl"/>
+                                    <constraint firstAttribute="height" constant="40" id="aTv-3c-hN9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1156,11 +1157,6 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pv9-3U-4ye">
-                                <rect key="frame" x="0.0" y="1009" width="414" height="49"/>
-                                <items/>
-                                <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTF-Kl-YNY">
                                 <rect key="frame" x="10" y="50" width="15" height="25"/>
                                 <constraints>
@@ -1171,9 +1167,12 @@
                                 <state key="normal" image="chevron.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnBackButtonPressed:" destination="mFJ-sm-Jtm" eventType="touchUpInside" id="u7G-hA-rhJ"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="28F-yb-hHJ">
-                                <rect key="frame" x="0.0" y="82" width="414" height="927"/>
+                                <rect key="frame" x="0.0" y="82" width="414" height="780"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShareFriendCell" id="9Ts-Zd-pm1" customClass="ShareFriendCell" customModule="DataDiet" customModuleProvider="target">
@@ -1235,25 +1234,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Xn8-8t-Tdt" firstAttribute="centerX" secondItem="Rew-MO-GqW" secondAttribute="centerX" id="0vK-7T-vOb"/>
-                            <constraint firstItem="zze-KC-SaY" firstAttribute="leading" secondItem="x5G-dB-pXc" secondAttribute="leading" id="3Yo-DJ-5u7"/>
-                            <constraint firstItem="Pv9-3U-4ye" firstAttribute="leading" secondItem="x5G-dB-pXc" secondAttribute="leading" id="953-5A-QaK"/>
-                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="rTF-Kl-YNY" secondAttribute="bottom" constant="7" id="GiF-kT-A6O"/>
-                            <constraint firstItem="Pv9-3U-4ye" firstAttribute="height" secondItem="x5G-dB-pXc" secondAttribute="height" multiplier="0.05" id="GqK-5Y-vIC"/>
-                            <constraint firstItem="zze-KC-SaY" firstAttribute="height" secondItem="x5G-dB-pXc" secondAttribute="height" multiplier="0.1" id="H1Z-2G-3IU"/>
-                            <constraint firstItem="28F-yb-hHJ" firstAttribute="trailing" secondItem="x5G-dB-pXc" secondAttribute="trailing" id="Itm-2g-4rK"/>
-                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="Yi6-C2-JM7" secondAttribute="bottom" constant="7" id="JBz-Ah-hrl"/>
-                            <constraint firstAttribute="bottom" secondItem="Pv9-3U-4ye" secondAttribute="bottom" id="JfD-gD-SCZ"/>
-                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="x5G-dB-pXc" secondAttribute="top" constant="38" id="M3C-5b-LNd"/>
-                            <constraint firstItem="rTF-Kl-YNY" firstAttribute="leading" secondItem="x5G-dB-pXc" secondAttribute="leading" constant="10" id="Msv-dd-fXQ"/>
-                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="Xn8-8t-Tdt" secondAttribute="bottom" id="ThE-8l-k1F"/>
-                            <constraint firstItem="Xn8-8t-Tdt" firstAttribute="centerY" secondItem="zze-KC-SaY" secondAttribute="centerY" constant="15" id="Vga-23-KXo"/>
-                            <constraint firstItem="Pv9-3U-4ye" firstAttribute="trailing" secondItem="x5G-dB-pXc" secondAttribute="trailing" id="ZzJ-gq-Xpw"/>
-                            <constraint firstItem="x5G-dB-pXc" firstAttribute="trailing" secondItem="Yi6-C2-JM7" secondAttribute="trailing" constant="10" id="apn-X9-HDK"/>
-                            <constraint firstItem="Pv9-3U-4ye" firstAttribute="centerX" secondItem="Rew-MO-GqW" secondAttribute="centerX" id="dqu-vy-MPD"/>
-                            <constraint firstItem="28F-yb-hHJ" firstAttribute="leading" secondItem="x5G-dB-pXc" secondAttribute="leading" id="iq0-m1-cBo"/>
-                            <constraint firstItem="zze-KC-SaY" firstAttribute="trailing" secondItem="x5G-dB-pXc" secondAttribute="trailing" id="stM-xw-jWk"/>
-                            <constraint firstItem="Pv9-3U-4ye" firstAttribute="top" secondItem="28F-yb-hHJ" secondAttribute="bottom" id="vgH-F3-8fJ"/>
+                            <constraint firstItem="28F-yb-hHJ" firstAttribute="leading" secondItem="x5G-dB-pXc" secondAttribute="leading" id="1yK-2b-US8"/>
+                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="Xn8-8t-Tdt" secondAttribute="bottom" id="6Rl-uR-SfW"/>
+                            <constraint firstItem="x5G-dB-pXc" firstAttribute="trailing" secondItem="Yi6-C2-JM7" secondAttribute="trailing" constant="10" id="9pJ-qj-FJg"/>
+                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="x5G-dB-pXc" secondAttribute="top" constant="38" id="M6z-6X-h0g"/>
+                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="rTF-Kl-YNY" secondAttribute="bottom" constant="7" id="Slz-XH-Tb7"/>
+                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="Yi6-C2-JM7" secondAttribute="bottom" constant="7" id="WO1-I4-JSA"/>
+                            <constraint firstItem="Xn8-8t-Tdt" firstAttribute="centerX" secondItem="Rew-MO-GqW" secondAttribute="centerX" id="Yuw-QQ-AfZ"/>
+                            <constraint firstItem="28F-yb-hHJ" firstAttribute="trailing" secondItem="x5G-dB-pXc" secondAttribute="trailing" id="dcM-Xf-leW"/>
+                            <constraint firstItem="x5G-dB-pXc" firstAttribute="bottom" secondItem="28F-yb-hHJ" secondAttribute="bottom" id="fK5-In-SfU"/>
+                            <constraint firstItem="28F-yb-hHJ" firstAttribute="top" secondItem="zze-KC-SaY" secondAttribute="bottom" id="oUL-XF-ihe"/>
+                            <constraint firstItem="zze-KC-SaY" firstAttribute="trailing" secondItem="x5G-dB-pXc" secondAttribute="trailing" id="uTW-gL-TKx"/>
+                            <constraint firstItem="rTF-Kl-YNY" firstAttribute="leading" secondItem="x5G-dB-pXc" secondAttribute="leading" constant="10" id="w2l-0R-ZNg"/>
+                            <constraint firstItem="zze-KC-SaY" firstAttribute="leading" secondItem="x5G-dB-pXc" secondAttribute="leading" id="ytl-fo-NF2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x5G-dB-pXc"/>
                     </view>
@@ -1267,7 +1260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ovk-hE-fhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9366.6666666666679" y="-1.3392857142857142"/>
+            <point key="canvasLocation" x="9370" y="-4"/>
         </scene>
     </scenes>
     <resources>
@@ -1282,7 +1275,4 @@
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
         <image name="trash.fill" catalog="system" width="60" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="622-Q9-IY6"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let VT = ViewTransitioner()
     
     var db: Firestore!
     var scannerData: DocumentReference!
@@ -214,6 +215,10 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
+    }
+    
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "ScannerSettingsView", ViewControllerClass: ScannerSettingsController.self, PushDirection: .right)
     }
     
     @IBAction func TouchUpInsideReload(_ sender: Any) {

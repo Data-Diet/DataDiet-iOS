@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class EditEmailViewController: UIViewController {
+    let VT = ViewTransitioner()
     
     var db: Firestore!
     var userData: DocumentReference!
@@ -36,7 +37,7 @@ class EditEmailViewController: UIViewController {
                 }
             }
             DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "EmailEditedSegue", sender: self)
+                self.VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "AccountSettingsView", ViewControllerClass: AccountViewController.self, PushDirection: .right)
             }
         }
     }
@@ -70,4 +71,7 @@ class EditEmailViewController: UIViewController {
         }
     }
 
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "AccountSettingsView", ViewControllerClass: AccountViewController.self, PushDirection: .right)
+    }
 }

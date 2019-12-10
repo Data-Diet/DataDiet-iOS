@@ -14,10 +14,10 @@ struct ViewTransitioner{
     
     func ChangeView<T>(FromViewController: UIViewController, StoryboardName: String, ViewID: String, ViewControllerClass: T.Type, PushDirection: HeroDefaultAnimationType.Direction) {
 
-        var ScannerVC = UIStoryboard(name: StoryboardName, bundle: nil).instantiateViewController(withIdentifier: ViewID) as? T
+        let VC = UIStoryboard(name: StoryboardName, bundle: nil).instantiateViewController(withIdentifier: ViewID) as? T
         
-        (ScannerVC as! UIViewController).hero.modalAnimationType = .push(direction: PushDirection)
+        (VC as! UIViewController).hero.modalAnimationType = .push(direction: PushDirection)
         
-        FromViewController.present(ScannerVC as! UIViewController, animated: true, completion: nil)
+        FromViewController.present(VC as! UIViewController, animated: true, completion: nil)
     }
 }

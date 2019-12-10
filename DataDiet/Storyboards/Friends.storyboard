@@ -36,6 +36,9 @@
                                 <state key="normal" image="chevron.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnBackButtonPressed:" destination="ogE-ae-b2d" eventType="touchUpInside" id="8FQ-Ry-E2M"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQw-Md-wuz">
                                 <rect key="frame" x="162.5" y="42" width="89.5" height="40"/>
@@ -137,6 +140,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Pending Requests" image="person.badge.plus" catalog="system" id="Drv-iF-OXk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="yQQ-WA-fXV" id="DM7-Im-O0d"/>
                     </connections>
@@ -181,6 +187,9 @@
                                 <state key="normal" image="chevron.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnBackButtonPressed:" destination="2Xb-Z7-Kwc" eventType="touchUpInside" id="xGZ-ts-tqU"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iv2-Is-bFc">
                                 <rect key="frame" x="0.0" y="82" width="414" height="731"/>
@@ -253,6 +262,9 @@
                     <tabBarItem key="tabBarItem" title="View Friends" image="person.3" catalog="system" id="Jj7-gb-kPB"/>
                     <navigationItem key="navigationItem" id="MqR-2Z-fMg"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="FriendsTableView" destination="iv2-Is-bFc" id="QbH-8I-e1n"/>
                     </connections>
@@ -264,7 +276,7 @@
         <!--Find Friends-->
         <scene sceneID="Af5-xG-HVW">
             <objects>
-                <viewController storyboardIdentifier="FindFriendsView" id="NXw-GI-x2X" customClass="FindFriendsViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FindFriendsView" modalPresentationStyle="fullScreen" id="NXw-GI-x2X" customClass="FindFriendsViewController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eno-28-6nd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,7 +299,7 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oqu-W5-mIT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oqu-W5-mIT">
                                 <rect key="frame" x="0.0" y="82" width="414" height="731"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -367,6 +379,9 @@
                                 <state key="normal" image="chevron.left" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
+                                <connections>
+                                    <action selector="OnBackButtonPressed:" destination="NXw-GI-x2X" eventType="touchUpInside" id="2rM-XE-Wc7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -380,13 +395,15 @@
                             <constraint firstItem="xc9-ZX-yvZ" firstAttribute="leading" secondItem="oqu-W5-mIT" secondAttribute="leading" id="Wsp-X8-U7w"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="top" secondItem="h0E-eW-qXc" secondAttribute="bottom" id="kro-VE-g22"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="top" secondItem="Rax-if-eHu" secondAttribute="top" constant="38" id="njL-15-iVG"/>
-                            <constraint firstItem="Rax-if-eHu" firstAttribute="bottom" secondItem="oqu-W5-mIT" secondAttribute="bottom" id="o6K-ZH-Wf9"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="leading" secondItem="Rax-if-eHu" secondAttribute="leading" id="xAI-EV-3z3"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="top" secondItem="hmc-cZ-7SF" secondAttribute="bottom" constant="7" id="zDO-a6-5ni"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rax-if-eHu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Find Friends" image="magnifyingglass" catalog="system" id="GYt-6I-dAO"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="tableView" destination="oqu-W5-mIT" id="69o-4l-4Gf"/>
                     </connections>
@@ -395,15 +412,18 @@
             </objects>
             <point key="canvasLocation" x="8162.3188405797109" y="-46.875"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Friend Tab Bar Controller-->
         <scene sceneID="MTf-S3-idl">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="vle-As-GLV" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="FriendsTabView" modalPresentationStyle="fullScreen" id="vle-As-GLV" customClass="FriendTabBarController" customModule="DataDiet" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zdo-BV-WbN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="NXw-GI-x2X" kind="relationship" relationship="viewControllers" id="C5f-TD-leU"/>
                         <segue destination="2Xb-Z7-Kwc" kind="relationship" relationship="viewControllers" id="reP-lI-Nv5"/>

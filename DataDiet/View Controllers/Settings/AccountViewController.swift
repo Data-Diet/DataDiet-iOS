@@ -9,8 +9,11 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Hero
 
 class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    let VT = ViewTransitioner()
 
     var db: Firestore!
     var uid: String!
@@ -129,4 +132,21 @@ class AccountViewController: UIViewController, UIPickerViewDelegate, UIImagePick
             }
         }
     }
+    
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "SettingsView", ViewControllerClass: SettingsViewController.self, PushDirection: .right)
+    }
+    @IBAction func OnEditNamePressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "EditNameView", ViewControllerClass: EditNameViewController.self, PushDirection: .left)
+    }
+    @IBAction func OnEditEmailPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "EditEmailView", ViewControllerClass: EditEmailViewController.self, PushDirection: .left)
+    }
+    @IBAction func OnEditUsernamePressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "EditUsernameView", ViewControllerClass: EditUsernameViewController.self, PushDirection: .left)
+    }
+    @IBAction func OnPersonalSettingsPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "PersonalSettingsView", ViewControllerClass: PersonalSettingsViewController.self, PushDirection: .left)
+    }
+    
 }

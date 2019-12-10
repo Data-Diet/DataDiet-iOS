@@ -9,8 +9,10 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Hero
 
 class PersonalSettingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+    let VT = ViewTransitioner()
     
     let diets = ["Vegan", "Vegetarian", "Pescatarian", "Kosher", "Ketogenic", "Paleolithic"]
     var dietsSelected = [Bool](repeating: false, count: 6)
@@ -180,5 +182,8 @@ class PersonalSettingsViewController: UIViewController, UITableViewDelegate, UIT
                 }
             }
         }
+    }
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "AccountSettingsView", ViewControllerClass: AccountViewController.self, PushDirection: .right)
     }
 }

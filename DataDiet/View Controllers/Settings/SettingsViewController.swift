@@ -43,7 +43,9 @@ class SettingsViewController: UIViewController {
         VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "AccountSettingsView", ViewControllerClass: AccountViewController.self, PushDirection: .left)
     }
     @IBAction func OnFriendsButtonPressed(_ sender: Any) {
-        VT.ChangeView(FromViewController: self, StoryboardName: "Friends", ViewID: "FindFriendsView", ViewControllerClass: FindFriendsViewController.self, PushDirection: .left)
+        let storyboard = UIStoryboard(name: "Friends", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "FriendsTabView") as! FriendTabBarController
+        self.present(controller, animated: true, completion: nil)
     }
     
     

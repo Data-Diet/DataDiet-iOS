@@ -193,6 +193,9 @@ class ScannerSettingsController: UIViewController, UITableViewDelegate, UITableV
         }
     }
     
+    @IBAction func OnImportButtonPressed(_ sender: Any) {
+        VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "ImportSettingsView", ViewControllerClass: ImportSettingsViewController.self, PushDirection: .left)
+    }
     @IBAction func OnBackButtonPressed(_ sender: Any) {
         VT.ChangeView(FromViewController: self, StoryboardName: "Settings", ViewID: "SettingsView", ViewControllerClass: SettingsViewController.self, PushDirection: .right)
     }

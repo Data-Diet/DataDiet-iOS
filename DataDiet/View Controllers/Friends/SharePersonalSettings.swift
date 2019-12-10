@@ -9,8 +9,10 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import Hero
 
 class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let VT = ViewTransitioner()
     
     var db: Firestore!
     var scannerData: DocumentReference!
@@ -112,6 +114,12 @@ class SharePersonalSettings: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
+    }
+    
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Settings", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "SettingsView") as! SettingsViewController
+        self.present(controller, animated: true, completion: nil)
     }
     
 }

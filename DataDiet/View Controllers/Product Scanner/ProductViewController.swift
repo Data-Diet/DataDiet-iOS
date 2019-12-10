@@ -11,7 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class ProductViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, UISearchResultsUpdating {
-    
+    let VT = ViewTransitioner()
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var productImage: UIImageView!
@@ -201,4 +201,12 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     }
+    @IBAction func OnBackButtonPressed(_ sender: Any) {
+        self.VT.ChangeView(FromViewController: self, StoryboardName: "Scanner", ViewID: "ScannerView", ViewControllerClass: ScannerViewController.self, PushDirection: .right)
+    }
+    @IBAction func OnHistoryBackButtonPressed(_ sender: Any) {
+        self.VT.ChangeView(FromViewController: self, StoryboardName: "History", ViewID: "HistoryView", ViewControllerClass: HistoryViewController.self, PushDirection: .right)
+    }
+    
+    
 }
