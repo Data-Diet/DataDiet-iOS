@@ -40,7 +40,7 @@
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snR-7V-X2m">
-                                <rect key="frame" x="10" y="50" width="25" height="25"/>
+                                <rect key="frame" x="7" y="50" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="vKa-tu-vfh"/>
                                     <constraint firstAttribute="height" constant="25" id="ypD-4E-qRM"/>
@@ -120,7 +120,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BZ1-AR-di1" firstAttribute="trailing" secondItem="Zex-ui-3P7" secondAttribute="trailing" id="1kI-9e-zoy"/>
-                            <constraint firstItem="snR-7V-X2m" firstAttribute="leading" secondItem="Zex-ui-3P7" secondAttribute="leading" constant="10" id="2f3-AV-3z9"/>
+                            <constraint firstItem="snR-7V-X2m" firstAttribute="leading" secondItem="Zex-ui-3P7" secondAttribute="leading" constant="7" id="2f3-AV-3z9"/>
                             <constraint firstItem="Zex-ui-3P7" firstAttribute="bottom" secondItem="TeF-qs-fQk" secondAttribute="bottom" constant="38" id="4tJ-aq-c0a"/>
                             <constraint firstItem="TeF-qs-fQk" firstAttribute="leading" secondItem="Zex-ui-3P7" secondAttribute="leading" id="6o0-1z-8RK"/>
                             <constraint firstItem="TeF-qs-fQk" firstAttribute="top" secondItem="gHt-0E-eOv" secondAttribute="bottom" id="Fmy-QU-Dv5"/>

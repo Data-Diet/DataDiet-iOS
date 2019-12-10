@@ -49,13 +49,13 @@
                                 <color key="barTintColor" red="0.68235294120000001" green="0.85490196080000003" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </toolbar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IC7-0z-iCU">
-                                <rect key="frame" x="10" y="50" width="15" height="25"/>
+                                <rect key="frame" x="7" y="57" width="25" height="15"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="15" id="80L-n3-TMG"/>
-                                    <constraint firstAttribute="height" constant="25" id="rQF-i4-y99"/>
+                                    <constraint firstAttribute="width" constant="25" id="ffG-c0-MzS"/>
+                                    <constraint firstAttribute="height" constant="15" id="qGA-fo-QpW"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system">
+                                <state key="normal" image="chevron.down" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="bold"/>
                                 </state>
                                 <connections>
@@ -145,7 +145,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="IC7-0z-iCU" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" constant="10" id="26n-E7-gcx"/>
+                            <constraint firstItem="IC7-0z-iCU" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" constant="7" id="26n-E7-gcx"/>
                             <constraint firstItem="LY8-B9-jmR" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" id="AlB-v5-HDp"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" id="J89-HP-8Be"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="top" secondItem="lt0-g4-QRt" secondAttribute="top" id="NnV-E4-uIq"/>
@@ -157,7 +157,7 @@
                             <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="Hoy-8m-PsA" secondAttribute="bottom" id="dNc-DQ-qIA"/>
                             <constraint firstItem="NNy-2G-LM1" firstAttribute="trailing" secondItem="p6x-05-Jxa" secondAttribute="trailing" id="i5W-5w-P2T"/>
                             <constraint firstItem="Hoy-8m-PsA" firstAttribute="centerX" secondItem="lt0-g4-QRt" secondAttribute="centerX" id="qDV-H2-0wy"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="IC7-0z-iCU" secondAttribute="bottom" constant="7" id="sGs-Vo-vjz"/>
+                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="IC7-0z-iCU" secondAttribute="bottom" constant="10" id="sGs-Vo-vjz"/>
                             <constraint firstItem="p6x-05-Jxa" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" id="ugJ-qR-6nO"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="trailing" secondItem="NNy-2G-LM1" secondAttribute="trailing" id="wo0-PP-N8f"/>
                         </constraints>
@@ -1271,6 +1271,7 @@
         <image name="Security" width="30" height="39"/>
         <image name="arrow.counterclockwise" catalog="system" width="56" height="64"/>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="64" height="52"/>
+        <image name="chevron.down" catalog="system" width="64" height="36"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
         <image name="square.and.arrow.down" catalog="system" width="60" height="64"/>
         <image name="trash.fill" catalog="system" width="60" height="64"/>
