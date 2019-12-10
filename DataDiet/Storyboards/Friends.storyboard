@@ -299,7 +299,7 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oqu-W5-mIT">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oqu-W5-mIT">
                                 <rect key="frame" x="0.0" y="82" width="414" height="731"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -390,11 +390,12 @@
                             <constraint firstItem="xc9-ZX-yvZ" firstAttribute="trailing" secondItem="oqu-W5-mIT" secondAttribute="trailing" id="E2z-Cp-uTy"/>
                             <constraint firstItem="xc9-ZX-yvZ" firstAttribute="top" secondItem="Eno-28-6nd" secondAttribute="top" id="Eck-tL-HIE"/>
                             <constraint firstItem="hmc-cZ-7SF" firstAttribute="leading" secondItem="Rax-if-eHu" secondAttribute="leading" constant="10" id="LEp-3W-3UD"/>
+                            <constraint firstItem="oqu-W5-mIT" firstAttribute="bottom" secondItem="Rax-if-eHu" secondAttribute="bottom" id="Nmk-EY-uQh"/>
                             <constraint firstItem="h0E-eW-qXc" firstAttribute="centerX" secondItem="Eno-28-6nd" secondAttribute="centerX" id="Qri-Ho-8Xs"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="trailing" secondItem="Rax-if-eHu" secondAttribute="trailing" id="UzD-HS-xGu"/>
                             <constraint firstItem="xc9-ZX-yvZ" firstAttribute="leading" secondItem="oqu-W5-mIT" secondAttribute="leading" id="Wsp-X8-U7w"/>
+                            <constraint firstItem="oqu-W5-mIT" firstAttribute="top" secondItem="Rax-if-eHu" secondAttribute="top" constant="38" id="eke-en-EYe"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="top" secondItem="h0E-eW-qXc" secondAttribute="bottom" id="kro-VE-g22"/>
-                            <constraint firstItem="oqu-W5-mIT" firstAttribute="top" secondItem="Rax-if-eHu" secondAttribute="top" constant="38" id="njL-15-iVG"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="leading" secondItem="Rax-if-eHu" secondAttribute="leading" id="xAI-EV-3z3"/>
                             <constraint firstItem="oqu-W5-mIT" firstAttribute="top" secondItem="hmc-cZ-7SF" secondAttribute="bottom" constant="7" id="zDO-a6-5ni"/>
                         </constraints>
@@ -420,6 +421,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabledForSubviews" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>

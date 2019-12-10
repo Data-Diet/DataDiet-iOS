@@ -20,6 +20,5 @@ struct ImageSetter {
         let currentImage = UIImage(named: "NavbarBackground")!.resizableImage(withCapInsets: UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0), resizingMode: .stretch)
         Toolbar.setBackgroundImage(currentImage, forToolbarPosition: .any, barMetrics: .default)
     }
-    
 }
 

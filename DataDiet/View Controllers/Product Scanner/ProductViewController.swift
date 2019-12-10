@@ -70,7 +70,7 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         data.getTitle(barcodeNumber: self.productBarcode) { (title) in
             //Can access all the ingredients in here if barcode is specified
             self.productTitleString = title
-            print(self.productIngredientsArray)
+            print("productTitleString" + self.productTitleString)
             self.titleGroup.leave()
         }
         
@@ -112,7 +112,9 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
             let controller = UISearchController(searchResultsController: nil)
             controller.searchResultsUpdater = self
             controller.dimsBackgroundDuringPresentation = false
+            controller.hidesNavigationBarDuringPresentation = true
             controller.searchBar.sizeToFit()
+            controller.searchBar.placeholder = "Search for Ingredients"
             controller.searchBar.searchBarStyle = .minimal;
 
             IngredientTableView.tableHeaderView = controller.searchBar
@@ -195,18 +197,18 @@ class ProductViewController: UIViewController, UITableViewDelegate, UITableViewD
         let searchPredicate = NSPredicate(format: "SELF contains[cd] %@", searchController.searchBar.text!)
         let array = (productIngredientsArray as NSArray).filtered(using: searchPredicate)
         filteredIngredientsData = array as! [String]
-
+        
         self.IngredientTableView.reloadData()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
     @IBAction func OnBackButtonPressed(_ sender: Any) {
-        self.VT.ChangeView(FromViewController: self, StoryboardName: "Scanner", ViewID: "ScannerView", ViewControllerClass: ScannerViewController.self, PushDirection: .right)
+        if (!self.resultSearchController.isActive) {
+            self.VT.ChangeView(FromViewController: self, StoryboardName: "Scanner", ViewID: "ScannerView", ViewControllerClass: ScannerViewController.self, PushDirection: .right)
+        }
     }
-    @IBAction func OnHistoryBackButtonPressed(_ sender: Any) {
-        self.VT.ChangeView(FromViewController: self, StoryboardName: "History", ViewID: "HistoryView", ViewControllerClass: HistoryViewController.self, PushDirection: .right)
+    @IBAction func OnBackHistoryButtonPressed(_ sender: Any) {
+        if (!self.resultSearchController.isActive) {
+            self.VT.ChangeView(FromViewController: self, StoryboardName: "History", ViewID: "HistoryView", ViewControllerClass: HistoryViewController.self, PushDirection: .right)
+        }
     }
-    
-    
 }

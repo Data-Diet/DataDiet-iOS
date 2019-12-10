@@ -17,6 +17,10 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var resetButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
 
         // Do any additional setup after loading the view.
     }

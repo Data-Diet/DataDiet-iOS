@@ -62,8 +62,19 @@
                                     <action selector="OnBackButtonPressed:" destination="c6i-J4-Xys" eventType="touchUpInside" id="lwV-Ss-O9s"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoy-8m-PsA">
+                                <rect key="frame" x="158" y="42" width="98" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="i2z-7C-mDz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="p6x-05-Jxa">
-                                <rect key="frame" x="0.0" y="82" width="414" height="230"/>
+                                <rect key="frame" x="0.0" y="105" width="414" height="230"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXV-P9-xZf">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -131,17 +142,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hoy-8m-PsA">
-                                <rect key="frame" x="158" y="42" width="98" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="i2z-7C-mDz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="22"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -152,12 +152,12 @@
                             <constraint firstItem="NNy-2G-LM1" firstAttribute="trailing" secondItem="p6x-05-Jxa" secondAttribute="trailing" id="PjX-6C-Oyo"/>
                             <constraint firstItem="LY8-B9-jmR" firstAttribute="trailing" secondItem="NNy-2G-LM1" secondAttribute="trailing" id="XIV-WI-X80"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="height" secondItem="NNy-2G-LM1" secondAttribute="height" multiplier="0.1" id="Xff-Mk-h1D"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="NNy-2G-LM1" secondAttribute="top" constant="38" id="ZAe-Pq-A1k"/>
+                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="NNy-2G-LM1" secondAttribute="top" constant="61" id="ZAe-Pq-A1k"/>
                             <constraint firstItem="LY8-B9-jmR" firstAttribute="bottom" secondItem="NNy-2G-LM1" secondAttribute="bottom" id="bA0-Fq-8Mu"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="Hoy-8m-PsA" secondAttribute="bottom" id="dNc-DQ-qIA"/>
+                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="Hoy-8m-PsA" secondAttribute="bottom" constant="23" id="dNc-DQ-qIA"/>
                             <constraint firstItem="NNy-2G-LM1" firstAttribute="trailing" secondItem="p6x-05-Jxa" secondAttribute="trailing" id="i5W-5w-P2T"/>
                             <constraint firstItem="Hoy-8m-PsA" firstAttribute="centerX" secondItem="lt0-g4-QRt" secondAttribute="centerX" id="qDV-H2-0wy"/>
-                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="IC7-0z-iCU" secondAttribute="bottom" constant="10" id="sGs-Vo-vjz"/>
+                            <constraint firstItem="p6x-05-Jxa" firstAttribute="top" secondItem="IC7-0z-iCU" secondAttribute="bottom" constant="33" id="sGs-Vo-vjz"/>
                             <constraint firstItem="p6x-05-Jxa" firstAttribute="leading" secondItem="NNy-2G-LM1" secondAttribute="leading" id="ugJ-qR-6nO"/>
                             <constraint firstItem="Oql-P8-4qY" firstAttribute="trailing" secondItem="NNy-2G-LM1" secondAttribute="trailing" id="wo0-PP-N8f"/>
                         </constraints>
