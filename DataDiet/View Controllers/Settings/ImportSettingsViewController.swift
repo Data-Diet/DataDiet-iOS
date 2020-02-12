@@ -56,9 +56,6 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         friendsGroup.enter()
         db = Firestore.firestore()
         shareFriends()
-        friendsGroup.notify(queue: .main) {
-            self.FriendsTableView.reloadData()
-        }
     }
     
     func shareFriends() {
@@ -80,20 +77,20 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
                                    let firstName = document.data()?["first_name"] as! String
                                    let lastName = document.data()?["last_name"] as! String
                                    self.users.append(ShareUser(image:self.retrieveProfilePic(photoURLString: document.data()?["profilePicURL"] as! String)!, username: "@\(username)", fullname: "\(firstName) \(lastName)"))
-                                   self.friendsUIDs.append(key as! String)
+                                    print()
+                                    print("appending Key: " + (key as! String))
+                                    print()
+                                    self.friendsUIDs.append(key as! String)
+                                    self.fetchFriendSelected(userID : userID, friendID : (key as! String))
                                 } else {
                                     print("Document does not exist")
                                 }
                             }
                         }
                     }
-                    //Retreive the friend that the user wants to have imported into scanner
-                    self.fetchFriendSelected(userID : userID)
-                    self.FriendsTableView.reloadData()
                 }
             }
         }
-        self.friendsGroup.leave()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,12 +100,13 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         
         print("indexPath.row: " + String(indexPath.row))
         
-        let switchView = UISwitch(frame: .zero)
-        switchView.setOn(friendSelected[indexPath.row] , animated: true)
-        switchView.tag = indexPath.row
-        switchView.addTarget(self, action: #selector(self.importSettings(_:)), for: .valueChanged)
-        cell.accessoryView = switchView
-        
+        if (indexPath.row < friendSelected.count) {
+            let switchView = UISwitch(frame: .zero)
+            switchView.setOn(friendSelected[indexPath.row] , animated: true)
+            switchView.tag = indexPath.row
+            switchView.addTarget(self, action: #selector(self.importSettings(_:)), for: .valueChanged)
+            cell.accessoryView = switchView
+        }
         return cell
     }
     
@@ -182,19 +180,12 @@ class ImportSettingsViewController: UIViewController, UITableViewDelegate, UITab
         }
     }
 
-    func fetchFriendSelected(userID : String) {
-        let friendSelected = self.db.collection("users").document(userID).collection("Friends").document("FriendSelected")
-        friendSelected.getDocument() { (document, error) in
+    func fetchFriendSelected(userID : String, friendID : String) {
+        _ = self.db.collection("users").document(userID).collection("Friends").document("FriendSelected").getDocument() { (document, error) in
             if let document = document, document.exists {
-                let name: Dictionary = document.data()! as Dictionary
-                for id in self.friendsUIDs {
-                    if(name[id] != nil) {
-                        self.friendSelected.append(name[id] as! Bool)
-                        self.FriendsTableView.reloadData()
-                    }
-                }
-            } else {
-                friendSelected.setData(self.defaultSelected)
+                let documentDict: NSDictionary = document.data()! as NSDictionary
+                self.friendSelected.append(documentDict[friendID] as! Bool)
+                self.FriendsTableView.reloadData()
             }
         }
     }
